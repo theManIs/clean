@@ -1,0 +1,146 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../extensions/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../extensions/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="callkeeperStyle.css">
+	<link rel="stylesheet" href="adminPanelStyle.css">
+	<link rel="stylesheet" media="screen" type="text/css" 
+		href="../extensions/colorpicker/css/colorpicker.css">
+	<script language="javascript" src="../extensions/jqui/jquery.js"></script>
+	<script language="javascript" src="../extensions/jqui/jquery-ui.min.js"></script>
+	<script language="javascript" src="../extensions/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../extensions/colorpicker/js/colorpicker.js"></script>
+	<script type="text/javascript" src="../extensions/jqueryJason/jquery.json-2.4.min.js"></script>
+	<script language="javascript" src="adminPanelScript.js"></script>
+
+</head>
+<body>
+<div class="displayInlineBlock">
+	<p id="colorpickerHolder"></p>
+</div>
+<div class="displayInlineBlock redactForm">
+	<div class="callkeeperMain mainWorkFrame displayInlineBlock">
+		<header>
+			<div class="blockContainerElement">
+				<figure class="dynamicIcon newFieldForm greenCheck">							
+					<div class="callkeeper background mask"></div>
+					<i class="fa fa-check fa-2x" title="Сохранить поле"></i>
+				</figure>
+				<input type="text" id="callkeeperTitleFormClone" value="Отправить сообщение"
+					class="headerHtml valueTitle smartEdit formStyle paddingNull" style="display: none;">
+				<h3 name="callkeeperMain" id="callkeeperTitleForm"  class="headerHtml valueTitle"
+					>Отправить сообщение</h3>
+			</div>
+			<div class="blockContainerElement">
+				<figure class="dynamicIcon newFieldForm greenCheckMiddle">							
+					<div class="callkeeper background mask"></div>
+					<i class="fa fa-check fa-2x" title="Сохранить поле"></i>
+				</figure>
+				<textarea id="callkeeperSecondMessageClone"  
+					class="textAreaShortPost smartEdit FormStyle textA blockS adminTextarea"
+					>Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время</textarea>
+				<div id="callkeeperSecondMessage" class="textAreaShortPost"
+				>Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время</div>
+			</div>
+		</header>
+		<section>
+			<div class="addListTool" id="addFieldToolId">
+				<a href="#" >+ добавить новое поле</a>
+			</div>
+			<div class="addListTool" id="addListToolId">
+				<a href="#" >+ добавить раскрывающийся список</a>
+			</div>
+			
+			
+			<div class="blockContainerElement">
+				<figure class="dynamicIcon newFieldForm blackAsteriskMiddle" title="Отметить как обязательное">							
+					<div class="callkeeper background mask"></div>
+					<i class="fa fa-asterisk fa-2x"></i>
+				</figure>
+				<figure class="dynamicIcon newFieldForm greenCheckMiddle">							
+					<div class="callkeeper background mask"></div>
+					<i class="fa fa-check fa-2x" title="Сохранить поле"></i>
+				</figure>
+				<textarea type="text"  class="smartEdit formStyle textA blockS" 
+					id="callkeeperQuestionClone">Введите ваш вопрос</textarea>
+				<textarea type="text" id="youQuestion" class="textA blockS"
+					placeholder="Введите ваш вопрос"></textarea>
+			</div>
+			
+			<div class="blockContainerElement">
+				<figure class="dynamicIcon newFieldForm greenCheckMiddle">							
+					<div class="callkeeper background mask"></div>
+					<i class="fa fa-check fa-2x" title="Сохранить поле"></i>
+				</figure>
+				<input id="callkeeperYouSendClone" value="Отправить"
+				class="callkeeperTextAlignCenter smartEditForm callK anyB">
+				<button id="youSend" class="callK anyB">Отправить</button>
+			</div>
+			<div class="blockContainerElement">
+				<figure class="dynamicIcon newFieldForm greenCheckRight">							
+					<div class="callkeeper background mask"></div>
+					<i class="fa fa-check fa-2x" title="Сохранить поле"></i>
+				</figure>				
+				<input id="callkeeperYouCloseClone" value="Закрыть"
+					class="callkeeperTextAlignCenter smartEditForm closeB featuresS callK anyB">
+				<button id="youClose" class="callK anyB closeB featuresS">Закрыть</button>
+			</div>
+			
+		</section>
+	</div>
+</div>
+<div class="displayInlineBlock">	
+	<div class="pushButtonContainer displayInlineBlock">
+		<figure class="dynamicIcon newFieldForm greenCheckMiddle">							
+			<div class="callkeeper background mask"></div>
+			<i class="fa fa-check fa-2x" title="Сохранить поле"></i>
+		</figure>
+		<input type="text" id="callYouPushClone" value="Оставить данные"
+				class="callkeeperTextAlignCenter smartEdit formStyle callK anyB pushD ButtonS">
+		<button id="youPush" class="callK anyB pushD ButtonS">Оставить данные</button>
+	</div>
+</div>
+<div class="displayInlineBlock">
+	<div class="containerBillboard displayInlineBlock">
+		<div class="callkeeperBillboard">
+			<div class="blockContainerElement">
+				<figure class="dynamicIcon newFieldForm greenCheck">							
+					<div class="callkeeper background mask"></div>
+					<i class="fa fa-check fa-2x" title="Сохранить поле"></i>
+				</figure>				
+				<input type="text" id="titleForCompleteClone" value="Сообщение"
+					class="callkeeperS messageS smartEdit formStyle">
+				<h2 class="callkeeperS messageS" id="titleForComplete">Сообщение</h2>
+			</div>
+			<div class="blockContainerElement">
+				<figure class="dynamicIcon newFieldForm greenCheckMiddle">							
+					<div class="callkeeper background mask"></div>
+					<i class="fa fa-check fa-2x" title="Сохранить поле"></i>
+				</figure>
+				<textarea id="callMesBodyClone" class="callkeeperS messageBody smartEditForm"
+				>Вы успешно отправили свои контактные данные</textarea>
+				<p class="callkeeperS messageBody" id="callMesBody"
+					>Вы успешно отправили свои контактные данные</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="redactMode listScroll" id="redactListScroll">
+	<h3 class="titleRedactList">Введите список полей выпадающего меню</h3>
+	<input type="text" class="itemList scrollElem scrollHeader" 
+		placeholder="Здесь будет название списка">
+	<input type="text" class="itemList scrollElem" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemList scrollElem" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemList scrollElem" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemList scrollElem" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemList scrollElem" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemList scrollElem" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemList scrollElem" placeholder="Здесь будет элемент списка">
+	<button class="callK anyB clickA buttonL" id="clickAcceptId">Подтвердить</button>
+</div>
+<div class="save button type" id="saveButtonId">
+	<button class="btn btn-primary">Сохранить изменения</button>
+<div>
+</body>
+</html>

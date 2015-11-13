@@ -1,0 +1,144 @@
+* 
+{
+	padding: 0px; 
+	margin: 0px;
+}
+
+
+.callkeeperMain 
+{
+	width: 300px;
+	height: 500px;
+	background: rgb(255, 255, 255);
+	position: absolute;
+	top: calc(90% - 500px);
+	left: calc(90% - 300px);
+	border-radius:10px;
+	border: 0px solid black;
+	box-shadow: 0px 0px 50px black;
+}
+
+.callKeeperMain header > h3 
+{
+	cursor: pointer;
+	color: white;
+	padding-top: 5px;
+	font: 15px verdana;
+	background: #399CE3;
+	background-image: -linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -webkit-linear-gradient(top , rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	border-bottom: 1px solid black;
+	text-align: center;
+	border-radius:10px 10px 0 0;
+	height: 30px;
+}
+
+.callKeeperMain header  #firstMessage
+{
+	border-radius: 0 15px 0 15px;
+	
+	margin: 10px;
+	padding: 1px;
+	font: oblique 14px Verdana;
+	background: #399CE3;
+	background-image: -linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -webkit-linear-gradient(top , rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+}
+
+.callKeeperMain header  #secondMessage
+{
+	border-radius: 0 15px 0 15px;
+	margin: 10px;
+	padding: 10px;
+	font: oblique 14px Verdana;
+	background: #399CE3;
+	background-image: -linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -webkit-linear-gradient(top , rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+}
+
+#youCenter, #youDep, #youName, #youMail, #youQuestion, .callKeeperMain section > label
+{
+	font: 12px Verdana;
+	margin: 10px 10px 10px 48px;
+	padding: 3px;
+	width: 200px;
+	border-radius: 3px;
+	height: 35px;
+}
+
+#youChoise, #youName, #youMail, #youQuestion
+{
+	box-shadow: 0px 0px 5px black;
+}
+
+.callKeeperMain section input:hover, .callKeeperMain section select:hover
+{
+	border: 2px solid rgba(0, 0, 255, .5);
+}
+
+.callKeeperMain section  input:focus
+{
+	background: rgba(0, 0, 255, .2);
+	border: 2px solid rgba(0, 0, 255, .5);
+}
+
+.callKeeperMain section > #youSend
+{
+	border-radius: 0 0 0 10px;
+}
+
+.callKeeperMain section > #youClose
+{
+	border-left: 1px solid black;
+	border-radius: 0  0 10px 0;
+}
+
+#youSend, #youClose, #youPush
+{
+	float: left;
+	font: 20px verdana;
+	position: relative;
+	width:  50%;
+	height: 50px;
+	margin-top: 14px;
+	border: 0px solid black;	
+	background: #399CE3;
+	background-image: -linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -webkit-linear-gradient(top , rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);	
+}
+
+#youPush
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-left: calc(100% - 250px);
+	width:  250px;
+}
+
+.callKeeperMain section > button:hover, #youPush:hover
+{
+	color: white;
+	cursor: pointer;
+}
+
+.callKeeperMain header > h3  
+{
+	background-image: -linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -webkit-linear-gradient(top , rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 80%);
+}

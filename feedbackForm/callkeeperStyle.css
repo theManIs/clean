@@ -1,0 +1,168 @@
+* 
+{
+	padding: 0px; 
+	margin: 0px;
+}
+.callkeeperMain 
+{
+	width: 300px;
+	background: white;
+	position: absolute;
+	top: calc(50% - 250px);
+	left: calc(50% - 150px);
+	border: 0px solid black;
+	box-shadow: 0px 0px 10px rgba(0,0,0, .4);
+}
+.headerHtmlTitle, .headerHtml.valueTitle
+{
+	width: 300px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	cursor: move;
+	#color: white;
+	padding-top: 5px;
+	font: 15px verdana;
+	font-weight: 900;
+	background: #399CE3;
+	border-bottom: 1px solid black;
+	text-align: center;
+}
+.textAreaShortPost
+{
+	height: 54px;
+	font-weight: 400;
+	margin: 0px;
+	padding: 15px;
+	font: 14px Verdana;
+	background: #399CE3;
+}
+input.itemList.scrollElem, .itemListScrollHeader, .newFieldForm, .textA.blockS
+{
+	padding: 4px 4px 4px 10px;
+	width: 270px;
+	height: 40px;
+	margin: 10px 0 0 15px;
+	font: 14px Verdana;
+	border: 0px dotted black;
+	outline: 0;
+	background: rgba(0,0,0, .1);
+	resize: vertical;
+	outline: 0;
+	box-shadow: inset 0 0 0 black;
+	border-radius: 0;
+	display: block;
+}
+.callKeeperMain section > #youClose
+{
+	border-left: 1px solid black;
+}
+.callK.anyB, .callkeeperAnyButton
+{
+	padding: 0;
+	margin: 0;
+	float: left;
+	font: 20px verdana;
+	width:  50%;
+	height: 50px;
+	margin-top: 14px;
+	border: 0px solid black;	
+	background: #399CE3;
+	outline: 0px solid black;
+	box-shadow: inset 0 0 0 black;
+	border-radius: 0;
+}
+.pushD.ButtonS
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-left: calc(100% - 250px);
+	width:  250px;
+	height: 50px;
+	box-shadow: inset 0 0 0 black;
+	border-radius: 0;
+}
+.callkeeperAnyButton:hover
+{
+	color: white;
+	cursor: pointer;
+}
+div.blockContainerElement option
+{
+	background: white;
+}
+.callkeeperBillboard
+{
+	background: white;
+	opacity: .9;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-left: calc(50% - 100px);
+	width: 400px;
+	height: 200px;
+}
+.callkeeperS.messageS
+{
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+	padding: 0 0 5px 0;
+	margin: 0;
+	height: 30px;
+	font-size: 22px;
+	width: 100%;
+	background: #399CE3;
+	font-weight: 100;
+	text-align: center;
+	border-bottom: 1px solid black;
+	transition: none;
+	box-shadow: inset 0 0 0 black;
+}
+.callkeeperS.messageBody
+{
+	box-sizing: border-box;
+	resize: none;
+	width: 100%;
+	height: 163px;
+	text-align: center;
+	padding: 40px 0 40px 0;
+	margin: 0;
+	font: 25px Verdana;
+	border-radius: 0;
+	box-shadow: inset 0 0 0 black;
+}
+select.classSelectPoint, input.class.InputText 
+{
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	outline: none;
+	width: 100%;
+	height: 100%;
+	margin: 0;	
+	background: none;
+}
+.closeB.featuresS
+{
+	border-left: 1px solid black;
+}
+div.callkeeper.container.input
+{
+	padding: 0;
+}
+.textA.blockS
+{
+	height: 80px;
+}
+.callkeeperAnyButton, .headerHtmlTitle, .callkeeperMessage, .textAreaShortPost
+{
+	background-image: -linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: -webkit-linear-gradient(top , rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%);
+}

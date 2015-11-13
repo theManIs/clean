@@ -1,0 +1,173 @@
+		<style type="text/css" class="uptocall-blur">
+    @font-face {
+        font-family: 'fontello';
+        src: url('https://uptocall.com/widget/font/fontello.eot?96830328');
+        src: url('https://uptocall.com/widget/font/fontello.eot?96830328#iefix') format('embedded-opentype'),
+        url('https://uptocall.com/widget/font/fontello.woff?96830328') format('woff'),
+        url('https://uptocall.com/widget/font/fontello.ttf?96830328') format('truetype'),
+        url('https://uptocall.com/widget/font/fontello.svg?96830328#fontello') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    [class^="uptocall-icon-"]:before, [class*=" uptocall-icon-"]:before {
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        margin-right: .2em;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+        margin-left: .2em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .uptocall-icon-email:before { content: '\e801'; }
+    .uptocall-icon-phone:before { content: '\e802'; }
+
+    .dialog-open {overflow: hidden;}
+    #uptocall-backdrop {bottom:0;left:0;outline:0 none;overflow-x:auto;overflow-y:scroll;position:fixed;right:0;top:0;z-index:1000;transition:opacity 0.15s linear 0s;opacity:0.2;background-color:#000;width:200%;}
+    .uptocall-blur {-webkit-filter: blur(1.4px);-moz-filter: blur(1.4px);-ms-filter: blur(1.4px);filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='blur'><feGaussianBlur stdDeviation='2'/></filter></svg>#blur");filter: blur(2px);filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=2);}
+    #uptocallPopup * {padding:0;margin:0;max-width:100%;min-width:0%;height:auto;width:auto;font-family:"Open Sans",sans-serif !important;color:#737272;font-weight:300 !important;font-size:16px;line-height:20px;float:none !important;-webkit-box-sizing:border-box !important;-moz-box-sizing:border-box !important;box-sizing:border-box !important;}
+    #uptocallPopup {text-align:left !important;position:fixed;bottom:0 !important;right:-340px;z-index:99999991;height:auto;width:340px;padding:0;min-height:400px;}
+    #uptocallPopup #uptocall-dialog {background:#f2f4f3;opacity:0.9;border-radius:4px 0 0 4px;overflow:visible;padding:30px 40px;position:relative;}
+    #uptocallPopup .uptocall-body {position:absolute;top:50%;margin-top:-185px;margin-right:40px}
+    #uptocallPopup .uptocall-clear {clear:both}
+    #uptocallPopup p {margin:0 0 20px 0;}
+    #uptocallPopup .uptocall-btn-exit {background: url(https://uptocall.com/widget/images/close.png) no-repeat;cursor: pointer;height:17px;width:17px;position:absolute;right:15px;top:15px;z-index:99999991;}
+    #uptocallPopup .uptocall-btn-exit:hover {opacity: 0.75;}
+    #uptocallPopup .uptocall-header {font-size:20px;line-height:26px;margin:0 0 20px 0;display:inline-block;}
+    #uptocallPopup .uptocall-text {margin:0 0 20px 0;line-height:22px;}
+    #uptocallPopup .uptocall-status {text-align:center;margin:15px 0 50px 0}
+    #uptocallPopup .uptocall-status a {text-align:center;font-style:italic;font-size:12px;color:#817f7f;display:inline-block;text-decoration:none !important;outline:none !important;}
+    #uptocallPopup .uptocall-status a span {display:block;width:50px;height:50px;-moz-border-radius: 25px;-webkit-border-radius: 25px;border-radius: 25px;-moz-background-clip: padding;-webkit-background-clip: padding-box;background-clip: padding-box;opacity:0.8;border: 1px solid #e63b2b;color:#e63b2b}
+    #uptocallPopup .uptocall-status a span:before {font-size:25px;margin-top:12px;margin-left:5px;}
+    #uptocallPopup .uptocall-status #uptocall-status-email span:before {margin-top:13px;}
+    #uptocallPopup .uptocall-status a:hover span {opacity:1}
+    #uptocallPopup .uptocall-status a.active span {background-color:#e63b2b;opacity:1;color:#fff;border:none}
+    #uptocallPopup .uptocall-status #uptocall-status-call {margin-right:35px}
+    #uptocallPopup .uptocall-form {padding:15px 0 0 0 !important;margin:0 0 10px 0 !important;}
+    #uptocallPopup .uptocall-form.uptocall-form-submit {opacity:0.7 !important;}
+    #uptocallPopup #uptocall-office-text {font-size:13px;font-style:italic;margin-bottom:20px;position:relative;color:#959595}
+    #uptocallPopup #uptocall-office-text a {font-size:13px;font-style:italic;text-decoration:none !important;}
+    #uptocallPopup #uptocall-office-text a:hover {border:none}
+    #uptocallPopup #uptocall-office-link {text-decoration:none !important;padding-left:5px;padding-right:5px;}
+    #uptocallPopup #uptocall-office-link span {border-bottom:1px dashed #959595;font-size:13px;font-style:italic;}
+    #uptocallPopup #uptocall-office-link:hover span {border:none}
+    #uptocallPopup #uptocall-office-link.uptocall-office-link-error {background:#fd3535;transition-property: background;-webkit-transition-duration:1.4s;color:#fff;border-color:#fff;-transition-timing-function:linear;}
+    #uptocallPopup #uptocall-office-link.uptocall-office-link-error span {transition-property:color, border-color;-webkit-transition-duration:1.4s;color:#fff;border-color:#fff;-transition-timing-function:linear;}
+    #uptocallPopup #uptocall-office-list {position:absolute;background-color: #fff;-moz-box-shadow: 1px 2px 3px rgba(0,0,0,.14);-webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.14);box-shadow: 1px 2px 3px rgba(0,0,0,.14);list-style:none !important;padding:0 5px !important;margin:0 !important;z-index:99999992;max-height:200px !important;overflow-y:auto !important;width:260px}
+    #uptocallPopup #uptocall-office-list li {padding:8px 4px;border-bottom:1px solid #ececec}
+    #uptocallPopup #uptocall-office-list li:last-of-type {border-bottom:none}
+    #uptocallPopup #uptocall-office-list a {font-style:normal;text-decoration:none !important;border:none !important;display:inline-block;width:100%;}
+    #uptocallPopup #uptocall-office-list li:hover a, #uptocallPopup #uptocall-office-list a:hover {color:#40bae7 !important;cursor:pointer}
+    #uptocallPopup input, #uptocallPopup textarea, #uptocallPopup select {background-color:#fff !important;border:1px solid rgba(149,149,149,.51) !important;-moz-border-radius: 4px / 3px;-webkit-border-radius: 4px / 3px;border-radius: 4px / 3px;-moz-background-clip: padding;-webkit-background-clip: padding-box;background-clip: padding-box;padding:8px 5px ;color:#959595 !important;outline: medium none;margin:0 0 15px 0;transition: border 0.25s ease-out 0s;width:100%;}
+    #uptocallPopup select {padding:5px !important;}
+    #uptocallPopup .uptocall-phone-error {border:1px solid #fd3535 !important;color:#fd3535 !important;-webkit-animation:office 0.5s linear 0s infinite alternate;-moz-animation:office 0.5s linear 0s infinite alternate;animation:office 0.5s linear 0s infinite alternate;}
+    #uptocallPopup input[type="submit"], #uptocallPopup #uptocall-btn-success {border:none !important;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;-moz-background-clip: padding;-webkit-background-clip: padding-box;background-clip: padding-box;background-color: #e63b2b !important;color:#fff !important;padding:8px 15px !important;margin:0 0 15px 0;width:100%;opacity:0.8}
+    #uptocallPopup input[type="submit"]:hover, #uptocallPopup #uptocall-btn-success:hover {opacity:1}
+    #uptocallPopup #uptocall-btn-success.uptocall-btn-disabled {opacity:0.5}
+    #uptocallPopup #uptocall-btn-failed {border:none !important;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;-moz-background-clip: padding;-webkit-background-clip: padding-box;background-clip: padding-box;background-color: rgba(176,177,177,.98) !important;color:#fff !important;padding:8px 15px !important;margin:0 0 15px 0;width:100%}
+    #uptocallPopup #uptocall-btn-failed:hover {background-color:#8B8C8C}
+    #uptocallPopup #uptocall-btn-failed.uptocall-btn-disabled {opacity:0.5}
+    #uptocallPopup #uptocall-phone-mask {width:70px !important;padding:7px 5px 7px 5px !important;height:40px}
+    #uptocallPopup #uptocall-countdown-container {text-align:center;padding-top:5px}
+    #uptocallPopup #uptocall-countdown {background: url(https://uptocall.com/widget/images/panel-time.png) no-repeat 0 0;padding:0 0 3px 50px;font-size:32px;line-height:35px !important;font-weight:300 !important;}
+    #uptocallPopup .uptocall-repeat-header {font-size:20px;line-height:26px;margin:0 0 20px 0;}
+    #uptocallPopup #uptocall-repeat-container a {color:#40bae7 !important;text-decoration:none !important;border-bottom:1px dashed #40bae7}
+    #uptocallPopup #uptocall-repeat-container a:hover {border-bottom:none}
+    #uptocallPopup #uptocall-rating {display:block;position:relative;top:2px;cursor:pointer;text-align:center}
+    #uptocallPopup .uptocall-rating-header {font-size:20px;line-height:26px;margin:0 0 20px 0;}
+    #uptocallPopup .uptocall-rating-text {margin-bottom:20px}
+    #uptocallPopup #uptocall-rating a {width:45px;height:45px;display:inline-block;background:url(https://uptocall.com/widget/images/panel-rating.png) no-repeat -55px 0;margin-right:4px}
+    #uptocallPopup #uptocall-rating a:last-of-type {margin-right:0}
+    #uptocallPopup #uptocall-rating a.active {background-position:0 0}
+    #uptocallPopup #uptocall-added-container {padding-top:50px;text-align:center}
+    #uptocallPopup #uptocall-added-container a {color:#959595 !important;border-bottom:1px dashed #959595;text-decoration:none !important;font-size:13px !important;font-style:italic}
+    #uptocallPopup #uptocall-added-container a:hover {border:none}
+    #uptocallPopup .uptocall-madeBy {bottom:10px;font-size:11px;position:absolute;right:14px;color:#666 !important;opacity:0.8;}
+    #uptocallPopup .uptocall-madeBy a {color:#959595 !important;font-size:11px;text-decoration:none;outline:none !important;}
+    #uptocallPopup select {outline: medium none;margin:0 5px 10px 0 !important;transition: border 0.25s ease-out 0s;float:left !important;}
+    @-moz-document url-prefix() {
+        #uptocallPopup #uptocall-phone-mask {padding: 6px 5px !important;}
+    }
+    @media screen and (min-width:0\0) { #uptocallPopup select {background:none;padding: 5px;} }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        #uptocallPopup select { padding:4px 22px 4px 0px !important; }
+    }
+    @-webkit-keyframes office {
+        0% {border-color:#959595;color:#959595;}
+        20% {border-color:#c82215;color:#c82215;}
+        40% {border-color:#959595;color:#959595;}
+        60% {border-color:#c82215;color:#c82215;}
+        80% {border-color:#959595;color:#959595;}
+        100% {border-color:#c82215;color:#c82215;}
+    }
+    @-moz-keyframes office {
+        0% {border-color:#959595;color:#959595;}
+        20% {border-color:#c82215;color:#c82215;}
+        40% {border-color:#959595;color:#959595;}
+        60% {border-color:#c82215;color:#c82215;}
+        80% {border-color:#959595;color:#959595;}
+        100% {border-color:#c82215;color:#c82215;}
+    }
+    @keyframes office {
+        0% {border-color:#959595;color:#959595;}
+        20% {border-color:#c82215;color:#c82215;}
+        40% {border-color:#959595;color:#959595;}
+        60% {border-color:#c82215;color:#c82215;}
+        80% {border-color:#959595;color:#959595;}
+        100% {border-color:#c82215;color:#c82215;}
+    }
+    @keyframes office {
+        from {color: #959595;}
+        to {color: #c82215;}
+    }
+</style>
+
+<style type="text/css" class="">
+#uptocall-mini {position:fixed;bottom:100px;right:100px;width:90px;height:90px;cursor:pointer;z-index:200998;opacity:0.7;}
+#uptocall-mini.uptocall-mini-open {opacity:1}
+#uptocall-mini-main {background:#e63b2b;width:85px;height:85px;-moz-box-shadow: 3px 4px 10px rgba(0,0,0,.39);-webkit-box-shadow: 3px 4px 10px rgba(0,0,0,.39);box-shadow: 3px 4px 10px rgba(0,0,0,.39);-moz-border-radius:43px;-webkit-border-radius:43px;border-radius:43px;position:absolute;bottom:0;right:0;-webkit-animation:shake 6s 0s both infinite;-moz-animation:shake 6s 0s both infinite;-o-animation:shake 6s 0s both infinite;animation:shake 6s 0s both infinite;}
+#uptocall-mini.uptocall-mini-open #uptocall-mini-main {-webkit-animation:none;-moz-animation:none;-o-animation:none;animation:none;}
+#uptocall-mini-main .uptocall-mini-icon {background:url(https://uptocall.com/widget/images/panel-mini-icon.png) no-repeat 22px 23px;width:85px;height:85px;opacity:0;-webkit-animation:uptocallpanel 6s 0s linear infinite;-moz-animation:uptocallpanel 6s 0s linear infinite;-o-animation:uptocallpanel 6s 0s linear infinite;animation:uptocallpanel 6s 0s linear infinite;}#uptocall-mini .uptocall-mini-label {-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;background-color:#fff;text-align:center;
+padding:6px 0;color:#989898 !important;font-size:13px;font-family:"Open Sans",sans-serif !important;width:140px;position:absolute;top:10px;left:0;-moz-box-shadow: 3px 4px 4px rgba(0,0,0,.21);-webkit-box-shadow: 3px 4px 4px rgba(0,0,0,.21);box-shadow: 3px 4px 4px rgba(0,0,0,.21);}
+#uptocall-mini .uptocall-mini-label:after {content:"";background:#fff;position:absolute;width:0;height:0;margin-left:-8px;top:9px;left:100%;-moz-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);-moz-box-shadow: 3px 4px 4px rgba(0,0,0,.21);-webkit-box-shadow:3px 4px 4px rgba(0,0,0,.21);-o-box-shadow:3px 4px 4px rgba(0,0,0,.21);box-shadow:3px 4px 4px rgba(0,0,0,.21);box-sizing:border-box;border:7px solid #fff;border-color:#fff transparent transparent transparent;z-index:200998;}
+#uptocall-mini .uptocall-mini-circle {width:55px;height:55px;-moz-border-radius:28px;-webkit-border-radius:28px;border-radius:28px;-moz-box-shadow: 3px 4px 10px rgba(0,0,0,.39);-webkit-box-shadow: 3px 4px 10px rgba(0,0,0,.39);box-shadow: 3px 4px 10px rgba(0,0,0,.39);background:#e63b2b url(https://uptocall.com/widget/images/panel-mini-icons-mini.png) no-repeat;position:absolute;top:0;right:18px;}
+#uptocall-mini-email {top:0;position:relative;opacity:0;visibility:hidden}
+#uptocall-mini-email .uptocall-mini-circle {background-position:15px 16px}
+#uptocall-mini-phone {top:70px;position:relative;opacity:0;visibility:hidden}
+#uptocall-mini-email.uptocall-mini-opacity, #uptocall-mini-phone.uptocall-mini-opacity {-webkit-transition:opacity .4s ease-out 0s;-moz-transition:opacity .4s ease-out 0s;-o-transition:opacity .4s ease-out 0s;transition:opacity .4s ease-out 0s;visibility:visible;opacity:1}
+#uptocall-mini-phone .uptocall-mini-circle {background-position:14px -60px}
+
+@-webkit-keyframes uptocallpanel {
+    0% {opacity:0;background-position:22px 23px}
+    25% {opacity:1;background-position:22px 23px}
+    50% {opacity:0;background-position:22px 23px}
+    51% {opacity:0;background-position:20px -45px}
+    75% {opacity:1;background-position:20px -45px}
+    100% {opacity:0;background-position:20px -45px}
+}
+@keyframes uptocallpanel {
+    0% {opacity:0;background-position:22px 23px}
+    25% {opacity:1;background-position:22px 23px}
+    50% {opacity:0;background-position:22px 23px}
+    51% {opacity:0;background-position:20px -45px}
+    75% {opacity:1;background-position:20px -45px}
+    100% {opacity:0;background-position:20px -45px}
+}
+@-webkit-keyframes shake {
+    80%, 100% {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+    82%, 86%, 90%, 94%, 98% {-webkit-transform: translate3d(-10px, 0, 0);transform: translate3d(-10px, 0, 0);}
+    84%, 88%, 92%, 96% {-webkit-transform: translate3d(10px, 0, 0);transform: translate3d(10px, 0, 0);}
+}
+@keyframes shake {
+    80%, 100% {-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+    82%, 86%, 90%, 94%, 98% {-webkit-transform: translate3d(-10px, 0, 0);transform: translate3d(-10px, 0, 0);}
+    84%, 88%, 92%, 96% {-webkit-transform: translate3d(10px, 0, 0);transform: translate3d(10px, 0, 0);}
+}
+</style>

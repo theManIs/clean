@@ -1,0 +1,25 @@
+.sm2-bar-ui {
+	font-size: 16px;
+}
+.sm2-bar-ui .sm2-main-controls,
+.sm2-bar-ui .sm2-playlist-drawer {
+	background-color: #7a7475; /* non-RGBA fallback */
+	background-color: rgba(122, 116, 117, 0.92);
+}
+.sm2-bar-ui .sm2-inline-texture {
+	background: transparent;
+}
+
+.sm2-bar-ui.fixed
+{
+	margin: 0 5%;
+	width: 90%;
+}
+
+.close.sm2-inline-button {
+	opacity: 1;
+	background-image: url(image/icomoon/entypo-25px-ffffff/PNG/cross.png),
+		url(image/icomoon/entypo-25px-ffffff/SVG/cross.svg);
+	background-position: 50% 50%;
+	background-size: 35%;
+}

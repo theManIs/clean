@@ -1,0 +1,272 @@
+.smartEditForm, .smartEdit.formStyle
+{
+	border: 0px dashed black;
+	display: none;
+	background: rgba(0,0,0, .1);
+	font-weight: 900;
+	color: rgba(255, 0, 0, .5);
+	outline: 0px solid black;
+}
+
+.callkeeperTextAlignCenter
+{
+	text-align: center;
+}
+.callkeeperBillboard
+{
+	margin: 0;
+	padding: 0;
+	position: static;
+	margin-left: calc(50% - 200px);
+	border: 1px dashed black;
+}
+.pushD.ButtonS
+{
+	margin-left: calc(50% - 125px);
+	position: static;
+}
+.displayInlineBlock
+{
+	display: inline-block;
+}
+.containerBillboard {
+	position: static;
+	margin-top: 50px;
+	margin-left: 100px;
+	#margin-left: calc(50% - 200px);
+}
+.pushButtonContainer
+{
+	margin-top: 50px;
+	#margin-left: calc(50% - 125px);
+	margin-left: 50px;
+	position: static;
+}
+.mainWorkFrame
+{
+	margin-top: 50px;
+	margin-left: calc(50% - 150px);
+	position: static;
+}
+.headerHtml.valueTitle
+{
+	cursor: text;
+}
+
+.headerHtml.valueTitle.smartEditForm
+{
+	padding: 0px;
+	cursor: default;
+	border-bottom: 1px solid black;
+}
+
+.textAreaShortPost
+{
+	font: 15px verdana;
+}
+
+.addListTool
+{
+	margin: 10px 0 0 20px;
+	
+}
+
+div.redactMode.listScroll
+{
+	z-index: 500;
+	display: none;
+	left: 0;
+	top: 0;
+	position: absolute;
+	padding: 10px;
+	width: 300px;
+	top: calc(50% - 250px);
+	left: calc(50% - 150px);
+	background: white;
+	border: 1px dashed black;
+}
+
+.titleRedactList
+{
+	margin: 15px;
+	text-align: center;
+}
+
+button.clickA.buttonL
+{
+	margin-left: calc(50% - 75px);
+}
+.itemList.scrollElem.scrollHeader
+{
+	font-weight: 900;
+}
+figure.dynamicIcon
+{
+	width: auto;
+	height: auto;
+	position: absolute;
+	background: none;
+	margin-left: 300px;
+	margin-top: 0;
+}
+figure.dynamicIcon:hover, .colorpicker_submit:hover
+{
+	transform: scale(1.7, 1.7);
+}
+figure.bluePhone
+{
+	color: darkblue;
+	margin-left: -150px;
+}
+figure.redCross
+{	
+	color: red;
+}
+figure.greenCheck
+{	
+	color: green;
+	margin-left: -50px;
+}
+figure.greenCheckMiddle
+{	
+	color: green;
+	margin-top: 25px;
+	margin-left: -50px;
+}
+figure.greenCheckRight
+{	
+	color: green;
+	margin-top: 25px;
+	margin-left: 300px;
+}
+figure.blackAsteriskMiddle 
+{
+	color: black;
+	margin-top: 25px;
+	margin-left: -100px;
+}
+figure.blackAsteriskSelect
+{
+	color: black;
+	margin-left: -50px;
+}
+figure.blackAsterisk
+{
+	color: black;
+	margin-left: -200px;
+}
+div.blockContainerElement i.fa.fa-2x
+{
+	text-shadow: 1px 1px 1px black;
+}
+figure.grayMail
+{
+	color: gray;
+	margin-left: -100px;
+}
+div.callkeeper.background.mask
+{
+	z-index: 100;
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	background-image: 
+		-linear-gradient(top, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: 
+		-o-linear-gradient(top, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: 
+		-ms-linear-gradient(top, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: 
+		-moz-linear-gradient(top, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: 
+		-webkit-linear-gradient(top , rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, 0) 80%);
+}
+div.color.selector, div.color.selector.inner, div.color.selector.border
+{
+	width: 60px;
+	height: 60px;	
+}
+div.color.selector.box
+{
+	margin-left: 150px;
+	margin-top: 0px;
+	font: 16px Verdana;
+	width: 160px;
+	height: 200px;
+	display: inline-block;
+	text-align: center;
+}
+div.color.selector.inner
+{
+	position: absolute;
+	margin-top: 10px;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+}
+div.color.selector.border
+{
+	#position: absolute;
+	background-image: url(../extensions/colorpicker/images/select2.png);
+	background-size: 60px;
+}
+div.save.button.type, div.save.button.type button
+{
+	margin-left: calc(50% - 100px);
+	width: 220px;
+	height: 50px;
+	font: 18px verdana;
+	margin-top: 15px;
+	text-align: center;
+}
+div.picker.little.box
+{
+	margin-left: 50px;
+}
+.displayInlineBlock.redactForm
+{
+	width: 700px;
+}
+.smartEdit.formStyle.paddingNull
+{
+	border: 0px;
+	outline: 0;
+	border-bottom: 1px solid black;
+	border-radius: 0;
+	padding-bottom: 8px;
+	height: 36px;
+}
+div.colorpicker_hex
+{
+	display: none;
+}
+.textA.blockS.adminTextarea
+{
+	font-weight: 900;
+	height: 84px;
+	margin: 0;
+	padding: 15px;
+	width: 300px;
+}
+.callkeeperS.messageS
+{
+	padding: 0;
+	height: 36px;
+	border-bottom: 1px solid black;
+}
+#colorpickerHolder input[type="text"]
+{
+	height: 20px;
+	vertical-align: top;
+	width: 30px;
+	padding-bottom: 5px;
+	outline: none;
+	transition: none;
+	border: none;
+	box-shadow: none;
+}
+#colorpickerHolder .colorpicker_field
+{
+	#height: 40px;
+	#background-repeat: none;
+}

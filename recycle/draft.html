@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<head>
+<body>
+	<script type="text/javascript">
+		var name = 'Name';
+		var mail = 'Mail.ru';
+		var message = 'any message';
+		var closer = function(name, mail, message) {
+			var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
+			var xhr = new XHR();
+			xhr.open('GET', 'backEnd.php?name=' + name + '&mail=' + mail + '&mes=' + message, true);
+			xhr.onload = function() {
+				alert(this.responseText);
+			}
+			xhr.onerror = function() {
+				alert('Ошибка ' + this.status)
+			}
+			xhr.ontimeout = function() {
+			  alert( 'Извините, запрос превысил максимальное время' );
+			}
+			xhr.send();
+		};
+		closer(name, mail, message)
+	</script>
+</body>
+</html>

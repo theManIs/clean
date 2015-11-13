@@ -1,0 +1,115 @@
+
+<!-- saved from url=(0051)http://localhost/lead/feedbackForm/adminPanel.html# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<!--<link rel="stylesheet" href="extensions\bootstrap\css\bootstrap.min.css">-->
+	<link rel="stylesheet" href="./adminPanel_files/font-awesome.min.css">
+	<link rel="stylesheet" href="./adminPanel_files/callkeeperStyle.css">
+	<link rel="stylesheet" href="./adminPanel_files/adminPanelStyle.css">
+	<script language="javascript" src="./adminPanel_files/jquery.js"></script>
+	<script language="javascript" src="./adminPanel_files/jquery-ui.min.js"></script>
+	<script language="javascript" src="./adminPanel_files/bootstrap.min.js"></script>
+	<script language="javascript" src="./adminPanel_files/adminPanelScript.js"></script>
+	<script language="javascript" src="./adminPanel_files/myJsUnit.js"></script>
+
+</head>
+<body>
+	<div class="callkeeperMain mainWorkFrame displayInlineBlock">
+	<header>
+		<input type="text" id="callkeeperTitleFormClone" class="headerHtmlTitle smartEditForm" style="display: none;">
+		<h3 name="callkeeperMain" id="callkeeperTitleForm" class="headerHtmlTitle">Отправить сообщение</h3>
+		<div>
+			<textarea id="callkeeperSecondMessageClone" class="textAreaShortPost smartEditForm textAreaStyle"></textarea>
+			<div id="callkeeperSecondMessage" class="textAreaShortPost">Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время</div>
+		</div>
+	</header>
+	<section>
+		<!--<div class="blockContainerElement">
+			<figure class="dynamicIcon newFieldForm redCross">							
+				<div class="callkeeper background mask"></div>
+				<i class="fa fa-times fa-2x" title="Удалить поле"></i>
+			</figure>
+			<figure class="dynamicIcon newFieldForm bluePhone">
+				<div class="callkeeper background mask"></div>
+				<i class="fa fa-phone fa-2x" title="Отметить как телефон"></i>
+			</figure>
+			<figure class="dynamicIcon newFieldForm grayMail">
+				<div class="callkeeper background mask"></div>
+				<i class="fa fa-envelope fa-2x" title="Отметить как почту"></i>
+			</figure>
+			<div class="callkeeper container input newFieldForm">
+				<input type="text" id="callkeeperYouNameClone" 
+					class="smartEditForm classInputText newFieldForm">
+				<input type="text" id="youName" placeholder="Введите ваше имя" 
+					class="classInputText newFieldForm">
+			</div>
+		</div>-->
+		<!--<input type="text" id="callkeeperYouMailClone" class="newFieldForm smartEditForm">
+		<input type="text" id="youMail" placeholder="Введите вашу почту" class="newFieldForm">-->
+		<div class="blockContainerElement"><figure class="dynamicIcon newFieldForm redCross">							
+	<div class="callkeeper background mask"></div>
+	<i class="fa fa-times fa-2x" title="Удалить поле"></i>
+</figure>
+<figure class="dynamicIcon newFieldForm bluePhone">
+	<div class="callkeeper background mask"></div>
+	<i class="fa fa-phone fa-2x" title="Отметить как телефон"></i>
+</figure>
+<figure class="dynamicIcon newFieldForm grayMail">
+	<div class="callkeeper background mask"></div>
+	<i class="fa fa-envelope fa-2x" title="Отметить как почту"></i>
+</figure>
+<figure class="dynamicIcon newFieldForm greenCheck">							
+	<div class="callkeeper background mask"></div>
+	<i class="fa fa-check fa-2x" title="Сохранить поле"></i>
+</figure>
+<div class="callkeeper container input newFieldForm">
+	<input type="text" id="inputFieldId0Clone" class="smartEditForm classInputText newFieldForm" style="display: block;">
+	<input type="text" id="inputFieldId0" placeholder="Новое поле" class="classInputText newFieldForm" style="display: none;">
+</div></div><div class="addListTool" id="addFieldToolId">
+			<a href="./adminPanel_files/adminPanel.html">+ добавить новое поле</a>
+		</div>
+		<div class="blockContainerElement"><figure class="dynamicIcon newFieldForm redCross">							
+	<div class="callkeeper background mask"></div>
+	<i class="fa fa-times fa-2x" title="Удалить поле"></i>
+</figure>
+<div class="callkeeper container input newFieldForm">
+	<select class="classSelectPoint newFieldForm"><option selected="selected">Название</option><option>Поле 1</option><option>Поле 2</option><option>Поле 3</option></select>
+</div></div><div class="addListTool" id="addListToolId">
+			<a href="./adminPanel_files/adminPanel.html">+ добавить раскрывающийся список</a>
+		</div>
+		<div class="blockContainerElement">
+			<textarea type="text" class="callkeeperQuestion smartEditForm textAreaStyle" id="callkeeperQuestionClone"></textarea>
+			<textarea type="text" id="youQuestion" class="callkeeperQuestion textAreaStyle" placeholder="Введите ваш вопрос"></textarea>
+		</div>
+		<input id="callkeeperYouSendClone" class="callkeeperTextAlignCenter smartEditForm callkeeperAnyButton">
+		<button id="youSend" class="callkeeperAnyButton">Отправить</button>
+		<input id="callkeeperYouCloseClone" class="callkeeperTextAlignCenter smartEditForm closeButtonFeatures callkeeperAnyButton">
+		<button id="youClose" class="callkeeperAnyButton">Закрыть</button>
+	</section>
+</div><br>
+<div class="pushButtonContainer displayInlineBlock">
+	<input type="text" id="callYouPushClone" class="callkeeperTextAlignCenter smartEditForm callkeeperAnyButton pushButtonData">
+	<button id="youPush" class="callkeeperAnyButton pushButtonData">Оставить данные</button>
+</div><br>
+<div class="containerBillboard displayInlineBlock">
+	<div class="callkeeperBillboard">
+		<input type="text" id="titleForCompleteClone" class="callkeeperMessage smartEditForm">
+		<h2 class="callkeeperMessage" id="titleForComplete">Сообщение</h2>
+		<textarea id="callMesBodyClone" class="callkeeperMessageBody smartEditForm"></textarea>
+		<p class="callkeeperMessageBody" id="callMesBody">Вы успешно отправили свои контактные данные</p>
+	</div>
+</div>
+<div class="redactListScroll" id="redactListScroll">
+	<h3 class="titleRedactList">Введите список полей выпадающего меню</h3>
+	<input type="text" class="itemListScroll itemListScrollHeader" placeholder="Здесь будет название списка">
+	<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+	<input type="text" class="itemListScroll" placeholder="Здесь будет элемент списка">
+	<button class="callkeeperAnyButton clickAcceptButton" id="clickAcceptId">Подтвердить</button>
+</div>
+
+</body></html>

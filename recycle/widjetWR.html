@@ -1,0 +1,66 @@
+<div id="uptocall-backdrop" class="uptocall-blur" style="display: block;"></div>
+<div id="uptocallPopup" style="right: 0px;">
+    <div id="uptocall-dialog" style="height: 894px;">
+        <div class="uptocall-btn-exit" id="uptocall-btn-exit"></div>
+                <div class="uptocall-status">
+            <a href="#" rel="call" id="uptocall-status-call" class=""><span class="uptocall-icon-phone"></span>Звонок</a>
+            <a href="#" rel="email" id="uptocall-status-email" class="active"><span class="uptocall-icon-email"></span>Email</a>
+        </div>
+                <div class="uptocall-body" id="uptocall-body-call" style="margin-top: -152px; display: none;">
+            <div class="uptocall-header" id="uptocall-header" data-default="Я - виджет UpToCall.Panel" data-onclose="Не нашли, что искали?" data-waiting="Отложенный звонок">Я - виджет UpToCall.Panel</div>
+            <div class="uptocall-text" id="uptocall-text" data-default="А вы в 24 секундах от того, чтобы обеспечить рост конверсии вашего сайта! Готовы?" data-onclose="Мы готовы помочь! Укажите ваш номер телефона и наш лучший менеджер обязательно перезвонит." data-waiting="Мы обязательно позвоним в указанное время и ответим на интересующие вас вопросы!">А вы в 24 секундах от того, чтобы обеспечить рост конверсии вашего сайта! Готовы?</div>
+            <form class="uptocall-form" id="uptocall-form" method="post">
+                                                <input type="text" name="phone" id="uptocall-phone" class="uptocall-phone" placeholder="Введите ваш номер" maxlength="13" autocomplete="off" required="">
+                <select name="date" id="uptocall-select-date" style="width:170px;display:none"><option value="2015-10-29">завтра</option><option value="2015-10-30">30.10</option></select>
+                <select name="hour" id="uptocall-select-hour" style="width:85px;margin-right:0 !important;display:none;"><option value="11_0">12:00</option><option value="11_15">12:15</option><option value="11_30">12:30</option><option value="11_45">12:45</option><option value="12_0">13:00</option><option value="12_15">13:15</option><option value="12_30">13:30</option><option value="12_45">13:45</option><option value="13_0">14:00</option><option value="13_15">14:15</option><option value="13_30">14:30</option><option value="13_45">14:45</option><option value="14_0">15:00</option><option value="14_15">15:15</option><option value="14_30">15:30</option><option value="14_45">15:45</option><option value="15_0">16:00</option><option value="15_15">16:15</option><option value="15_30">16:30</option><option value="15_45">16:45</option><option value="16_0">17:00</option><option value="16_15">17:15</option><option value="16_30">17:30</option><option value="16_45">17:45</option><option value="17_0">18:00</option><option value="17_15">18:15</option><option value="17_30">18:30</option><option value="17_45">18:45</option></select>
+                <div class="uptocall-clear"></div>
+                <input type="submit" id="uptocall-submit" data-default="Жду звонка!" data-onclose="Жду звонка!" data-waiting="Жду звонка!" value="Жду звонка!">
+                <input type="hidden" name="delayed" value="0" id="uptocall-delayed">
+                <input type="button" id="uptocall-btn-success" value="Мне позвонили" style="display:none">
+                    <input type="button" id="uptocall-btn-failed" value="Звонка не было" style="display:none">
+                    <div id="uptocall-countdown-container"><span id="uptocall-countdown">00:24:00</span></div>                <div class="uptocall-clear"></div>
+            </form>
+            <div style="display:none" id="uptocall-rating-container">
+                <div class="uptocall-rating-header">Ваше мнение очень важно для нас</div>
+                <div class="uptocall-rating-text">Пожалуйста, оцените диалог от 1 до 5 звезд</div>
+                <div id="uptocall-rating">
+                    <a class="active" rel="1" href="#"></a>
+                    <a class="active" rel="2" href="#"></a>
+                    <a class="active" rel="3" href="#"></a>
+                    <a class="active" rel="4" href="#"></a>
+                    <a rel="5" href="#"></a>
+                </div>
+            </div>
+            <div id="uptocall-repeat-container" style="display:none">
+                <div class="uptocall-repeat-header">К сожалению, все линии заняты</div>
+                Мы обязательно перезвоним Вам в самое ближайшее время, либо Вы можете <a href="#" id="uptocall-repeat-call">повторить звонок</a>            </div>
+            <div id="uptocall-added-container">
+                <a id="uptocall-added" href="#">Неудобно разговаривать сейчас?</a>
+                <a id="uptocall-added-back" href="#" style="display:none">Я могу разговаривать прямо сейчас</a>
+            </div>        </div>
+                <div class="uptocall-body" id="uptocall-body-email" style="display: block; margin-top: -160px;">
+            <div class="uptocall-header" id="uptocall-header-email" data-complete="Спасибо">Напишите нам!</div>
+            <div class="uptocall-text" id="uptocall-text-email" data-complete="Ваше сообщение успешно отправлено и в самое ближайшее время Вы получите ответ!">Мы обязательно ответим Вам в самое ближайшее время</div>
+
+            <form method="post" id="uptocall-form-email">
+                <input type="email" name="email" id="uptocall-email" placeholder="Ваш Email (обязательно)" required="">
+                <textarea name="message" id="uptocall-message" placeholder="Ваше сообщение (обязательно)" style="height:100px" required=""></textarea>
+                <input type="tel" name="phone" placeholder="Ваш телефон (необязательно)">
+
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+                <div class="uptocall-madeBy"><a target="_blank" href="https://uptocall.com">Установите UpToCall на свой сайт</a></div>
+    </div>
+</div>
+<div id="uptocall-mini" class="" style="width: 90px; height: 90px; display: block;">
+    <div id="uptocall-mini-email" class="">
+        <div class="uptocall-mini-label">Написать на e-mail</div>
+        <div class="uptocall-mini-circle"></div>
+    </div>
+    <div id="uptocall-mini-phone" class="">
+        <div class="uptocall-mini-label">Обратный звонок</div>
+        <div class="uptocall-mini-circle"></div>
+    </div>
+    <div id="uptocall-mini-main"><div class="uptocall-mini-icon"></div></div>
+</div>

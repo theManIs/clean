@@ -1,0 +1,203 @@
+/*#callkeeperYouNameClone, #callkeeperYouMailClone, #callkeeperQuestionClone, #callkeeperTitleFormClone,
+#callkeeperSecondMessageClone
+{
+	position: absolute;
+	display: none;
+}*/
+
+/*#callkeeperTitleFormClone
+{
+	width: 100%;
+	height: 35px;
+	text-align: center;
+}*/
+
+.smartEditForm
+{
+	#position: absolute;
+	border: 0px dashed black;
+	display: none;
+	background: rgba(0,0,0, .1);
+	font-weight: 900;
+	color: rgba(255, 0, 0, .5);
+}
+
+.callkeeperTextAlignCenter
+{
+	text-align: center;
+}
+
+.closeButtonFeatures
+{
+	float: right;
+	border-left: 1px solid black;
+}
+
+.callkeeperBillboard
+{
+	margin: 0;
+	padding: 0;
+	position: static;
+	margin-left: calc(50% - 200px);
+	border: 1px dashed black;
+}
+
+.pushButtonData
+{
+	margin-left: calc(50% - 125px);
+	position: static;
+}
+
+.displayInlineBlock
+{
+	display: inline-block;
+}
+.containerBillboard {
+	position: static;
+	margin-top: 50px;
+	margin-left: calc(50% - 200px);
+}
+
+.pushButtonContainer
+{
+	margin-top: 50px;
+	margin-left: calc(50% - 125px);
+	position: static;
+}
+
+.mainWorkFrame
+{
+	margin-top: 50px;
+	margin-left: calc(50% - 150px);
+	position: static;
+}
+
+.headerHtmlTitle
+{
+	cursor: text;
+}
+
+.headerHtmlTitle.smartEditForm
+{
+	padding: 0px;
+	cursor: default;
+	border-bottom: 1px solid black;
+}
+
+.textAreaShortPost
+{
+	font: 15px verdana;
+}
+
+.addListTool
+{
+	margin: 10px 0 0 20px;
+	
+}
+
+.redactListScroll
+{
+	display: none;
+	left: 0;
+	top: 0;
+	position: absolute;
+	padding: 10px;
+	width: 300px;
+	top: calc(50% - 250px);
+	left: calc(50% - 150px);
+	background: white;
+	border: 1px dashed black;
+}
+
+.titleRedactList
+{
+	margin: 15px;
+	text-align: center;
+}
+
+.clickAcceptButton
+{
+	margin-left: calc(50% - 75px);
+}
+
+.itemListScrollHeader
+{
+	font-weight: 900;
+}
+
+.textAreaStyle
+{
+	height: 80px;
+}
+
+figure.dynamicIcon
+{
+	width: auto;
+	height: auto;
+	position: absolute;
+	background: none;
+	margin-left: 310px;
+	margin-top: 0;
+}
+figure.dynamicIcon:hover
+{
+	transform: scale(1.5, 1.5);
+}
+figure.bluePhone
+{
+	color: darkblue;
+	margin-left: -50px;
+}
+figure.redCross
+{	
+	color: red;
+}
+figure.greenCheck
+{	
+	color: green;
+	margin-left: -150px;
+}
+div.blockContainerElement i.fa.fa-2x
+{
+	text-shadow: 1px 1px 1px black;
+}
+figure.grayMail
+{
+	color: gray;
+	margin-left: -100px;
+}
+
+div.callkeeper.background.mask
+{
+	z-index: 100;
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	background-image: 
+		-linear-gradient(top, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: 
+		-o-linear-gradient(top, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: 
+		-ms-linear-gradient(top, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: 
+		-moz-linear-gradient(top, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0) 80%);
+	background-image: 
+		-webkit-linear-gradient(top , rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, 0) 80%);
+}
+
+div.callkeeper.container.input
+{
+	padding: 0;
+}
+
+input.classInputText , select.classSelectPoint
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;	
+	background: none;
+}
+select.classSelectPoint
+{
+	#padding: 0;
+}

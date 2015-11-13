@@ -1,0 +1,156 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../extensions/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../extensions/fontawesome/css/font-awesome.min.css">
+	<script language="javascript" src="../extensions/jqui/jquery.js"></script>
+	<script language="javascript" src="../extensions/jqui/jquery-ui.min.js"></script>
+	<script language="javascript" src="../extensions/bootstrap/js/bootstrap.min.js"></script>
+	<!-- -->
+	<script language="javascript" src="../soundBar/sm2.min.js"></script>
+	<script language="javascript" src="../soundBar/sm2.init.js"></script>
+	<script language="javascript" src="../soundBar/has.flash.js"></script>
+	<script language="javascript" src="../soundBar/script/bar-ui.js"></script>
+	<script language="javascript" src="../soundBar/sModule.js"></script>
+	<!--<script language="javascript" src="../soundBar/sManager.js"></script>-->	
+	<!--<script language="javascript" src="../soundBar/sLoader.js"></script>-->	
+	<link rel="stylesheet" href="../soundBar/css/bar-ui.css">
+	<link rel="stylesheet" href="../soundBar/userSoundStyle.css">
+	<!--<link rel="stylesheet" href="../soundBar/css/sBarStyle.css">-->
+	<!-- -->
+</head>
+<body>
+	<table class="table">
+		<tr><td><a href="01. Stars.mp3" class="playlink" 
+			recordname="01. Stars.mp3">01. Stars.mp3</a></tr>
+		<tr><td><a href="02. Lies Of The Beautiful People.mp3" class="playlink" 
+			recordname="02. Lies Of The Beautiful People.mp3"
+			>02. Lies Of The Beautiful People.mp3</a></tr>
+		<tr><td><a href="04. Pray For Me.mp3" class="playlink" 
+			recordname="04. Pray For Me.mp3">04. Pray For Me.mp3</a></tr>
+		<tr><td><a href="05. Tomorrow.mp3" class="playlink" 
+			recordname="05. Tomorrow.mp3">05. Tomorrow.mp3</a></tr>
+		<tr><td><a href="06. Deadlihood.mp3" class="playlink" 
+			recordname="06. Deadlihood.mp3">06. Deadlihood.mp3</a></tr>
+		<tr><td><a href="09. High On The Music.mp3" class="playlink" 
+			recordname="09. High On The Music.mp3">09. High On The Music.mp3</a></tr>
+		<tr><td><a href="10. Miracle.mp3" class="playlink" 
+			recordname="10. Miracle.mp3">10. Miracle.mp3</a></tr>		
+	</table>
+	
+	<div class="sm2-bar-ui full-width fixed">
+
+ <div class="bd sm2-main-controls">
+
+  <div class="sm2-inline-texture"></div>
+  <div class="sm2-inline-gradient"></div>
+
+  <div class="sm2-inline-element sm2-button-element">
+   <div class="sm2-button-bd">
+    <a href="#play" class="sm2-inline-button play-pause">Play / pause</a>
+   </div>
+  </div>
+
+  <div class="sm2-inline-element sm2-inline-status">
+
+   <div class="sm2-playlist">
+    <div class="sm2-playlist-target"><ul class="sm2-playlist-bd"><li><b></b><span class="label"></span></li></ul></div>
+   </div>
+
+   <div class="sm2-progress">
+    <div class="sm2-row">
+    <div class="sm2-inline-time">0:00</div>
+     <div class="sm2-progress-bd">
+      <div class="sm2-progress-track">
+       <div class="sm2-progress-bar"></div>
+       <div class="sm2-progress-ball"><div class="icon-overlay"></div></div>
+      </div>
+     </div>
+     <div class="sm2-inline-duration">0:00</div>
+    </div>
+   </div>
+
+  </div>
+
+  <div class="sm2-inline-element sm2-button-element sm2-volume">
+   <div class="sm2-button-bd">
+    <span class="sm2-inline-button sm2-volume-control volume-shade"></span>
+    <a href="#volume" class="sm2-inline-button sm2-volume-control">volume</a>
+   </div>
+  </div>
+
+  <div class="sm2-inline-element sm2-button-element">
+   <div class="sm2-button-bd">
+    <a href="#prev" title="Previous" class="sm2-inline-button previous">&lt; previous</a>
+   </div>
+  </div>
+
+  <div class="sm2-inline-element sm2-button-element">
+   <div class="sm2-button-bd">
+    <a href="#next" title="Next" class="sm2-inline-button next">&gt; next</a>
+   </div>
+  </div>
+	<!--
+	<div class="sm2-inline-element sm2-button-element">
+		<div class="sm2-button-bd">
+			<a href="#repeat" title="Repeat playlist" class="sm2-inline-button repeat">∞ repeat</a>
+		</div>
+	</div>
+	-->
+
+	<!-- not implemented -->
+	<!--
+	<div class="sm2-inline-element sm2-button-element disabled">
+		<div class="sm2-button-bd">
+			<a href="#shuffle" title="Shuffle" class="sm2-inline-button shuffle">shuffle</a>
+		</div>
+	</div>
+	-->
+
+  <div class="sm2-inline-element sm2-button-element sm2-menu">
+   <div class="sm2-button-bd">
+    <a href="#menu" class="sm2-inline-button menu">menu</a>
+   </div>
+  </div>
+  <div class="sm2-inline-element sm2-button-element">
+	<div class="sm2-button-bd">
+		<a href="#close" title="Close" class="sm2-inline-button close">Close</a>
+	</div>
+</div>
+
+ </div>
+
+ <div class="bd sm2-playlist-drawer sm2-element">
+
+  <div class="sm2-inline-texture">
+   <div class="sm2-box-shadow"></div>
+  </div>
+
+  <!-- playlist content is mirrored here -->
+
+  <div class="sm2-playlist-wrapper">
+
+    <ul class="sm2-playlist-bd">
+
+     <!-- item with "download" link -->
+     <li class="selected">
+      <div class="sm2-row">
+       <div class="sm2-col sm2-wide">
+   
+       </div>
+       <div class="sm2-col">
+    
+       </div>
+      </div>
+     </li>
+		
+    </ul>
+  
+  </div>
+
+ </div>
+
+</div>
+	
+</body>
+</html>

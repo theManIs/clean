@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://callkeeper.ru/dashboard/calls.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CallKeeper - История звонков</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./CallKeeper - История звонков_files/bootstrap.min.css">
+    <link href="./CallKeeper - История звонков_files/css" rel="stylesheet" type="text/css">
+    <link href="./CallKeeper - История звонков_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="57x57" href="http://callkeeper.ru/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://callkeeper.ru/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://callkeeper.ru/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://callkeeper.ru/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://callkeeper.ru/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://callkeeper.ru/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://callkeeper.ru/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://callkeeper.ru/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://callkeeper.ru/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://callkeeper.ru/favicon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://callkeeper.ru/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="http://callkeeper.ru/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://callkeeper.ru/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="http://callkeeper.ru/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <script async="" src="./CallKeeper - История звонков_files/analytics.js"></script><script type="text/javascript" async="" src="./CallKeeper - История звонков_files/watch.js"></script><script type="text/javascript" src="./CallKeeper - История звонков_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./CallKeeper - История звонков_files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./CallKeeper - История звонков_files/maskedinput.min.js"></script>
+    <script type="text/javascript" src="./CallKeeper - История звонков_files/charts.js"></script>
+    <script type="text/javascript" src="./CallKeeper - История звонков_files/charts_export.js"></script>
+    <link href="./CallKeeper - История звонков_files/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="./CallKeeper - История звонков_files/bootstrap-toggle.min.js"></script>
+	<script language="javascript" src="../soundBar/sLoader.js"></script>
+	
+	
+	
+    
+    
+    <style type="text/css">
+      body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+      }
+      .gap100 { margin-top:100px; }
+      .gap50 { margin-top:50px; }
+      .gap20 { margin-top:20px; }
+      .hero-widget { text-align: center; padding-top: 20px; padding-bottom: 20px; }
+.hero-widget .icon { display: block; font-size: 96px; line-height: 96px; margin-bottom: 10px; text-align: center; }
+.hero-widget var { display: block; height: 64px; font-size: 64px; line-height: 64px; font-style: normal; }
+.hero-widget label { font-size: 17px; }
+.hero-widget .options { margin-top: 10px; }
+.rasp { border: 1px solid #ccc; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s }
+    .rasp:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+
+.rasp::-moz-placeholder {
+    color: #999;
+    opacity: 1
+}
+
+.rasp:-ms-input-placeholder {
+    color: #999
+}
+
+.rasp::-webkit-input-placeholder {
+    color: #999
+}
+
+.rasp[disabled], .rasp[readonly] { 
+    cursor: not-allowed;
+    background-color: #fff;
+    opacity: 0.4
+}
+    </style>
+  
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter27184661 = new Ya.Metrika({id:27184661,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>&lt;div&gt;&lt;img src="//mc.yandex.ru/watch/27184661" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+<!-- /Yandex.Metrika counter -->
+  <link rel="stylesheet" type="text/css" href="./CallKeeper - История звонков_files/callkeeperWidget.css"></head>
+  
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://callkeeper.ru/dashboard/calls.php#">CallKeeper</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="http://callkeeper.ru/dashboard/index.php">Главная</a>
+            </li>
+            <li class="active">
+              <a href="./CallKeeper - История звонков_files/CallKeeper - История звонков.html">Звонки</a>
+            </li>
+            <li>
+              <a href="http://callkeeper.ru/dashboard/tap2calls.php">Tap2Calls</a>
+            </li>
+            <li>
+              <a href="http://callkeeper.ru/dashboard/widgets.php">Виджеты</a>
+            </li>
+            <li>
+              <a href="http://callkeeper.ru/dashboard/profile.php">Профиль</a>
+            </li>
+            <li>
+              <a href="http://callkeeper.ru/dashboard/finance.php">Финансы</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+        	<li class="dropdown">
+          		<a href="http://callkeeper.ru/dashboard/calls.php#" class="dropdown-toggle" data-toggle="dropdown">i@callkeeper.ru <span class="caret"></span></a>
+          		<ul class="dropdown-menu" role="menu">
+            		<li><a href="http://callkeeper.ru/dashboard/profile.php">Настройки</a></li>
+            		<li><a href="http://callkeeper.ru/dashboard/finance.php">Финансы</a></li>
+            		<li class="divider"></li>
+            		<li><a href="http://callkeeper.ru/dashboard/log_off.php?action=logoff">Выйти</a></li>
+          		</ul>
+        	</li>
+      	  </ul>
+          <a href="http://callkeeper.ru/dashboard/finance.php" class="btn btn-success pull-right navbar-btn">Пополнить баланс</a>
+                    <p class="navbar-text pull-right">1552 минут до 31.12.2016</p>
+        </div>
+        <!--/.navbar-collapse -->
+    </div>	<style>
+	.topa { text-decoration: none; border-bottom: 1px dashed; }
+	.topa:hover { text-decoration: none; }
+	</style>
+	
+	<link rel="stylesheet" href="./CallKeeper - История звонков_files/datepicker3.css">
+	<script type="text/javascript" src="./CallKeeper - История звонков_files/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="./CallKeeper - История звонков_files/bootstrap-datepicker.ru.js"></script>
+	<link rel="stylesheet" type="text/css" href="./CallKeeper - История звонков_files/bar-ui.css">
+	
+	<style>
+	.sm2-bar-ui {
+	 font-size: 16px;
+	}
+	.sm2-bar-ui .sm2-main-controls,
+	.sm2-bar-ui .sm2-playlist-drawer {
+	 background-color: #c0c0c0; /* non-RGBA fallback */
+	 background-color: rgba(192, 192, 192, 0.78);
+	}
+	.sm2-bar-ui .sm2-inline-texture {
+	 background: transparent;
+	}
+	</style>
+<div class="container">
+    
+				<div class="gap50"></div>
+		<div class="row">
+			<div class="col-md-7">
+				<h1>История звонков <small>с 30.10.2015 до 06.11.2015</small></h1>
+			</div>
+			<div class="col-md-5" style="text-align: right;">
+			<form class="form-inline" style="margin-top: 25px; margin-bottom: 10px;"><label for="widget_select">Выбрать виджет:&nbsp;&nbsp;</label><select id="widget_select" name="widget_select" class="form-control"><option value="all">Все виджеты</option><option value="23e7f4bf557dc3087964c78a8cd016e7">liderce.ru</option><option value="7682e50460c13bce7ccf5d14c2330bf2">callkeeper.ru</option><option value="cc106d16a089ce029491f0dfeb09bc5e">future.callkeeper.ru</option><option value="49cbcd3628655aa21322e2f7116e1f55">blog.callkeeper.ru</option><option value="5a9b6fa6743160a64d276dee1fa853e2">admin.callkeeper.ru</option><option value="a19d88c946feba0c86a07d7e569f8538">example.com</option></select></form>	
+			</div>
+		</div>	
+		<div class="gap50"></div>
+
+    
+    <div class="row">
+		<div class="col-md-6">
+      		<form class="form-inline" role="form" method="get" id="calls_form" action="./CallKeeper - История звонков_files/CallKeeper - История звонков.html">
+      			<label for="start">Показать:&nbsp;&nbsp;</label>
+      			<div class="form-group">
+      				<div class="input-daterange input-group" id="datepicker">
+      					<span class="input-group-addon">c</span>
+    					<input type="text" class="input-sm form-control" name="start" id="istart" value="2015-10-30">
+    					<span class="input-group-addon">по</span>
+    					<input type="text" class="input-sm form-control" name="end" id="iend" value="2015-11-06">
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="hidden" name="widget" value="">					<button type="submit" class="btn btn-primary">Показать</button>
+				</div>
+			</form>	
+      	</div>
+      	<div class="col-md-6" style="text-align: right;">
+      		<b>Показать звонки за: &nbsp;&nbsp;</b><a class="topa" href="http://callkeeper.ru/dashboard/calls.php?p=lastday">день</a>&nbsp;&nbsp;&nbsp;&nbsp;<b>неделю</b>&nbsp;&nbsp;&nbsp;&nbsp;<a class="topa" href="http://callkeeper.ru/dashboard/calls.php?p=lastmonth">месяц</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="topa" href="http://callkeeper.ru/dashboard/calls.php?p=all">все время</a>      	</div>
+	</div>
+	
+    <hr style="margin-top: 5px; margin-bottom: 5px;">
+      	 
+	<div class="row">
+		<div class="gap20"></div>
+		<div id="daycalls" data-highcharts-chart="0"><div class="highcharts-container" id="highcharts-0" style="position: relative; overflow: hidden; width: 1170px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="1170" height="400"><desc>Created with Highcharts 4.0.4</desc><defs><clippath id="highcharts-1"><rect x="0" y="0" width="924" height="289"></rect></clippath></defs><rect x="0" y="0" width="1170" height="400" strokeWidth="0" fill="#FFFFFF" class=" highcharts-background"></rect><path fill="none" d="M 67 360.5 L 991 360.5" stroke="#808080" stroke-width="1"></path><g class="highcharts-button" style="cursor:default;" stroke-linecap="round" transform="translate(1136,10)"><title>Chart context menu</title><rect x="0.5" y="0.5" width="24" height="22" strokeWidth="1" fill="white" stroke="none" stroke-width="1" rx="2" ry="2"></rect><path fill="#E0E0E0" d="M 6 6.5 L 20 6.5 M 6 11.5 L 20 11.5 M 6 16.5 L 20 16.5" stroke="#666" stroke-width="3" zIndex="1"></path><text x="0" zIndex="1" style="color:black;fill:black;" y="13"></text></g><path fill="rgba(67,67,72,0.25)" d="M 0 0"></path><path fill="rgba(124,181,236,0.25)" d="M 0 0"></path><g class="highcharts-grid" zIndex="1"></g><g class="highcharts-grid" zIndex="1"><path fill="none" d="M 67 70.5 L 991 70.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 67 129.5 L 991 129.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 67 187.5 L 991 187.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 67 244.5 L 991 244.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 67 302.5 L 991 302.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path><path fill="none" d="M 67 360.5 L 991 360.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path></g><g class="highcharts-axis" zIndex="2"><path fill="none" d="M 204.5 360 L 204.5 370" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 334.5 360 L 334.5 370" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 463.5 360 L 463.5 370" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 593.5 360 L 593.5 370" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 722.5 360 L 722.5 370" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 852.5 360 L 852.5 370" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 981.5 360 L 981.5 370" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 75.5 360 L 75.5 370" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 67 360.5 L 991 360.5" stroke="#C0D0E0" stroke-width="1" zIndex="7" visibility="visible"></path></g><g class="highcharts-axis" zIndex="2"><text x="28.09375" zIndex="7" text-anchor="middle" transform="translate(0,0) rotate(270 28.09375 215.5)" class=" highcharts-yaxis-title" style="color:#707070;fill:#707070;" visibility="visible" y="215.5"><tspan>Количество, шт</tspan></text></g><g class="highcharts-series-group" zIndex="3"><g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(67,71) scale(1 1)" clip-path="url(#highcharts-1)"><path fill="none" d="M 9.058823529411764 289 C 9.058823529411764 289 86.70588235294117 289 138.47058823529412 289 C 190.23529411764704 289 216.1176470588235 289 267.88235294117646 289 C 319.6470588235294 289 345.5294117647059 289 397.29411764705884 289 C 449.0588235294118 289 474.9411764705883 144.5 526.7058823529412 144.5 C 578.4705882352941 144.5 604.3529411764706 289 656.1176470588235 289 C 707.8823529411765 289 733.7647058823529 289 785.5294117647059 289 C 837.2941176470588 289 914.9411764705883 260.1 914.9411764705883 260.1" stroke="#7cb5ec" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M -0.9411764705882355 289 L 9.058823529411764 289 C 9.058823529411764 289 86.70588235294117 289 138.47058823529412 289 C 190.23529411764704 289 216.1176470588235 289 267.88235294117646 289 C 319.6470588235294 289 345.5294117647059 289 397.29411764705884 289 C 449.0588235294118 289 474.9411764705883 144.5 526.7058823529412 144.5 C 578.4705882352941 144.5 604.3529411764706 289 656.1176470588235 289 C 707.8823529411765 289 733.7647058823529 289 785.5294117647059 289 C 837.2941176470588 289 914.9411764705883 260.1 914.9411764705883 260.1 L 924.9411764705883 260.1" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""></path></g><g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(67,71) scale(1 1)" clip-path="none" style=""><path fill="#7cb5ec" d="M 914 256.1 C 919.328 256.1 919.328 264.1 914 264.1 C 908.672 264.1 908.672 256.1 914 256.1 Z"></path><path fill="#7cb5ec" d="M 785 285 C 790.328 285 790.328 293 785 293 C 779.672 293 779.672 285 785 285 Z"></path><path fill="#7cb5ec" d="M 656 285 C 661.328 285 661.328 293 656 293 C 650.672 293 650.672 285 656 285 Z"></path><path fill="#7cb5ec" d="M 526.7058823529412 140.5 C 532.0338823529412 140.5 532.0338823529412 148.5 526.7058823529412 148.5 C 521.3778823529412 148.5 521.3778823529412 140.5 526.7058823529412 140.5 Z" stroke-width="1"></path><path fill="#7cb5ec" d="M 397 285 C 402.328 285 402.328 293 397 293 C 391.672 293 391.672 285 397 285 Z"></path><path fill="#7cb5ec" d="M 267 285 C 272.328 285 272.328 293 267 293 C 261.672 293 261.672 285 267 285 Z"></path><path fill="#7cb5ec" d="M 138 285 C 143.328 285 143.328 293 138 293 C 132.672 293 132.672 285 138 285 Z"></path><path fill="#7cb5ec" d="M 9 285 C 14.328 285 14.328 293 9 293 C 3.6719999999999997 293 3.6719999999999997 285 9 285 Z"></path></g><g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(67,71) scale(1 1)" clip-path="url(#highcharts-1)"><path fill="none" d="M 9.058823529411764 231.2 C 9.058823529411764 231.2 86.70588235294117 289 138.47058823529412 289 C 190.23529411764704 289 216.1176470588235 260.1 267.88235294117646 260.1 C 319.6470588235294 260.1 345.5294117647059 289 397.29411764705884 289 C 449.0588235294118 289 474.9411764705883 57.80000000000001 526.7058823529412 57.80000000000001 C 578.4705882352941 57.80000000000001 604.3529411764706 260.1 656.1176470588235 260.1 C 707.8823529411765 260.1 733.7647058823529 202.3 785.5294117647059 202.3 C 837.2941176470588 202.3 914.9411764705883 231.2 914.9411764705883 231.2" stroke="#434348" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M -0.9411764705882355 231.2 L 9.058823529411764 231.2 C 9.058823529411764 231.2 86.70588235294117 289 138.47058823529412 289 C 190.23529411764704 289 216.1176470588235 260.1 267.88235294117646 260.1 C 319.6470588235294 260.1 345.5294117647059 289 397.29411764705884 289 C 449.0588235294118 289 474.9411764705883 57.80000000000001 526.7058823529412 57.80000000000001 C 578.4705882352941 57.80000000000001 604.3529411764706 260.1 656.1176470588235 260.1 C 707.8823529411765 260.1 733.7647058823529 202.3 785.5294117647059 202.3 C 837.2941176470588 202.3 914.9411764705883 231.2 914.9411764705883 231.2 L 924.9411764705883 231.2" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""></path></g><g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(67,71) scale(1 1)" clip-path="none" style=""><path fill="#434348" d="M 914 227.2 L 918 231.2 914 235.2 910 231.2 Z"></path><path fill="#434348" d="M 785 198.3 L 789 202.3 785 206.3 781 202.3 Z"></path><path fill="#434348" d="M 656.1176470588235 256.1 L 660.1176470588235 260.1 656.1176470588235 264.1 652.1176470588235 260.1 Z" stroke-width="1"></path><path fill="#434348" d="M 526.7058823529412 53.80000000000001 L 530.7058823529412 57.80000000000001 526.7058823529412 61.80000000000001 522.7058823529412 57.80000000000001 Z" stroke-width="1"></path><path fill="#434348" d="M 397 285 L 401 289 397 293 393 289 Z"></path><path fill="#434348" d="M 267 256.1 L 271 260.1 267 264.1 263 260.1 Z"></path><path fill="#434348" d="M 138 285 L 142 289 138 293 134 289 Z"></path><path fill="#434348" d="M 9 227.2 L 13 231.2 9 235.2 5 231.2 Z"></path></g><g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(67,71) scale(1 1)" clip-path="url(#highcharts-1)"><path fill="none" d="M 9.058823529411764 289 C 9.058823529411764 289 86.70588235294117 289 138.47058823529412 289 C 190.23529411764704 289 216.1176470588235 289 267.88235294117646 289 C 319.6470588235294 289 345.5294117647059 289 397.29411764705884 289 C 449.0588235294118 289 474.9411764705883 231.2 526.7058823529412 231.2 C 578.4705882352941 231.2 604.3529411764706 289 656.1176470588235 289 C 707.8823529411765 289 733.7647058823529 289 785.5294117647059 289 C 837.2941176470588 289 914.9411764705883 289 914.9411764705883 289" stroke="#90ed7d" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M -0.9411764705882355 289 L 9.058823529411764 289 C 9.058823529411764 289 86.70588235294117 289 138.47058823529412 289 C 190.23529411764704 289 216.1176470588235 289 267.88235294117646 289 C 319.6470588235294 289 345.5294117647059 289 397.29411764705884 289 C 449.0588235294118 289 474.9411764705883 231.2 526.7058823529412 231.2 C 578.4705882352941 231.2 604.3529411764706 289 656.1176470588235 289 C 707.8823529411765 289 733.7647058823529 289 785.5294117647059 289 C 837.2941176470588 289 914.9411764705883 289 914.9411764705883 289 L 924.9411764705883 289" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""></path></g><g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(67,71) scale(1 1)" clip-path="none" style=""><path fill="#90ed7d" d="M 910 285 L 918 285 918 293 910 293 Z"></path><path fill="#90ed7d" d="M 781 285 L 789 285 789 293 781 293 Z"></path><path fill="#90ed7d" d="M 652 285 L 660 285 660 293 652 293 Z"></path><path fill="#90ed7d" d="M 522 227.2 L 530 227.2 530 235.2 522 235.2 Z"></path><path fill="#90ed7d" d="M 393 285 L 401 285 401 293 393 293 Z"></path><path fill="#90ed7d" d="M 263 285 L 271 285 271 293 263 293 Z"></path><path fill="#90ed7d" d="M 134 285 L 142 285 142 293 134 293 Z"></path><path fill="#90ed7d" d="M 5 285 L 13 285 13 293 5 293 Z"></path></g><g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(67,71) scale(1 1)" clip-path="url(#highcharts-1)"><path fill="none" d="M 9.058823529411764 231.2 C 9.058823529411764 231.2 86.70588235294117 289 138.47058823529412 289 C 190.23529411764704 289 216.1176470588235 289 267.88235294117646 289 C 319.6470588235294 289 345.5294117647059 289 397.29411764705884 289 C 449.0588235294118 289 474.9411764705883 289 526.7058823529412 289 C 578.4705882352941 289 604.3529411764706 289 656.1176470588235 289 C 707.8823529411765 289 733.7647058823529 289 785.5294117647059 289 C 837.2941176470588 289 914.9411764705883 289 914.9411764705883 289" stroke="#f7a35c" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M -0.9411764705882355 231.2 L 9.058823529411764 231.2 C 9.058823529411764 231.2 86.70588235294117 289 138.47058823529412 289 C 190.23529411764704 289 216.1176470588235 289 267.88235294117646 289 C 319.6470588235294 289 345.5294117647059 289 397.29411764705884 289 C 449.0588235294118 289 474.9411764705883 289 526.7058823529412 289 C 578.4705882352941 289 604.3529411764706 289 656.1176470588235 289 C 707.8823529411765 289 733.7647058823529 289 785.5294117647059 289 C 837.2941176470588 289 914.9411764705883 289 914.9411764705883 289 L 924.9411764705883 289" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""></path></g><g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(67,71) scale(1 1)" clip-path="none" style=""><path fill="#f7a35c" d="M 914 285 L 918 293 910 293 Z"></path><path fill="#f7a35c" d="M 785 285 L 789 293 781 293 Z"></path><path fill="#f7a35c" d="M 656 285 L 660 293 652 293 Z"></path><path fill="#f7a35c" d="M 526 285 L 530 293 522 293 Z"></path><path fill="#f7a35c" d="M 397 285 L 401 293 393 293 Z"></path><path fill="#f7a35c" d="M 267 285 L 271 293 263 293 Z"></path><path fill="#f7a35c" d="M 138 285 L 142 293 134 293 Z"></path><path fill="#f7a35c" d="M 9 227.2 L 13 235.2 5 235.2 Z"></path></g></g><text x="565" text-anchor="middle" class="highcharts-title" zIndex="4" style="color:#333333;font-size:18px;fill:#333333;width:1106px;" y="25"><tspan>Количество звонков в сутки</tspan></text><text x="565" text-anchor="middle" class="highcharts-subtitle" zIndex="4" style="color:#555555;fill:#555555;width:1106px;" y="53"><tspan>с 30.10.2015 до 06.11.2015</tspan></text><g class="highcharts-legend" zIndex="7" transform="translate(1011,160)"><g zIndex="1"><g><g class="highcharts-legend-item" zIndex="1" transform="translate(8,3)"><path fill="none" d="M 0 11 L 16 11" stroke="#7cb5ec" stroke-width="2"></path><path fill="#7cb5ec" d="M 8 7 C 13.328 7 13.328 15 8 15 C 2.6719999999999997 15 2.6719999999999997 7 8 7 Z"></path><text x="21" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2" y="15">future.callkeeper.ru</text></g><g class="highcharts-legend-item" zIndex="1" transform="translate(8,21)"><path fill="none" d="M 0 11 L 16 11" stroke="#434348" stroke-width="2"></path><path fill="#434348" d="M 8 7 L 12 11 8 15 4 11 Z"></path><text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2">callkeeper.ru</text></g><g class="highcharts-legend-item" zIndex="1" transform="translate(8,39)"><path fill="none" d="M 0 11 L 16 11" stroke="#90ed7d" stroke-width="2"></path><path fill="#90ed7d" d="M 4 7 L 12 7 12 15 4 15 Z"></path><text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2">liderce.ru</text></g><g class="highcharts-legend-item" zIndex="1" transform="translate(8,57)"><path fill="none" d="M 0 11 L 16 11" stroke="#f7a35c" stroke-width="2"></path><path fill="#f7a35c" d="M 8 7 L 12 15 4 15 Z"></path><text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2">admin.callkeeper.ru</text></g></g></g></g><g class="highcharts-axis-labels highcharts-xaxis-labels" zIndex="7"><text x="76.05882352941177" text-anchor="middle" style="color:#606060;cursor:default;font-size:11px;fill:#606060;" y="380" opacity="1">30</text><text x="205.47058823529412" text-anchor="middle" style="color:#606060;cursor:default;font-size:11px;fill:#606060;" y="380" opacity="1">31</text><text x="334.88235294117646" text-anchor="middle" style="color:#606060;cursor:default;font-size:11px;fill:#606060;" y="380" opacity="1">1</text><text x="464.29411764705884" text-anchor="middle" style="color:#606060;cursor:default;font-size:11px;fill:#606060;" y="380" opacity="1">2</text><text x="593.7058823529412" text-anchor="middle" style="color:#606060;cursor:default;font-size:11px;fill:#606060;" y="380" opacity="1">3</text><text x="723.1176470588235" text-anchor="middle" style="color:#606060;cursor:default;font-size:11px;fill:#606060;" y="380" opacity="1">4</text><text x="852.5294117647059" text-anchor="middle" style="color:#606060;cursor:default;font-size:11px;fill:#606060;" y="380" opacity="1">5</text><text x="981.9411764705883" text-anchor="middle" style="color:#606060;cursor:default;font-size:11px;fill:#606060;" y="380" opacity="1">6</text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" zIndex="7"><text x="52" text-anchor="end" style="width:366px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="363.5" opacity="1">0</text><text x="52" text-anchor="end" style="width:366px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="305.7" opacity="1">2</text><text x="52" text-anchor="end" style="width:366px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="247.89999999999998" opacity="1">4</text><text x="52" text-anchor="end" style="width:366px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="190.10000000000002" opacity="1">6</text><text x="52" text-anchor="end" style="width:366px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="132.3" opacity="1">8</text><text x="52" text-anchor="end" style="width:366px;color:#606060;cursor:default;font-size:11px;fill:#606060;" y="74.5" opacity="1">10</text></g><g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" transform="translate(653,-9999)" opacity="0" visibility="visible"><path fill="none" d="M 3.5 0.5 L 137.5 0.5 C 140.5 0.5 140.5 0.5 140.5 3.5 L 140.5 45.5 C 140.5 48.5 140.5 48.5 137.5 48.5 L 76.5 48.5 70.5 54.5 64.5 48.5 3.5 48.5 C 0.5 48.5 0.5 48.5 0.5 45.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)" width="140" height="48"></path><path fill="none" d="M 3.5 0.5 L 137.5 0.5 C 140.5 0.5 140.5 0.5 140.5 3.5 L 140.5 45.5 C 140.5 48.5 140.5 48.5 137.5 48.5 L 76.5 48.5 70.5 54.5 64.5 48.5 3.5 48.5 C 0.5 48.5 0.5 48.5 0.5 45.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)" width="140" height="48"></path><path fill="none" d="M 3.5 0.5 L 137.5 0.5 C 140.5 0.5 140.5 0.5 140.5 3.5 L 140.5 45.5 C 140.5 48.5 140.5 48.5 137.5 48.5 L 76.5 48.5 70.5 54.5 64.5 48.5 3.5 48.5 C 0.5 48.5 0.5 48.5 0.5 45.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)" width="140" height="48"></path><path fill="rgba(249, 249, 249, .85)" d="M 3.5 0.5 L 137.5 0.5 C 140.5 0.5 140.5 0.5 140.5 3.5 L 140.5 45.5 C 140.5 48.5 140.5 48.5 137.5 48.5 L 76.5 48.5 70.5 54.5 64.5 48.5 3.5 48.5 C 0.5 48.5 0.5 48.5 0.5 45.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#434348" stroke-width="1"></path><text x="8" zIndex="1" style="font-size:12px;color:#333333;fill:#333333;" y="21"><tspan style="font-size: 10px">Среда, Ноя 4, 2015</tspan><tspan style="fill:#434348" x="8" dy="16">●</tspan><tspan dx="0"> callkeeper.ru: </tspan><tspan style="font-weight:bold" dx="0">1 шт</tspan></text></g></svg></div></div>
+    </div>	
+      	
+	<div class="row">
+		<div class="gap20"></div>
+		<div class="col-md-3 col-md-offset-9" style="text-align: right;">
+			<b>Экспортировать в: </b> <a href="http://callkeeper.ru/dashboard/export.php?start=2015-10-30&end=2015-11-06">.xls</a>
+		</div>
+    </div>
+      	
+	<div class="row">
+		<div class="gap20"></div>	
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Сайт</th>
+					<th>Дата звонка</th>
+					<th>Время</th>
+					<th>Номер клиента</th>
+					<th>Номер менеджера</th>
+					<th>Длительность</th>
+					<th>Источник</th>
+					<th>Статус звонка</th>
+				</tr>
+            </thead>
+			<tbody>
+              <tr><td>future.callkeeper.ru</td><td>06.11.15</td><td>17:49</td><td>+7 (929) 555-55-70 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 79.165.195.35&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (916) 916-96-18 </td><td>00:21 <a class="playlink" href="http://149.11.44.92/records/2015/11/06/a9168ee9b3d6acbb.1446821371.2760197.mp3" recordname="callkeeper.ru - 06.11.15 17:49 - +7 (929) 555-55-70"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://149.11.44.92/records/2015/11/06/a9168ee9b3d6acbb.1446821371.2760197.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-usd"></span>  <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;UTM source&lt;/b&gt; &lt;br&gt;&lt;b&gt;UTM medium&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM campaign&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM content&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM term&lt;/b&gt; (none)&lt;br&gt;" data-original-title="UTM метки"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span></a></td><td><span class="label label-danger">Оператор отключился не дождавшись соединения</span></td></tr><tr><td>callkeeper.ru</td><td>06.11.15</td><td>16:59</td><td>+7 (97885) 957-73 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 91.238.74.252&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Краснодар&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Краснодарский край&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (929) 555-55-70 </td><td>02:27 <a class="playlink" href="http://91.232.135.33/records/2015/11/06/e026202c30f504a2.1446818250.371335.mp3" recordname="future.callkeeper.ru - 06.11.15 17:49 - +7 (97885) 957-73"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://91.232.135.33/records/2015/11/06/e026202c30f504a2.1446818250.371335.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-search"></span> <img src="./CallKeeper - История звонков_files/yandex.png" height="15px"></td><td><span class="label label-success">Звонок прошел успешно</span></td></tr><tr><td>callkeeper.ru</td><td>06.11.15</td><td>12:58</td><td>+7 (926) 820-49-60 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 213.208.191.42&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Санкт-Петербург&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Санкт-Петербург&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:40 <a class="playlink" href="http://149.11.44.92/records/2015/11/06/2df7341861b36e4a.1446803896.2636719.mp3" recordname="callkeeper.ru - 06.11.15 16:59 - +7 (926) 820-49-60"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://149.11.44.92/records/2015/11/06/2df7341861b36e4a.1446803896.2636719.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-link"></span> yandex.ru</td><td><span class="label label-success">Звонок прошел успешно</span></td></tr><tr><td>callkeeper.ru</td><td>05.11.15</td><td>15:35</td><td>+7 (97885) 957-73 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 91.238.74.252&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Краснодар&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Краснодарский край&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 965-50-11 </td><td>02:24 <a class="playlink" href="http://95.163.65.4/records/2015/11/05/18c0101f2a336fce.1446726979.53578.mp3" recordname="callkeeper.ru - 06.11.15 12:58 - +7 (97885) 957-73"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://95.163.65.4/records/2015/11/05/18c0101f2a336fce.1446726979.53578.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-search"></span> <img src="./CallKeeper - История звонков_files/yandex.png" height="15px"></td><td><span class="label label-success">Звонок прошел успешно</span></td></tr><tr><td>callkeeper.ru</td><td>05.11.15</td><td>14:55</td><td>+7 (905) 940-08-90 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 94.137.50.82&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Омск&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Омская область&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>10:45 <a class="playlink" href="http://149.11.44.92/records/2015/11/05/32e9b9356142b2ed.1446724513.2380839.mp3" recordname="callkeeper.ru - 05.11.15 15:35 - +7 (905) 940-08-90"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://149.11.44.92/records/2015/11/05/32e9b9356142b2ed.1446724513.2380839.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-search"></span> <img src="./CallKeeper - История звонков_files/google.png" height="15px"></td><td><span class="label label-success">Звонок прошел успешно</span></td></tr><tr><td>callkeeper.ru</td><td>05.11.15</td><td>15:00</td><td>+7 (920) 654-46-64 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 109.161.71.227&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Ярославль&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Ярославская область&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:51 <a class="playlink" href="http://95.163.65.4/records/2015/11/05/e3a43223107e4f1f.1446724819.31653.mp3" recordname="callkeeper.ru - 05.11.15 14:55 - +7 (920) 654-46-64"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://95.163.65.4/records/2015/11/05/e3a43223107e4f1f.1446724819.31653.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-link"></span> yar.ford-avtomir.ru</td><td><span class="label label-success">Звонок прошел успешно</span></td></tr><tr><td>callkeeper.ru</td><td>04.11.15</td><td>14:21</td><td>+7 (952) 137-50-01 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 82.195.18.41&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Полевской&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Свердловская область&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>02:29 <a class="playlink" href="http://149.11.44.92/records/2015/11/04/1368b83cde2a8039.1446636124.2009733.mp3" recordname="callkeeper.ru - 05.11.15 15:00 - +7 (952) 137-50-01"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://149.11.44.92/records/2015/11/04/1368b83cde2a8039.1446636124.2009733.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-link"></span> germes66.ru</td><td><span class="label label-success">Звонок прошел успешно</span></td></tr><tr><td>callkeeper.ru</td><td>03.11.15</td><td>17:14</td><td>+7 (80950) 512-34 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 81.30.50.134&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Уфа&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Республика Башкортостан&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:03 <a class="playlink" href="http://95.163.65.4/records/2015/11/03/b2ed90e1764bb604.1446560099.1689221.mp3" recordname="callkeeper.ru - 04.11.15 14:21 - +7 (80950) 512-34"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://95.163.65.4/records/2015/11/03/b2ed90e1764bb604.1446560099.1689221.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-link"></span> rolf-altufievo.ru</td><td><span class="label label-warning">Не удалось дозвониться до клиента</span></td></tr><tr><td>liderce.ru</td><td>03.11.15</td><td>12:48</td><td>+7 (929) 612-44-50 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 86.62.106.65&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (926) 029-82-52 </td><td>00:42 <a class="playlink" href="http://95.163.65.4/records/2015/11/03/d7c9b2f5244dd84e.1446544146.1515188.mp3" recordname="callkeeper.ru - 03.11.15 17:14 - +7 (929) 612-44-50"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://95.163.65.4/records/2015/11/03/d7c9b2f5244dd84e.1446544146.1515188.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-search"></span> <img src="./CallKeeper - История звонков_files/yandex.png" height="15px"></td><td><span class="label label-success">Звонок прошел успешно</span></td></tr><tr><td>liderce.ru</td><td>03.11.15</td><td>12:43</td><td>+7 (929) 612-44-50 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 86.62.106.65&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (926) 029-82-52 </td><td>00:34 <a class="playlink" href="http://95.163.65.4/records/2015/11/03/2567578d715116ea.1446543835.1511441.mp3" recordname="liderce.ru - 03.11.15 12:48 - +7 (929) 612-44-50"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://95.163.65.4/records/2015/11/03/2567578d715116ea.1446543835.1511441.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-search"></span> <img src="./CallKeeper - История звонков_files/yandex.png" height="15px"></td><td><span class="label label-success">Звонок прошел успешно</span></td></tr><tr><td>callkeeper.ru</td><td>03.11.15</td><td>10:15</td><td>+7 (909) 904-95-83 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 79.165.195.35&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:00 </td><td><span class="glyphicon glyphicon-link"></span> delovik.org</td><td><span class="label label-danger">Номер оператора занят</span></td></tr><tr><td>callkeeper.ru</td><td>03.11.15</td><td>10:14</td><td>+7 (909) 904-95-83 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 79.165.195.35&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:00 </td><td><span class="glyphicon glyphicon-link"></span> delovik.org</td><td><span class="label label-danger">Номер оператора занят</span></td></tr><tr><td>callkeeper.ru</td><td>03.11.15</td><td>10:11</td><td>+7 (909) 904-95-83 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 79.165.195.35&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:00 </td><td><span class="glyphicon glyphicon-link"></span> delovik.org</td><td><span class="label label-danger">Оператор не взял трубку</span></td></tr><tr><td>callkeeper.ru</td><td>03.11.15</td><td>09:13</td><td>+7 (964) 726-34-42 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 91.79.24.247&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:00 </td><td><span class="glyphicon glyphicon-link"></span> audi-taganka.ru</td><td><span class="label label-danger">Не удалось дозвониться до оператора</span></td></tr><tr><td>callkeeper.ru</td><td>03.11.15</td><td>07:25</td><td>+7 (70761) 710-02 </td><td>+7 (985) 915-77-55 </td><td>00:00 </td><td><span class="glyphicon glyphicon-search"></span> <img src="./CallKeeper - История звонков_files/google.png" height="15px"></td><td><span class="label label-danger">Оператор не взял трубку</span></td></tr><tr><td>callkeeper.ru</td><td>03.11.15</td><td>06:04</td><td>+7 (70761) 710-02 </td><td>+7 (985) 915-77-55 </td><td>00:00 </td><td><span class="glyphicon glyphicon-search"></span> <img src="./CallKeeper - История звонков_files/google.png" height="15px"></td><td><span class="label label-danger">Номер оператора занят</span></td></tr><tr><td>callkeeper.ru</td><td>03.11.15</td><td>05:57</td><td>+7 (70266) 880-52 </td><td>+7 (985) 915-77-55 </td><td>00:00 </td><td><span class="glyphicon glyphicon-search"></span> <img src="./CallKeeper - История звонков_files/google.png" height="15px"></td><td><span class="label label-danger">Оператор не взял трубку</span></td></tr><tr><td>future.callkeeper.ru</td><td>03.11.15</td><td>02:40</td><td>+7 (916) 916-96-18 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 79.172.122.187&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (916) 916-96-18 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;Офис №1&lt;/b&gt;" data-original-title="Название офиса"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></td><td>00:00 </td><td><span class="glyphicon glyphicon-usd"></span>  <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;UTM source&lt;/b&gt; &lt;br&gt;&lt;b&gt;UTM medium&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM campaign&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM content&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM term&lt;/b&gt; (none)&lt;br&gt;" data-original-title="UTM метки"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span></a></td><td><span class="label label-danger">Номер оператора занят</span></td></tr><tr><td>future.callkeeper.ru</td><td>03.11.15</td><td>02:40</td><td>+7 (916) 916-96-18 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 79.172.122.187&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (916) 916-96-18 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;&lt;/b&gt;" data-original-title="Название офиса"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></td><td>00:00 </td><td><span class="glyphicon glyphicon-usd"></span>  <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;UTM source&lt;/b&gt; &lt;br&gt;&lt;b&gt;UTM medium&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM campaign&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM content&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM term&lt;/b&gt; (none)&lt;br&gt;" data-original-title="UTM метки"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span></a></td><td><span class="label label-danger">Номер оператора занят</span></td></tr><tr><td>future.callkeeper.ru</td><td>03.11.15</td><td>02:03</td><td>+7 (916) 916-96-18 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 79.172.122.187&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (916) 916-96-18 </td><td>00:00 </td><td><span class="glyphicon glyphicon-usd"></span>  <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;UTM source&lt;/b&gt; &lt;br&gt;&lt;b&gt;UTM medium&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM campaign&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM content&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM term&lt;/b&gt; (none)&lt;br&gt;" data-original-title="UTM метки"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span></a></td><td><span class="label label-danger">Номер оператора занят</span></td></tr><tr><td>future.callkeeper.ru</td><td>03.11.15</td><td>02:02</td><td>+7 (916) 916-96-18 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 79.172.122.187&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (916) 916-96-18 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;&lt;/b&gt;" data-original-title="Название офиса"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></td><td>00:00 </td><td><span class="glyphicon glyphicon-usd"></span>  <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;UTM source&lt;/b&gt; &lt;br&gt;&lt;b&gt;UTM medium&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM campaign&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM content&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM term&lt;/b&gt; (none)&lt;br&gt;" data-original-title="UTM метки"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span></a></td><td><span class="label label-danger">Номер оператора занят</span></td></tr><tr><td>future.callkeeper.ru</td><td>03.11.15</td><td>02:01</td><td>+7 (916) 916-96-18 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 79.172.122.187&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (916) 916-96-18 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;&lt;/b&gt;" data-original-title="Название офиса"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></td><td>00:00 </td><td><span class="glyphicon glyphicon-usd"></span>  <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;UTM source&lt;/b&gt; &lt;br&gt;&lt;b&gt;UTM medium&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM campaign&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM content&lt;/b&gt; (none)&lt;br&gt;&lt;b&gt;UTM term&lt;/b&gt; (none)&lt;br&gt;" data-original-title="UTM метки"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span></a></td><td><span class="label label-danger">Номер оператора занят</span></td></tr><tr><td>callkeeper.ru</td><td>01.11.15</td><td>16:30</td><td>+7 (910) 444-32-56 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 109.252.193.77&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>02:04 <a class="playlink" href="http://91.232.135.33/records/2015/11/01/d7ae746fc71b61b6.1446384612.1054429.mp3" recordname="future.callkeeper.ru - 03.11.15 02:01 - +7 (910) 444-32-56"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://91.232.135.33/records/2015/11/01/d7ae746fc71b61b6.1446384612.1054429.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-link"></span> autoskd.ru</td><td><span class="label label-success">Звонок прошел успешно</span></td></tr><tr><td>callkeeper.ru</td><td>30.10.15</td><td>17:49</td><td>+7 (903) 671-13-39 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 185.15.189.10&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Москва&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Москва&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:00 </td><td><span class="glyphicon glyphicon-link"></span> sportcar-center.com</td><td><span class="label label-default">Global IP block</span></td></tr><tr><td>admin.callkeeper.ru</td><td>30.10.15</td><td>14:58</td><td>+7 (931) 373-21-99 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 5.18.107.234&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Санкт-Петербург&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Санкт-Петербург&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:59 <a class="playlink" href="http://91.232.135.33/records/2015/10/30/c896e0dda384f9ef.1446206288.808026.mp3" recordname="callkeeper.ru - 30.10.15 17:49 - +7 (931) 373-21-99"><span class="glyphicon glyphicon-play" style="color: #000;"></span></a> <a href="http://91.232.135.33/records/2015/10/30/c896e0dda384f9ef.1446206288.808026.mp3"><span class="glyphicon glyphicon-save"></span></a></td><td><span class="glyphicon glyphicon-screenshot"></span> Прямой заход</td><td><span class="label label-success">Звонок прошел успешно</span></td></tr><tr><td>admin.callkeeper.ru</td><td>30.10.15</td><td>11:21</td><td>+7 (912) 476-50-00 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 176.56.0.35&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Челябинск&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Челябинская область&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:00 </td><td><span class="glyphicon glyphicon-search"></span> <img src="./CallKeeper - История звонков_files/google.png" height="15px"></td><td><span class="label label-danger">Не удалось дозвониться до оператора</span></td></tr><tr><td>callkeeper.ru</td><td>30.10.15</td><td>11:09</td><td>+7 (919) 400-66-12 <a href="http://callkeeper.ru/dashboard/calls.php#" tabindex="0" class="popp" data-toggle="popover" data-trigger="focus" title="" data-content="&lt;b&gt;IP адрес:&lt;/b&gt; 176.56.0.35&lt;br&gt;&lt;b&gt;Страна:&lt;/b&gt; Россия&lt;br&gt;&lt;b&gt;Город:&lt;/b&gt; Челябинск&lt;br&gt;&lt;b&gt;Область:&lt;/b&gt; Челябинская область&lt;br&gt;" data-original-title="Местоположение клиента"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a></td><td>+7 (985) 915-77-55 </td><td>00:00 </td><td><span class="glyphicon glyphicon-search"></span> <img src="./CallKeeper - История звонков_files/google.png" height="15px"></td><td><span class="label label-danger">Не удалось дозвониться до оператора</span></td></tr>			</tbody>
+		</table>
+	</div>
+
+	<div class="row">
+		<h1>Итоги</h1>
+		<div class="gap20"></div>
+		<div class="col-md-5">
+      		<table class="table table-bordered">
+      			<thead>
+      			</thead>
+      			<tbody>
+      				<tr>
+      					<td><b>Итого звонков:</b></td>
+      					<td>27 <span class="label label-success">10 успешных</span></td>
+      				</tr>	
+      				<tr>
+      					<td><b>Итого длительность:</b></td>	
+      					<td>24 мин 19 сек </td>
+      				</tr>	
+      				<tr>
+      					<td><b>Израсходовано:</b></td>	
+      					<td>30 мин</td>
+      				</tr>
+      				<tr>
+      					<td><b>Среднее время разговора:</b></td>	
+      					<td>00:54</td>
+      				</tr>
+      			</tbody>
+			</table>
+		</div>
+	</div>
+	
+	<div class="row">
+		<h1>Аналитика звонков</h1>
+		<div class="gap20"></div>
+		<div id="traffictype" class="col-md-6" data-highcharts-chart="1"><div class="highcharts-container" id="highcharts-4" style="position: relative; overflow: hidden; width: 555px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="555" height="400"><desc>Created with Highcharts 4.0.4</desc><defs><clippath id="highcharts-5"><rect x="0" y="0" width="535" height="332"></rect></clippath></defs><rect x="0" y="0" width="555" height="400" strokeWidth="0" fill="#FFFFFF" class=" highcharts-background"></rect><g class="highcharts-button" style="cursor:default;" stroke-linecap="round" transform="translate(521,10)"><title>Chart context menu</title><rect x="0.5" y="0.5" width="24" height="22" strokeWidth="1" fill="white" stroke="none" stroke-width="1" rx="2" ry="2"></rect><path fill="#E0E0E0" d="M 6 6.5 L 20 6.5 M 6 11.5 L 20 11.5 M 6 16.5 L 20 16.5" stroke="#666" stroke-width="3" zIndex="1"></path><text x="0" zIndex="1" style="color:black;fill:black;" y="13"></text></g><rect x="9.5" y="52.5" width="536" height="333" strokeWidth="-1" stroke="#C0C0C0" stroke-width="1" fill="none" zIndex="1"></rect><g class="highcharts-series-group" zIndex="3"><g class="highcharts-series highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(10,53) scale(1 1)" style="cursor:pointer;"><path fill="#7cb5ec" d="M 276.9758647253621 47.50000245785438 A 118.5 118.5 0 0 1 393.66940470432587 145.25150593565328 L 277 166 A 0 0 0 0 0 277 166 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path><path fill="#434348" d="M 393.6900948602346 145.36818569515887 A 118.5 118.5 0 0 1 363.3001778671485 247.20670723590842 L 277 166 A 0 0 0 0 0 277 166 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path><path fill="#90ed7d" d="M 363.2189280233616 247.29296679604198 A 118.5 118.5 0 0 1 211.93990148312207 265.04258468443834 L 277 166 A 0 0 0 0 0 277 166 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path><path fill="#f7a35c" d="M 211.8408914449913 264.9774750754766 A 118.5 118.5 0 0 1 249.59380059433101 50.71274903903419 L 277 166 A 0 0 0 0 0 277 166 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path><path fill="#8085e9" d="M 249.70910152917605 50.68540048781689 A 118.5 118.5 0 0 1 276.83540587733853 47.50011430902228 L 277 166 A 0 0 0 0 0 277 166 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path></g><g class="highcharts-markers" visibility="visible" zIndex="0.1" transform="translate(10,53) scale(1 1)"></g></g><text x="278" text-anchor="middle" class="highcharts-title" zIndex="4" style="color:#333333;font-size:18px;fill:#333333;width:491px;" y="25"><tspan>Распределение источников трафика</tspan></text><g class="highcharts-data-labels highcharts-tracker" visibility="visible" zIndex="6" transform="translate(10,53) scale(1 1)" opacity="1" style="cursor:pointer;"><path fill="none" d="M 377.4539600384511 52.24240019683177 C 372.4539600384511 52.24240019683177 367.3116591609588 58.37075574178358 360.24099545440686 66.79724461609234 L 353.1703317478549 75.2237334904011" stroke="#7cb5ec" stroke-width="1"></path><path fill="none" d="M 424.2614425788501 208.59028005759689 C 419.2614425788501 208.59028005759689 411.5975264803262 206.2958541959082 401.05964184485583 203.1410186360862 L 390.52175720938544 199.98618307626418" stroke="#434348" stroke-width="1"></path><path fill="none" d="M 299.23979774759704 313.4958961246785 C 294.23979774759704 313.4958961246785 293.3110544345949 305.54998926274294 292.03403237921736 294.6243673275816 L 290.75701032383984 283.6987453924202" stroke="#90ed7d" stroke-width="1"></path><path fill="none" d="M 125.75604867768709 140.21324561646088 C 130.7560486776871 140.21324561646088 138.63451070178476 141.6024310377963 149.46739598491905 143.51256099213253 L 160.30028126805334 145.42269094646878" stroke="#f7a35c" stroke-width="1"></path><path fill="none" d="M 254.7602022524032 18.504103875321476 C 259.7602022524032 18.504103875321476 260.6889455654051 26.450010737257017 261.96596762078264 37.37563267241839 L 263.24298967616016 48.301254607579764" stroke="#8085e9" stroke-width="1"></path><g zIndex="1" style="cursor:pointer;" transform="translate(382,42)"><text x="3" zIndex="1" style="font-size:11px;color:black;fill:black;" y="15"><tspan style="font-weight:bold">UTM (Другие)</tspan><tspan dx="0">:</tspan><tspan x="3" dy="15">6 (22.2 %)</tspan></text></g><g zIndex="1" style="cursor:pointer;" transform="translate(429,199)"><text x="3" zIndex="1" style="font-size:11px;color:black;fill:black;" y="15"><tspan style="font-weight:bold">Поиск (Яндекс)</tspan><tspan dx="0">:</tspan><tspan x="3" dy="15">4 (14.8 %)</tspan></text></g><g zIndex="1" style="cursor:pointer;" transform="translate(304,303)"><text x="3" zIndex="1" style="font-size:11px;color:black;fill:black;" y="15"><tspan style="font-weight:bold">Поиск (Google)</tspan><tspan dx="0">:</tspan><tspan x="3" dy="15">6 (22.2 %)</tspan></text></g><g zIndex="1" style="cursor:pointer;" transform="translate(14,130)"><text x="0" zIndex="1" style="font-size:11px;color:black;fill:black;" y="15"><tspan style="font-weight:bold">Ссылки на сайтах</tspan><tspan dx="0">:</tspan><tspan x="0" dy="15">10 (37.0 %)</tspan></text></g><g zIndex="1" style="cursor:pointer;" transform="translate(154,9)"><text x="0" zIndex="1" style="font-size:11px;color:black;fill:black;" y="15"><tspan style="font-weight:bold">Прямые заходы</tspan><tspan dx="0">:</tspan><tspan x="0" dy="15">1 (3.7 %)</tspan></text></g></g><g class="highcharts-legend" zIndex="7"><g zIndex="1"><g></g></g></g><g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" transform="translate(0,-9999)"><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></path><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></path><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></path><path fill="rgba(249, 249, 249, .85)" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0"></path><text x="8" zIndex="1" style="font-size:12px;color:#333333;fill:#333333;" y="21"></text></g></svg></div></div>
+      	<div id="callsstatus" class="col-md-6" data-highcharts-chart="2"><div class="highcharts-container" id="highcharts-6" style="position: relative; overflow: hidden; width: 555px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="555" height="400"><desc>Created with Highcharts 4.0.4</desc><defs><clippath id="highcharts-7"><rect x="0" y="0" width="535" height="332"></rect></clippath></defs><rect x="0" y="0" width="555" height="400" strokeWidth="0" fill="#FFFFFF" class=" highcharts-background"></rect><g class="highcharts-button" style="cursor:default;" stroke-linecap="round" transform="translate(521,10)"><title>Chart context menu</title><rect x="0.5" y="0.5" width="24" height="22" strokeWidth="1" fill="white" stroke="none" stroke-width="1" rx="2" ry="2"></rect><path fill="#E0E0E0" d="M 6 6.5 L 20 6.5 M 6 11.5 L 20 11.5 M 6 16.5 L 20 16.5" stroke="#666" stroke-width="3" zIndex="1"></path><text x="0" zIndex="1" style="color:black;fill:black;" y="13"></text></g><rect x="9.5" y="52.5" width="536" height="333" strokeWidth="-1" stroke="#C0C0C0" stroke-width="1" fill="none" zIndex="1"></rect><g class="highcharts-series-group" zIndex="3"><g class="highcharts-series highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(10,53) scale(1 1)" style="cursor:pointer;"><path fill="#d9534f" d="M 234.48105839205635 82.500001928949 A 93 93 0 1 1 223.809741706192 267.8835395382298 L 234.5 175.5 A 0 0 0 1 0 234.5 175.5 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path><path fill="#5cb85c" d="M 223.71736352717974 267.8728030899518 A 93 93 0 0 1 174.63122829100905 104.33308230605512 L 234.5 175.5 A 0 0 0 0 0 234.5 175.5 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(-10,3)"></path><path fill="#f0ad4e" d="M 174.70242513122525 104.27324912778012 A 93 93 0 0 1 234.37082486575935 82.50008971087824 L 234.5 175.5 A 0 0 0 0 0 234.5 175.5 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path></g><g class="highcharts-markers" visibility="visible" zIndex="0.1" transform="translate(10,53) scale(1 1)"></g></g><text x="278" text-anchor="middle" class="highcharts-title" zIndex="4" style="color:#333333;font-size:18px;fill:#333333;width:491px;" y="25"><tspan>Статусы звонков</tspan></text><g class="highcharts-data-labels highcharts-tracker" visibility="visible" zIndex="6" transform="translate(10,53) scale(1 1)" opacity="1" style="cursor:pointer;"><path fill="none" d="M 362.29190346736596 182.65181395598853 C 357.29190346736596 182.65181395598853 349.30543820119584 182.1866553247047 338.3240484602119 181.54706220668947 L 327.3426587192279 180.90746908867425" stroke="#d9534f" stroke-width="1"></path><path fill="none" d="M 111.66728998519488 210.77679762346415 C 116.66728998519488 210.77679762346415 124.33120608371877 208.48237176177543 134.86909071918916 205.32753620195342 L 145.40697535465955 202.17270064213142" stroke="#5cb85c" stroke-width="1"></path><path fill="none" d="M 187.43152237094273 59.91780764333327 C 192.43152237094273 59.91780764333327 195.16768351754808 67.43534860962055 198.92990509413045 77.77196743826553 L 202.6921266707128 88.10858626691052" stroke="#f0ad4e" stroke-width="1"></path><g zIndex="1" style="cursor:pointer;" transform="translate(367,173)"><text x="3" zIndex="1" style="font-size:11px;color:black;fill:black;" y="15"><tspan style="font-weight:bold">Нет связи с отделом продаж</tspan><tspan x="3" dy="15">14 (51.9 %)</tspan></text></g><g zIndex="1" style="cursor:pointer;" transform="translate(3,201)"><text x="0" zIndex="1" style="font-size:11px;color:black;fill:black;" y="15"><tspan style="font-weight:bold">Успешный звонок</tspan><tspan x="0" dy="15">10 (37.0 %)</tspan></text></g><g zIndex="1" style="cursor:pointer;" transform="translate(58,50)"><text x="0" zIndex="1" style="font-size:11px;color:black;fill:black;" y="15"><tspan style="font-weight:bold">Нет связи с клиентом</tspan><tspan x="0" dy="15">3 (11.1 %)</tspan></text></g></g><g class="highcharts-legend" zIndex="7"><g zIndex="1"><g></g></g></g><g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" transform="translate(0,-9999)"><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></path><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></path><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></path><path fill="rgba(249, 249, 249, .85)" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0"></path><text x="8" zIndex="1" style="font-size:12px;color:#333333;fill:#333333;" y="21"></text></g></svg></div></div>
+	</div>	
+	
+	
+      <script type="text/javascript">
+      $.extend({
+	  getUrlVars: function(){
+		var vars = [], hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		for(var i = 0; i < hashes.length; i++)
+		{
+		  hash = hashes[i].split('=');
+		  vars.push(hash[0]);
+		  vars[hash[0]] = hash[1];
+		}
+		return vars;
+	  },
+	  getUrlVar: function(name){
+		return $.getUrlVars()[name];
+	  }
+	});
+	$(document).ready(function(){
+	var allVars = $.getUrlVars();
+	//alert(allVars['start']);
+	if (($('#iend').val()) == '')
+	{
+	var d = new Date();
+	var curr_date = d.getDate();
+	var curr_month = d.getMonth() + 1;
+	var curr_year = d.getFullYear();
+	$('#iend').val(curr_year + "-" + curr_month + "-" + curr_date);
+	}
+	
+	$('.input-daterange').datepicker({
+    format: "yyyy-mm-dd",
+    //startDate: "2014-11-05",
+    language: "ru",
+    keyboardNavigation: false,
+    autoclose: true,
+    todayHighlight: true
+	});
+	
+	Highcharts.setOptions({
+	lang: {
+		months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',  'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+		weekdays: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+		shortMonths: [ "Янв" , "Фев" , "Мар" , "Апр" , "Май" , "Июн" , "Июл" , "Авг" , "Сен" , "Окт" , "Ноя" , "Дек"]
+	}
+	});
+	
+	$('#daycalls').highcharts({
+		chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,//null,
+            plotShadow: false,
+            type: 'spline'
+        },
+		credits: {
+			enabled: false,
+			href: 'http://callkeeper.ru',
+			text: 'CallKeeper.ru'
+		},
+        title: {
+            text: 'Количество звонков в сутки',
+            x: -20 
+        },
+        subtitle: {
+            text: 'с 30.10.2015 до 06.11.2015',
+            x: -20
+        },
+        xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: {
+                day: '%e'
+            },
+            tickInterval: 1000*3600*24        },
+        yAxis: {
+            title: {
+                text: 'Количество, шт'
+            },
+            min: 0,
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: ' шт'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{ name: "future.callkeeper.ru",
+		data: [0, 0, 0, 0, 5, 0, 0, 1, ],
+		pointStart: Date.UTC(2015,09,30),
+        pointInterval: 24 * 3600 * 1000
+		}, { name: "callkeeper.ru",
+		data: [2, 0, 1, 0, 8, 1, 3, 2, ],
+		pointStart: Date.UTC(2015,09,30),
+        pointInterval: 24 * 3600 * 1000
+		}, { name: "liderce.ru",
+		data: [0, 0, 0, 0, 2, 0, 0, 0, ],
+		pointStart: Date.UTC(2015,09,30),
+        pointInterval: 24 * 3600 * 1000
+		}, { name: "admin.callkeeper.ru",
+		data: [2, 0, 0, 0, 0, 0, 0, 0, ],
+		pointStart: Date.UTC(2015,09,30),
+        pointInterval: 24 * 3600 * 1000
+		}]
+    });
+    
+    $('#traffictype').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 1,//null,
+            plotShadow: false
+        },
+        credits: {
+			enabled: false,
+			href: 'http://callkeeper.ru',
+			text: 'CallKeeper.ru'
+		},
+        title: {
+            text: 'Распределение источников трафика'
+        },
+        tooltip: {
+            pointFormat: '{point.y} ({point.percentage:.1f} %)'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>:<br>{point.y} ({point.percentage:.1f} %)',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            //name: 'Типы трафика',
+            data: [
+                                                ['UTM (Другие)', 6],                ['Поиск (Яндекс)', 4],                ['Поиск (Google)', 6],                                ['Ссылки на сайтах', 10],                ['Прямые заходы', 1],                            ]
+        }]
+    });
+    
+    $('#callsstatus').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 1,//null,
+            plotShadow: false,
+            
+        },
+        credits: {
+			enabled: false,
+			href: 'http://callkeeper.ru',
+			text: 'CallKeeper.ru'
+		},
+        title: {
+            text: 'Статусы звонков'
+        },
+        tooltip: {
+            pointFormat: '{point.y} ({point.percentage:.1f} %)'
+        },
+        plotOptions: {
+            pie: {
+            	//size: '40%',
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    crop: false,
+                    overflow: 'none',
+                    format: '<b>{point.name}</b><br>{point.y} ({point.percentage:.1f} %)',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            //name: 'Типы трафика',
+            data: [ 
+                
+                { name: 'Нет связи с отделом продаж', y:14, color: '#d9534f' },                { name: 'Успешный звонок', y: 10, sliced: true, selected: true, color: '#5cb85c' },                { name: 'Нет связи с клиентом', y: 3, color: '#f0ad4e' },                            ]
+        }]
+    });
+    
+    $(function () {
+  $('[data-toggle="popover"]').on('click',function(e){
+    e.preventDefault();
+  })
+  .popover({html: true});
+});
+	function parseUrlQuery() {
+    var data = {};
+    if(location.search) {
+        var pair = (location.search.substr(1)).split('&');
+        for(var i = 0; i < pair.length; i ++) {
+            var param = pair[i].split('=');
+            data[param[0]] = param[1];
+        }
+    }
+    return data;
+	}
+	
+	$('#widget_select').on('change',function(){
+	var urlparams = parseUrlQuery();
+	//alert(urlparams);
+	var newurlparams;
+	if (window.location.search.toString() !== '')
+	{
+		var itwaswidget=0;
+		newurlparams = '?';
+		for(var key in urlparams)
+		{
+			if (key !== 'widget')
+			newurlparams = newurlparams + key + '=' + urlparams[key] + '&';
+			else { newurlparams = newurlparams + key + '=' + document.getElementById('widget_select').value + '&'; itwaswidget=1; }
+		
+		}
+		newurlparams = newurlparams.substr(0, newurlparams.length - 1);
+		if (itwaswidget==0) newurlparams += '&widget=' + document.getElementById('widget_select').value;
+	}
+	else newurlparams = '?widget=' + document.getElementById('widget_select').value;
+	window.location = 'http://callkeeper.ru/dashboard/calls.php' + newurlparams;
+	 });
+	
+	});
+	</script>
+       
+
+ <hr>
+      
+      <footer>
+        <p class="text-right">Давайте дружить на <br><a href="https://www.facebook.com/pages/CallKeeper/257251707807291" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a href="https://www.facebook.com/pages/CallKeeper/257251707807291" target="_blank"><i class="fa fa-vk fa-2x"></i></a></p>
+      </footer>
+    </div>
+    <!-- /container -->
+    <script type="text/javascript" src="./CallKeeper - История звонков_files/saved_resource" charset="UTF-8"></script>
+	<script type="text/javascript" src="./CallKeeper - История звонков_files/callkeeper.js" charset="UTF-8"></script>
+        <div class="callkeeperWidget_button callkeeperWidget_show_popup callkeeperWidget_button_right callkeeperWidget_open_popup"></div></body></html>
