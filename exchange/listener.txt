@@ -1,0 +1,4 @@
+element.removeEventListener(event, handler[, phase]);
+element.addEventListener(event, handler[, phase]);
+element.attachEvent
+element.detachEvent

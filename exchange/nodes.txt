@@ -1,0 +1,8 @@
+parentElem.removeChild(elem)
+parentElem.replaceChild(newElem, elem)
+document.createElement(tag)
+document.createTextNode(text)
+parentElem.appendChild(elem)/insertBefore(elem, nextSibling)
+parentElem.insertBefore(elem, parentElem.firstChild);
+parentElem.insertBefore(elem, null);
+elem.cloneNode(true)

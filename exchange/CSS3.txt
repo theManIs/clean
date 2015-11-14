@@ -1,0 +1,93 @@
+font-style:    normal | italic | oblique
+font-variant:    normal | small-caps
+font-weight:    bold | bolder | lighter | normal | 100 - 900
+hasLayout =    [display: inline-block | position: absolute | [ float: left | right ] | 
+	      width != auto | height != auto | zoom: 1 | writing-mode: tb-rl]
+height:    <value> | auto
+hyphens:    auto | manual | none
+image-rendering:    auto | optimaizeSpeed | optimaizeQuality | crisp-edges
+left:    <value> | auto
+letter-spacing:    <value> | normal
+line-height:    <value> | normal
+list-style-image:    none | url(' ')
+list-style-position:    inside | outside
+list-style-type:    circle | disc | square | armenian | decimal | decimal-leading-zero | georgian | lower-alpha |
+	          lower-greek | lower-latin | lower-roman | upper-alpha | upper-latin | upper-roman | none
+list-style:    list-style-type & list-style-position & list-style-image
+margin-right:    <value> | auto
+margin-left:    <value> | auto
+margin-top:    <value> | auto
+margin-bottom:    <value> | auto
+margin:    <value> * [1 | 2 | 3 | 4] | auto
+max-height:    none | <value>
+max-width:    none | <value>
+min-height:    <value>
+min-width:    <value>
+opacity:    <value>
+orphans:    <namber>
+outline:    outline-color & outline-style & outline-width
+outline-color:    invert | <color>
+outline-offset:    <value>
+outline-style:    none | dotted | dashed | solid | groove | ridge | inset | outset
+outline-width:    thin | medium | thick | <value>
+overflow:    auto | hidden | scroll | visible
+overflow-x:    auto | scroll | hidden | visible
+overflow-y:    auto | scroll | hidden | visible
+padding-top:    <value>
+padding-right:    <value>
+padding-bottom:    <value>
+padding-left:    <value>
+padding:    <value> * [1 | 2 | 3 | 4]
+page-break-after:    always | auto | avoid | left | right
+page-break-before:    always | auto | avoid | left | right
+page-break-inside:    auto | avoid
+position:    absolute | fixed | relative | static
+quotes:    "open-quote" & "close-quote" | none
+resize:    none | both | horizontal | vertical
+right:    <value> | auto
+scrollbar-3dlight-color:    <color>
+scrollbar-arrow-color:    <color>
+scrollbar-base-color:    <color>
+scrollbar-darkshadow-color:    <color>
+scrollbar-face-color:    <color>
+scrollbar-highlight-color:    <color>
+scrollbar-shadow-color:    <color>
+scrollbar-track-color:    <color> 
+tab-size:    <namber>
+table-layout:    fixed | auto
+text-align:    center | justify | left | right | start | end | inherit
+text-align-last:    start | end | left | right | center | justify
+text-decoration:    none | blink | line-through | overline | underline
+text-decoration-color:    <color>
+text-decoration-line:    line-through | overline | underline | none
+text-decoration-style:    solid | double | dotted | dashed | wavy
+text-indent:    <value>
+text-overflow:    clip | ellipsis
+text-shadow:    none | <color> & <x> & <y> & <radius>
+text-transform:    capitalize | lowercase | uppercase | none
+top:    <value> | auto
+transform:    none | rotate() | scale(x, y) | scaleX() | scaleY() | skewX() | skewY() |
+	translate(x, y) | translateX() | translateY() | matrix(M11, M12, M21, M22, Dx, Dy)
+transform-origin:    [<x> | <width> | left | center | right] & [<y> | <height> | top | center | bottom] & [<z> | <value>]
+transform-style:    flat | preserve-3d
+transition:    none | [transition-property & transition-duration & transition-timing-function & transition-delay]
+transition-delay:    <time>
+transition-duration:    <time>
+transition-property:    none | all | <property>
+transition-timing-function:    ease | ease-in | ease-out | ease-in-out | linear | steps(<namber>, srart | end) | cubic-bezier
+unicode-bidi:    normal | embed | bidi-override
+vertical-align:    baseline | bottom | middle | sub | super | text-bottom | text-top | top | <value>
+visibility:    visible | hidden | collapse
+white-space:    normal | nowrap | pre | pre-line | pre-wrap
+widows:    <namber>
+width:    <value> | auto
+word-break:    normal | break-all | keep-all
+word-spacing:    <value> | normal
+word-wrap:    normal | break-word
+writing-mode:    lr-td | rl-tb | tb-rl | bt-rl | tb-lr | bt-lr
+z-index:    <value> | auto
+zoom:    <value> | normal
+Value Property:    inherit | initial | url('   ') | ex | px | % | em | in | cm | mm | pt | pc |
+	namber | '   ' | "   " | \"   \" | \'   \' | [ -moz-] [-webkit-] calc(value + | - | * | / value) | hasLayout |
+	deg | grad | rad | turn | #RRGGBB | RGB(r,g, b) | RGBA(r, g, b, a) | HSL([0-359], [0-100]%, [0-100]%) |
+	HSLA([0-359], [0-100]%, [0-100]%, [0-1]) | s | ms

@@ -1,0 +1,11 @@
+CPasswordHelper
+CActiveRecord
+CUserIdentity
+CHttpException
+CDbCriteria
+CActiveDataProvider
+CHtml
+CListView
+CGridView
+CActiveForm
+Yii::import()

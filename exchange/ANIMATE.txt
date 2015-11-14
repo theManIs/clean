@@ -1,0 +1,17 @@
+class="animated"
+
+flash bounce pulse rubberBand shake swing tada wobble
+bounceIn bounceInDown bounceInRight bounceInLeft bounceInUp
+bounceOut bounceOutDown bounceOutLeft bounceOutRight bounceOutUp
+fadeInDown fadeInDownBig fadeInLeft fadeInLeftBig fadeInUp fadeInUpBig fadeInRight fadeInRightBig
+fadeOut fadeOutDown fadeOutDownBig fadeOutLeft fadeOutLeftBig fadeOutUp fadeOutUpBig fadeOutRight fadeOutRightBig
+flip flipInX flipInY flipOutX flipOutY 
+lightSpeedIn lightSpeedOut 
+rotateIn rotateInDownRight rotateInDownLeft rotateInUpRight rotateInUpLeft
+rotateOut rotateOutDownRight rotateOutDownLeft rotateOutUpRight rotateOutUpLeft
+slideInUp slideInDown slideInRight slideInLeft
+slideOutUp slideOutDown slideOutRight slideOutLeft
+zoomIn zoomInUp zoomInDown zoomInRight zoomInLeft
+zoomOut zoomOutUp zoomOutDown zoomOutRight zoomOutLeft
+hinge rollIn rollout
+

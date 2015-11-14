@@ -1,0 +1,10 @@
+preg_?filter
+preg_?grep
+preg_?last_?error
+preg_?match_?all
+preg_?match
+preg_?quote
+preg_?replace_?callback_?array
+preg_?replace_?callback
+preg_?replace
+preg_?split

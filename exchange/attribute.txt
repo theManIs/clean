@@ -1,0 +1,9 @@
+elem.classList.contains("class")
+elem.classList.add/remove("class")
+elem.classList.toggle("class")
+elem.className/innerHTML/href/value/innerText
+elem.hasAttribute(name)
+elem.getAttribute(name)
+elem.setAttribute(name, value)
+elem.removeAttribute(name)
+elem.data-*/dataset.attrname

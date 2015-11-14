@@ -1,0 +1,11 @@
+git push origin
+git commit -a -m "Message"
+git status
+git add filename
+git branch -a
+git branch branchname
+git merge branchname
+git checkout branchname
+git branch -d branchname
+git clone githostaddress
+git pull githostaddress

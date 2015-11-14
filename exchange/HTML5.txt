@@ -1,0 +1,90 @@
+universal attributes: accesskey="key" class="name ..." contenteditable="false | true" contextmenu="id" 
+		  dir="ltr | rtl" hidden="hidden" id="name" lang="code" spellcheck="true | false" style="CSS"
+		  tabindex="namber" title="content"
+attributes: type="[MIME] | [button | reset | submit] | [checkbox | command | radio]" name="id" ]srclang | hreflang]="code" 
+	href="url" [target | formtarget]="name | _blank | _self | _parent | _top" 
+	rel="[stylesheet | alternate] | [archives | author | bookmark | first | help | index | last | license | me | next | 		nofollow | noreferrer | prev | search | sidebar | tag | up | shortcut icon | icon]" 
+	alt="content" coords="X, Y, ..." shape="circle | default | poly | rect"
+	src="url" preload="none | metadata | auto" cite="[content] | [url]" form="id" [formaction | action]="url" 
+	[formmethod | method]="GET | POST" datetime="ISO 8601" open="open"
+	[formenctype | enctype]="application/x-www-form-urlencoded | multipart/form-data | text/plain" value="content"
+	span="namber" icon="url" label="content" [accept-charset | charset]="code" autocomplete="on | off" manifest="url"
+	sandbox="allow-same-origin | allow-top-navigation | allow-forms | allow-scripts" srcdoc="<html-code>"
+	usemap="id" accept="MIME" list="id" [min | max]="content" maxlength="namber" pattern="expression"
+	placeholder="content" size="namber" step="namber" value="[content] | [namber]"
+	type="button | checkbox | file | hidden | image | password | radio | reset | submit | text |
+	color | date | datetime | datetime-local | email | number | range | search | tel | time | url | month | week"
+	keytype="rsa" for="id" media="all | braille | handheld | print | screen | speech | projection | tty | tv"
+	sizes="widthXheight | any" type="context | toolbar | list" data="url"
+	http-equiv="Content-Type | expires | pragma | refresh" name="author | description | keywords"
+	valuetype="date | object | ref" type='MIME; codecs="code"' colspan="namber" headers="id" rowspan="namber"
+	scope="col | colgroup | row | rowgroup" [rows | cols]="namber" wrap="soft | hard"
+	kind="subtitiles | captions | descriptions | chapters | metadata" poster="url"
+<a [download href hreflang name rel target type]></a>
+<address></address>
+<area [alt coords shape href hreflang target type]>
+<article></article><aside></aside><header></header><section></section><nav></nav>
+<audio [src autoplay controls loop muted preload></audio>
+<b></b><code></code><cite></cite><ul></ul><var></var><dfn></dfn><kbd></kbd>
+<wbr><br><hr>
+<base [href target]> 
+<bdo [dir]></bdo><bdi></bdi><abbr></abbr><em></em><i></i><mark></mark>
+<blockquote [cite]></blockquote>
+<button [autofocus disabled form formaction formenctype formmethod formnovalidate formtarget name type value]></button>
+<canvas [height width]></canvas>
+<caption></caption>
+<col [span]>
+<colgroup [span]></colgroup>
+<command [disabled checked icon label radiogroup type]>
+<datalist></datalist>
+<details [open]></details>
+<div></div>
+<dl></dl><dd><dt>
+<embed [height width src]></embed>
+<fieldset [disabled form]></fieldset>
+<legend></legend>
+<figcaption></figcaption>
+<figure></figure>
+<footer></footer>
+<form [accept-charset action autocomplete enctype name novalidate target]></form>
+<h1></h1><h2></h2><h3></h3><h4></h4><h5></h5><h6></h6>
+<html [manifest]></html><head></head><body></body>
+<iframe [height width name sandbox seamless src srcdoc]></iframe>
+<img [height ismap src usemap]>
+<input [accept alt autocomplete autofocus checked disable form formaction formenctype formmethod
+	formnovalidate formtarget list max maxlength min multiple name pattern placeholder
+	readonly required size src step value type]>
+<ins [cite datetime]></ins><del [cite datetime]></del>
+<keygen [autofocus challenge disabled form name keytype>
+<label [for]></label>
+<link [charset href media rel sizes]>
+<main></main>
+<map [name]></map>
+<menu [type label]></menu>
+<meta [charset http-equiv name content]>
+<meter [value min max low high optimum]></meter>
+<noscript></noscript>
+<object [date height width type]></object>
+<ol [start reversed]></ol><ul></ul><li [value]></li>
+<optgroup [disabled label]></optgroup>
+<option [disabled selected label value]></option>
+<output [for form name]></output>
+<p></p>
+<param [name type value valuetype]>
+<pre></pre>
+<progress [value max]></progress>
+<rp></rp><rt></rt><ruby></ruby>
+<s></s><q [cite]></q><samp></samp><small></small><strong></strong><var></var><sub></sub><sup></sup>
+<script [async defer src type]></script>
+<select [autofocus disabled form multiple name required size]></select>
+<source [media src type]></source>
+<span></span>
+<style [type media]></style>
+<summary></summary>
+<table></table><tbody></tbody><td [colspan headers rowspan scope]><tfoot></tfoot>
+<th [colspan headers rowspan scope]></th><thead></thead><tr></tr>
+<textarea [autofocus cols disabled form maxlength name placeholder readonly required rows wrap]></textarea>
+<time [datetime]></time>
+<title></title>
+<track [kind | src | srclang | label | default | width]>
+<video [autoplay controls height loop poster preload src width]></video>

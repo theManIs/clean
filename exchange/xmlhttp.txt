@@ -1,0 +1,23 @@
+XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequestæ
+var xhr = new XHR();
+open(method, url, async, user, password);
+send(body);
+abort();
+setRequestHeader(name, value);
+getResponseHeader(name);
+getAllResponseHeaders();
+
+timeout
+responseText
+responseXML
+status
+statusText
+
+onreadystatechange
+ontimeout
+onerror
+onload
+onprogress
+onabort
+onloadstart
+onloadend

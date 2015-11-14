@@ -1,0 +1,19 @@
+git add
+git status
+git commit -a -m "<comments>"
+git giff
+git reset
+git rm
+git mv
+git clean
+git chekout <branch>
+git branch <branch>
+git pull <repository> <branch>
+git clone <source> <target>
+scp -r <local> <remote>
+git clone --bare <source> <target>
+git remote add <local> <remote>
+git init <project>
+git config
+git log
+git push origin
