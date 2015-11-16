@@ -16,12 +16,11 @@ var fVariables = {
 		fields : [],
 		selects : [],
 	},
-	bundle : {},
-	tmp : [],
+	
 };
 var fFunctions = {
 	addField : function(before, addClass) {			
-		this.xyz = $.get('inputField.html', '', function(data){
+		$.get('inputField.html', '', function(data){
 			var blockContainer = $('<div>').addClass(addClass).html(data);
 			var nowId = fVariables.inputFieldId + fVariables.countInputField++;
 			$(blockContainer.find('input')[0]).attr('id', nowId + 'Clone');
@@ -40,11 +39,11 @@ var fFunctions = {
 			$('#redactListScroll').css('display', 'block');
 		});
 		$('#clickAcceptId').click(function() {
-			fFunctions.addList($('.itemList.scrollElem'), $('#addListToolId'), 'selectMenuPanel newFieldForm');
+			fFunctions.addList($('.itemListScroll'), $('#addListToolId'), 'selectMenuPanel newFieldForm');
 			$('#redactListScroll').css('display', 'none');
 		});
 		$('#saveButtonId').click(function() {
-			fFunctions.serverSend();
+			fFunctions.sendToServer();
 		});
 		return this;
 	},
@@ -138,7 +137,6 @@ var fFunctions = {
 				'-webkit-linear-gradient(top , rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 80%)',
 		});		
 		$('.color.selector.inner').css('background', color)
-		return this;
 	},
 	colorpickerInit : function() {
 		$('#colorpickerHolder').ColorPicker({
@@ -163,51 +161,89 @@ var fFunctions = {
 		});
 		return this;
 	},
-	serverSend : function() {
-		this.cicle(fVariables.idPull, this.findKeys);
-		var send = $.toJSON(fVariables.bundle);
-		console.log(send);
-		$.post('saveFeatures.php', 'send=' + send, function(data){alert(data);}, 'html');
-		return this;
+	l : function(l) {
+		return console.log(l);
 	},
-	cicle : function(obj, cb) {
-		//console.log(obj);
-		for (var key in obj) {
-			cb(key, obj[key]);
+	dgebi : function(id) {
+		return document.getElementById(id);;
+	},
+	dce : function(e) {
+		return document.createElement(e);
+	},
+	ncnt : function(elem) {
+		return elem.cloneNode(true);
+	}, 	
+	pac : function(parent, child) {
+		parent.appendChild(child);
+		return;
+	},
+	buildNode : function(elem, name) {
+		for (i = 0; i < name.length; i++) {
+			var alias = 'fVariables.idPull.' + name[i] + '[0]';
+			this.pac(elem, this.ncnt(this.dgebi(eval(alias))));
 		}
 		return;
 	},
-	findKeys : function(key, val) {
-		if (key === 'fields') {
-			//console.dir(val);
-			fVariables.bundle.fields = [];
-			fFunctions.cicle(val, fFunctions.bFields);
-		} else if (key === 'selects') {
-			//console.dir(val);
-			fVariables.bundle.selects = [];
-			fFunctions.cicle(val, fFunctions.bSelects);
-		} else if (key === 'question') {
-			fVariables.bundle[key] = [val[0], $('#' + val[0]).attr('placeholder')];
-		} else {
-			fVariables.bundle[key] = [val[0], $('#' + val[0]).text()];
-			//console.log(val);
+	buildFields : function() {
+		var section = this.dce('section');
+		var fields = fVariables.idPull.fields;
+		for (i = 0; i < fields.length; i++) {
+			if ($(eval(fields[i][0]))) {
+				var div = this.dce('div');
+				div.className = 'callkeeper container input newFieldForm';
+				var nick = 'fVariables.idPull.fields[' + i + '][0]';
+				this.pac(div, this.ncnt(this.dgebi(eval(nick))));
+				this.pac(section, div);
+			}
 		}
+		section = this.buildSelects(section);
+		this.buildNode(section, ['question', 'send', 'close']);
+		return section;
 	},
-	bFields : function(key, val) {
-		fVariables.bundle.fields.push([val[0], $('#' + val[0]).attr('placeholder')]);
+	buildSelects : function(section) {	
+		var selects = fVariables.idPull.selects;
+		for (i = 0; i < selects.length; i++) {
+			if ($(eval(selects[i]))) {
+				var div = this.dce('div');
+				div.className = 'callkeeper container input newFieldForm';
+				var nick = 'fVariables.idPull.selects[' + i + ']';
+				this.pac(div, this.ncnt(this.dgebi(eval(nick))));
+				this.pac(section, div);
+			}
+		}		
+		return section;
 	},
-	bSelects : function(key, val) {
-		//console.log(val);
-		var opt = [], pack = $('#' + val).find('option');
-		fVariables.tmp = [];
-		for (i = 0; i < pack.size(); i++)
-			opt.push($(pack[i]).text());
-		//console.log(opt);
-		fFunctions.cicle(opt, fFunctions.bOptions);
-		fVariables.bundle.selects.push(fVariables.tmp);
-	},
-	bOptions : function(key, val) {
-		fVariables.tmp.push(val);
+	sendToServer : function() {
+		var idPull = fVariables.idPull;
+		var header = this.dce('header');
+		var wdgt = this.dce('div');
+		var cBill = this.dce('div');
+		var bboard = this.dce('div');
+		var dvEl = this.dce('div');
+		var push = this.dce('div');		
+		section = this.buildFields();
+		
+		dvEl.className = 'callkeeperMain mainWorkFrame displayInlineBlock';
+		dvEl.id = 'mainFrameForm';
+		cBill.className = 'callkeeperBillboard';
+		push.className = 'displayInlineBlock';
+		bboard.className = 'containerBillboard displayInlineBlock';
+		wdgt.className = 'displayInlineBlock redactForm';		
+		
+		this.buildNode(cBill, ['tComplete', 'mComplete']);
+		this.buildNode(push, ['push']);		
+		this.buildNode(header, ['title', 'notice']);
+		
+		this.pac(dvEl, header);
+		this.pac(dvEl, section);
+		this.pac(bboard, cBill);
+		this.pac(wdgt, dvEl);
+		
+		push =  $('<div>').html(push).html();
+		wdgt = $('<div>').html(wdgt).html();
+		bboard = $('<div>').html(bboard).html();
+		param = 'form_str=' + bboard + push + wdgt + '&form_token=' + form_token;
+		$.post('saveFeatures.php', param, function(data){alert(data);}, 'html');
 	},
 };
 
@@ -220,5 +256,4 @@ $(document).ready(function(){
 	fFunctions.init();
 	fFunctions.changes();
 	fFunctions.afterInit();
-	//fFunctions.serverSend();
 });
