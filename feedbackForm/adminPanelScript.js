@@ -1,7 +1,7 @@
 var fVariables = {
 	countInputField: 0,
 	countSelectMenu: 0,
-	formColorMaster: 'cloud',
+	formColorMaster: '#27ae60',
 	inputFieldId : 'inputFieldId',
 	selectMenuId : 'selectMenuId',
 	idPull : {
@@ -120,7 +120,8 @@ var fFunctions = {
 			save.click(function(event) {
 				keeperSave(origin, clone);
 			});					
-		};	
+		};
+		return this;
 	},
 	formPaint : function(color) {
 		$('.callkeeperS.messageS').add('.callK.anyB').add('.textAreaShortPost')
@@ -165,9 +166,10 @@ var fFunctions = {
 	},
 	serverSend : function() {
 		this.cicle(fVariables.idPull, this.findKeys);
-		var send = $.toJSON(fVariables.bundle);
-		console.log(send);
-		$.post('saveFeatures.php', 'send=' + send, function(data){alert(data);}, 'html');
+		fVariables.bundle.color = fVariables.formColorMaster;
+		var send =  'send=' + $.toJSON(fVariables.bundle) + '&form_token=' + form_token;
+		//console.log(send);
+		$.post('saveFeatures.php',send, function(data){alert(data);}, 'html');
 		return this;
 	},
 	cicle : function(obj, cb) {
@@ -213,12 +215,14 @@ var fFunctions = {
 
 
 
-$(document).ready(function(){	
-	fFunctions.colorpickerInit();
-	fFunctions.formPaint(fVariables.formColorMaster);
-	fFunctions.beforeInit();
-	fFunctions.init();
-	fFunctions.changes();
-	fFunctions.afterInit();
+$(document).ready(function(){
+	fFunctions.colorpickerInit().formPaint(fVariables.formColorMaster);
+	//fFunctions.colorpickerInit();
+	//fFunctions.formPaint(fVariables.formColorMaster);
+	fFunctions.beforeInit().init().changes().afterInit();
+	//fFunctions.beforeInit();
+	//fFunctions.init();
+	//fFunctions.changes();
+	//fFunctions.afterInit();
 	//fFunctions.serverSend();
 });

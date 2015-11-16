@@ -6,3 +6,4 @@ parentElem.appendChild(elem)/insertBefore(elem, nextSibling)
 parentElem.insertBefore(elem, parentElem.firstChild);
 parentElem.insertBefore(elem, null);
 elem.cloneNode(true)
+elem.parentNode

@@ -7,7 +7,11 @@ ini_set('display_errors','1');
 setlocale(LC_ALL, "ru_RU.UTF-8");
 mb_internal_encoding("UTF-8");
 mb_http_output('UTF-8');
-$hour = new DateTime('now + 4 hour');
+
+//Возвращает объект Date в любой части кода
+function getHour() {
+	return new DateTime('now + 2 hour');
+}
 
 //Динамическое подключение классов
 function __autoload($name) 
@@ -21,7 +25,7 @@ if ('localhost' === $_SERVER['HTTP_HOST']) {
 	define('DB', 'lead');
 	define('USER', 'root');
 	define('PASSWORD', '');
-} else {
+} elseif ('mysql.hostinger.ru' === $_SERVER['HTTP_HOST']) {
 	define('HOST', 'mysql.hostinger.ru');
 	define('DB', 'u421461657_bank');
 	define('USER', 'u421461657_pie');

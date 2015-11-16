@@ -1,5 +1,6 @@
 formWidget = {
-	formPath : '../feedbackForm/saveFeatures.php',
+	featuresPath : '../feedbackForm/saveFeatures.php',
+	formPath : '../feedbackForm/callkeeperWidget.html',
 	stylePath : '../feedbackForm/callkeeperStyle.css',
 	backEnd : '../feedbackForm/backEnd.php',
 	xhr : '../feedbackForm/xhr.js',
@@ -9,25 +10,87 @@ formWidget = {
 		R.addStyle(this.stylePath);
 		return this;
 	},
-	loadModel : function(it) {
-		var response = getReq(it);
-		response.addEventListener('load', function() {
-			document.body.innerHTML = document.body.innerHTML + response.responseText;
-		});
-		return response;
+	ld : function(it) {
+		return getReq(it);
 	},
 	load : function() {
-		widget = this.loadModel(this.formPath + '?form_token=' + form_token);
-		widget.addEventListener('load', function() {toggle();});
+		this.widget = this.ld(this.featuresPath + '?form_token=' + form_token);
+		this.form = this.ld(this.formPath);
+		return this;
+	},
+	listeners : function() {
+		this.form.addEventListener('load', function() {
+			//R.log(widget.status);
+			document.body.innerHTML = document.body.innerHTML + this.responseText;
+			toggle();
+		});
+		this.widget.addEventListener('load', function() {
+			//R.log(form.status);
+			if (200 === formWidget.form.status)
+				formWidget.build();
+			else
+				formWidget.form.addEventListener('load', formWidget.build);
+		});
+		return this;
+	},
+	build : function() {
+		//R.log(formWidget.widget.status);
+		//R.log(formWidget.form.status);
+		formWidget.jso = JSON.parse(formWidget.widget.responseText);
+		formWidget.formPaint(formWidget.jso.color);
 	},
 	features : function() {
 		R('.callkeeperBillboard').style.marginTop = window.innerHeight/2 
 			- R('.callkeeperBillboard').offsetHeight/2;
 		R('#youPush').style.marginTop = window.innerHeight - R('#youPush').offsetHeight;	
 	},
+	specialField : function(field) {
+		formWidget.origin = R('#specialField');
+		R.cicle(field, formWidget.fieldCallback);
+		formWidget.origin.parentNode.parentNode.removeChild(formWidget.origin.parentNode);
+	},
+	fieldCallback : function(k, v) {
+		var clone = formWidget.origin.parentNode.cloneNode(true);
+		var input = clone.querySelector('input');
+		input.id = v[0];
+		input.placeholder = v[1];
+		R('.callkeeperMain.mainWorkFrame.displayInlineBlock section')
+			.insertBefore(clone, R('#youQuestion'));
+	},
+	specialSelect : function(select) {
+		formWidget.origin = R('#specialSelect');
+		R.cicle(select, formWidget.selectCallback);
+	},
+	selectCallback : function(k, v) {
+		var clone = formWidget.origin.parentNode.cloneNode(true);
+		var select = clone.querySelector('select');
+		select.id = v[0];
+		R.cicle(v, optionCallback);
+	},
+	optionCallback : function(k, v) {
+		if (!iteration)
+			continue;
+		
+		var iteration = true;
+	},
+};
+formWidget.formPaint = function(color) {
+	paint = R('.callK.anyB, .callkeeperS.messageS, .textAreaShortPost, .headerHtml.valueTitle');
+	R.cicle(paint, function(k, v) {v.style.backgroundColor = color;});
+	R('#callkeeperTitleForm').innerText = formWidget.jso.title;
+	R('#callkeeperSecondMessage').innerText = formWidget.jso.notice;
+	R('#youQuestion').placeholder = formWidget.jso.question;
+	R('#youSend').innerText = formWidget.jso.send;
+	R('#youClose').innerText = formWidget.jso.close;
+	R('#titleForComplete').innerText = formWidget.jso.t_complete;
+	R('#callMesBody').innerText = formWidget.jso.m_complete;
+	R('#youPush').innerText = formWidget.jso.push;
+	formWidget.specialField(JSON.parse(formWidget.jso.fields));
+	formWidget.specialSelect(JSON.parse(formWidget.jso.selects));
+	return this;
 };
 
-formWidget.beforeLoad().load();
+formWidget.beforeLoad().load().listeners();
 
 function toggle() {
 	var lable = document.querySelector('#youPush');
@@ -69,7 +132,7 @@ function toggle() {
 			request = JSON.stringify(request) + '&form_token=' + form_token;
 			var point = postReq(formWidget.backEnd, request);
 			point.onload = function(){
-				alert(point.responseText);
+				//alert(point.responseText);
 				R('.callkeeperBillboard').hidden = false;
 				setTimeout(function(){R('.callkeeperBillboard').hidden = true;}, 2000);
 			}

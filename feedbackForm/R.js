@@ -45,3 +45,11 @@ R.addScript = function(src) {
 R.log = function(log) {
 	return console.log(log);
 };
+
+R.cicle = function(obj, cb) {
+	for (var key in obj) {
+		if (obj.hasOwnProperty(key))
+			cb(key, obj[key]);
+	}
+	return;
+};
