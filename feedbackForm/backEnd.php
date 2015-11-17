@@ -1,19 +1,67 @@
 <?php
 include 'config.php';
-//$_POST['request'] =  '"{"fields":[[["Новое поле"],[""]],[["Новое поле"],[""]],[["Новое поле"],[""]]],"selects":[[["Название"],["Название"]],[["adfa"],["adfa"]]],"textarea":"","token":"345345","write":"true"}";';
-//$_POST['form_token'] = '345345';
-$form_message = isset($_POST['request']) ?  $_POST['request'] : false;
-$form_token = isset($_POST['form_token']) ? $_POST['form_token'] : false;
+$_POST['request'] = '{"fields":[[["Ваше имя"],["Козьма"],["#personName"]],[["Мобильный телефон"],["0 000 000 00 00"],["#phoneNumber"]],[["Электронная почта"],["собака@почта.рус"],["#mailAdress"]],[["Новое поле"],["Никогда мне не звоните"],["#inputFieldId0"]]],"selects":[[["Название"],["Поле 1"]],[["Название"],["Поле 2"]],[["Название"],["Поле 3"]]],"textarea":"Угх!","token":26}';
+$_POST['form_token'] = '345345';
 
-function writeUnit() {
-	echo 'Вы успешно записали строку номер ' . write(func_get_arg(0), func_get_arg(1));
+
+function write($msg) {
+	$m = parseMessage($msg);
+	//var_dump($m);
+	$composite = structure('message_in');
+	//$composite->showCols();
+	//var_dump($composite->collation($m, 'id', 'last_update'));
+	if ($composite->collation($m, 'id', 'last_update')) {
+		//$composite->rowWrite($m);
+		echo 'Успех! Вы записали строку номер: ' . $composite->rowWrite($m);		
+		//var_dump($composite); 
+		//print_r($tkn . '<br>Сообщение: ');
+		//print_r(json_decode($msg));
+		//return $script->pdo->lastInsertId();
+	} else
+		echo 'Ошибка года, Ваш массив фуфло!';
 }
-function write() {
-	$script = M_sql::Q();
-	$script->insert('message_in')->set('token', 'message');
-	$script->bind(func_get_arg(1), func_get_arg(0))->send();
-	return $script->pdo->lastInsertId();
+function parseMessage($msg) {
+	$mJson = json_decode($msg);
+	$cut['person'] = requisition($mJson->fields, '#personName');
+	$cut['phone'] = requisition($mJson->fields, '#phoneNumber');
+	$cut['mail'] = requisition($mJson->fields, '#mailAdress');
+	$cut['selects'] = keyVal($mJson->selects);
+	$cut['fields'] = keyVal($mJson->fields);
+	$cut['textarea'] = $mJson->textarea;
+	$cut['token'] = $mJson->token;
+	$cut['utm'] = '';
+	$cut['ip'] = '';
+	return $cut;
 }
-if ($form_message !== false && $form_token !== false) {
-	writeUnit($form_message, $form_token);
+function keyVal($components) {
+	for ($i = 0, $f = '', $c = $components; $i < count($c); $i++) {
+		if ('empty' === $c[$i])
+			continue;
+		$f .= $c[$i][0][0] . ':';
+		$f .= $c[$i][1][0] . ';';
+	}
+	return $f;
 }
+function requisition(&$arr, $mark) {
+	for ($i = 0; $i < count($arr); $i++) {
+		if ($mark === $arr[$i][2][0]) {
+			$ok = $arr[$i][1][0];
+			$arr[$i] = 'empty';
+			return $ok;
+		}
+	}
+}
+function entry() {
+	$suite = gtVars();
+	if (!empty($suite['msg']))
+		write($suite['msg']);
+}
+function structure($tName) {
+	return DBClass::get($tName);
+}
+function gtVars() {
+	$massive['msg'] = isset($_POST['request']) ?  $_POST['request'] : false;
+	$massive['tkn'] = isset($_POST['form_token']) ? $_POST['form_token'] : false;
+	return $massive;
+}
+entry();

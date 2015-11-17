@@ -1,9 +1,10 @@
 var fVariables = {
 	countInputField: 0,
 	countSelectMenu: 0,
-	formColorMaster: '#27ae60',
+	formColorMaster: '#16a085',
 	inputFieldId : 'inputFieldId',
 	selectMenuId : 'selectMenuId',
+	addClass : 'blockContainerElement',
 	idPull : {
 		title : ['callkeeperTitleForm', 'callkeeperTitleFormClone'],
 		notice : ['callkeeperSecondMessage', 'callkeeperSecondMessageClone'],
@@ -20,12 +21,14 @@ var fVariables = {
 	tmp : [],
 };
 var fFunctions = {
-	addField : function(before, addClass) {			
-		this.xyz = $.get('inputField.html', '', function(data){
+	addField : function(before, addId, addValue) {			
+		$.get('inputField.html', '', function(data) {
+			var addClass = fVariables.addClass;
+			addValue = (addValue) ? addValue : 'Новое поле';
 			var blockContainer = $('<div>').addClass(addClass).html(data);
-			var nowId = fVariables.inputFieldId + fVariables.countInputField++;
-			$(blockContainer.find('input')[0]).attr('id', nowId + 'Clone');
-			$(blockContainer.find('input')[1]).attr('id', nowId).attr('placeholder', 'Новое поле');
+			var nowId = (addId) ? addId : fVariables.inputFieldId + fVariables.countInputField++;
+			$(blockContainer.find('input')[0]).attr('id', nowId + 'Clone').attr('value', addValue);
+			$(blockContainer.find('input')[1]).attr('id', nowId).attr('placeholder', addValue);
 			before.before(blockContainer);
 			eval("keeperToggle($('#" + nowId + "'), $('#" + nowId + "Clone'))");
 			$('.fa.fa-times.fa-2x').parent().click(function(event) {$(this).parent().remove();});			
@@ -34,7 +37,7 @@ var fFunctions = {
 	},
 	init : function() {		
 		$('#addFieldToolId').click(function() {
-			fFunctions.addField($('#addFieldToolId'), 'blockContainerElement');
+			fFunctions.addField($('#addFieldToolId'));
 		});
 		$('#addListToolId').click(function() {
 			$('#redactListScroll').css('display', 'block');
@@ -75,10 +78,15 @@ var fFunctions = {
 		keeperToggle($('#callMesBody'), $('#callMesBodyClone'));
 		return this;
 	},
-	afterInit : function() {	
-		fFunctions.addField($('#addFieldToolId'), 'blockContainerElement');		
+	afterInit : function() {
+		fFunctions.addField($('#addFieldToolId'), 'personName', 'Ваше имя');	
+		fFunctions.addField($('#addFieldToolId'), 'phoneNumber', 'Мобильный телефон');	
+		fFunctions.addField($('#addFieldToolId'), 'mailAdress', 'Электронная почта');	
+		fFunctions.addField($('#addFieldToolId'));	
 		var suite = $([$('<input>').val('Название'), $('<input>').val('Поле 1'), 
-			$('<input>').val('Поле 2'), $('<input>').val('Поле 3')]);
+			$('<input>').val('Поле 2'), $('<input>').val('Поле 3'), $('<input>').val('Поле 4')]);
+		fFunctions.addList(suite, $('#addListToolId'));
+		fFunctions.addList(suite, $('#addListToolId'));
 		fFunctions.addList(suite, $('#addListToolId'));
 		return this;
 	},
@@ -201,7 +209,7 @@ var fFunctions = {
 	bSelects : function(key, val) {
 		//console.log(val);
 		var opt = [], pack = $('#' + val).find('option');
-		fVariables.tmp = [];
+		fVariables.tmp = ['#' + val];
 		for (i = 0; i < pack.size(); i++)
 			opt.push($(pack[i]).text());
 		//console.log(opt);

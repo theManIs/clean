@@ -19,14 +19,6 @@ function R(selector) {
 	}
 }
 
-R.counter = function(kit, callback) {
-	var eachCounter = 0;
-	while (eachRow = kit[eachCounter]) {
-		callback(eachCounter);
-		eachCounter++;
-	}
-};
-
 R.addStyle = function(link) {
 	var tag = document.createElement('link');
 	tag.rel = 'stylesheet';
@@ -47,9 +39,11 @@ R.log = function(log) {
 };
 
 R.cicle = function(obj, cb) {
+	var counter = 0;
 	for (var key in obj) {
 		if (obj.hasOwnProperty(key))
-			cb(key, obj[key]);
+			cb(key, obj[key], counter);
+		counter++;
 	}
 	return;
 };

@@ -60,18 +60,22 @@ formWidget = {
 	specialSelect : function(select) {
 		formWidget.origin = R('#specialSelect');
 		R.cicle(select, formWidget.selectCallback);
+		formWidget.origin.parentNode.parentNode.removeChild(formWidget.origin.parentNode);
 	},
 	selectCallback : function(k, v) {
 		var clone = formWidget.origin.parentNode.cloneNode(true);
-		var select = clone.querySelector('select');
-		select.id = v[0];
-		R.cicle(v, optionCallback);
+		formWidget.select = clone.querySelector('select');
+		//cur = v;
+		formWidget.select.id = v[0];
+		R.cicle(v, formWidget.optionCallback);
+		R('.callkeeperMain.mainWorkFrame.displayInlineBlock section')
+			.insertBefore(clone, R('#youQuestion'));
 	},
-	optionCallback : function(k, v) {
-		if (!iteration)
-			continue;
-		
-		var iteration = true;
+	optionCallback : function(k, v, i) {
+		if (0 === i) return;
+		var option = document.createElement('option');
+		option.innerText = v;
+		formWidget.select.appendChild(option);
 	},
 };
 formWidget.formPaint = function(color) {
@@ -123,7 +127,7 @@ function toggle() {
 			var fields = formGetData.fields();
 			var selects = formGetData.selects();
 			var textarea = formGetData.textarea();
-			request = {
+			var request = {
 				fields : fields,
 				selects : selects,
 				textarea : textarea,
@@ -142,13 +146,14 @@ function toggle() {
 
 formGetData = {
 	fields : function() {
-		this.f = this.build('.class.InputText.newFieldForm', this.cdfields);
+		this.f = this.build('input.class.InputText.newFieldForm', this.cdfields);
 		delete kit;
 		delete rec;
 		return this.f;
 	},
-	cdfields : function(i) {
-		rec.push([[R(formGetData.fCount + i).placeholder], [R(formGetData.fCount + i).value]]);
+	cdfields : function(k, v, i) {
+		var selectorId = '#' + v.id;
+		rec.push([[R(selectorId).placeholder], [R(selectorId).value], [selectorId]]);
 	},
 	build : function(indifier, callback) {
 		var kit = R(indifier);
@@ -159,11 +164,11 @@ formGetData = {
 			if (length === 1) 
 				rec.push([[kit[0].innerText], [kit.value]]);
 			else
-				R.counter(kit, callback);
+				R.cicle(kit, callback);
 		return rec;
 		}		
 	},
-	cbselects : function(i) {
+	cbselects : function(k, v, i) {
 		var nameSel = kit[i][0].innerText;
 		rec.push([[nameSel], [kit[i].value]]);		
 	},

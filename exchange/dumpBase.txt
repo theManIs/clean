@@ -1,0 +1,3 @@
+mysqldump -u[USER] -p[PASSWORD] [DB_NAME] > [FILE_NAME_TO_SAVE].sql
+mysql -u[USER] -p[PASSWORD] -f [mydb] < [mydb_dump].sql
+mysql -u[root] -p[123456] -f --default-character-set=[cp1251] [mydb] < [mydb_dump].sql
