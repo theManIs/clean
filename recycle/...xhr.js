@@ -1,10 +1,11 @@
 /*Производит кросс-доменный GET-запрос*/
-function getReq(request) {
+function get(request) {
+	request = request + '?noCache=' + (new Date()).getTime();
 	var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 	var xhr = new XHR();
 	xhr.open('GET', request, true);
 	xhr.onerror = function() {
-		alert('Ошибка ' + this.status);
+		alert('Ошибка' + this.status);
 	}
 	xhr.ontimeout = function() 	{
 		alert('Извините, запрос превысил максимальное время');
@@ -14,18 +15,17 @@ function getReq(request) {
 };
 
 /*Производит кросс-доменный POST-запрос*/
-function postReq(url, request) {
+function get(request) {
 	time = (new Date()).getTime();
 	var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 	var xhr = new XHR();
-	xhr.open('POST', url, true);	
-	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+	xhr.open('POST', time, true);
 	xhr.onerror = function() {
-		alert('Ошибка ' + this.status);
+		alert('Ошибка' + this.status);
 	}
 	xhr.ontimeout = function() 	{
 		alert('Извините, запрос превысил максимальное время');
 	}
-	xhr.send('request=' + request);
+	xhr.send(request);
 	return xhr;
 };
