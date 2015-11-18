@@ -63,7 +63,6 @@ formWidget = {
 	selectCallback : function(k, v) {
 		var clone = formWidget.origin.parentNode.cloneNode(true);
 		formWidget.select = clone.querySelector('select');
-		//cur = v;
 		formWidget.select.id = v[0];
 		R.cicle(v, formWidget.optionCallback);
 		R('.callkeeperMain.mainWorkFrame.displayInlineBlock section')
@@ -72,7 +71,7 @@ formWidget = {
 	optionCallback : function(k, v, i) {
 		if (0 === i) return;
 		var option = document.createElement('option');
-		option.innerText = v;
+		option.innerHTML = v;
 		formWidget.select.appendChild(option);
 	},
 };

@@ -147,6 +147,10 @@ select.classSelectPoint, input.class.InputText
 	margin: 0;	
 	background: none;
 }
+input.class.InputText 
+{
+	box-sizing: border-box;
+}
 .closeB.featuresS
 {
 	border-left: 1px solid black;
@@ -158,6 +162,7 @@ div.callkeeper.container.input
 .textA.blockS
 {
 	height: 80px;
+	width: 256px;
 }
 .callkeeperAnyButton, .headerHtmlTitle, .callkeeperMessage, .textAreaShortPost
 {
