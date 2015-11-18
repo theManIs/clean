@@ -8,6 +8,7 @@ var myLoader = {
 		var l = document.createElement('script');
 		l.type = 'text/javascript';
 		l.src = addr;
+		l.async = false;
 		document.head.appendChild(l);
 	},
 	recognize : function () {
@@ -21,4 +22,4 @@ var myLoader = {
 	},
 };
 
-myLoader.initiate(['R.js', 'xhr.js', 'drag&drop.js', 'ckScript.js']);
+myLoader.initiate(['R.js', 'xhr.js', 'dnd.js', 'ckScript.js']);

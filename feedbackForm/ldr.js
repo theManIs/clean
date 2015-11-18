@@ -8,6 +8,7 @@ var myLoader = {
 		var l = document.createElement('script');
 		l.type = 'text/javascript';
 		l.src = addr;
+		l.async = false;
 		document.head.appendChild(l);
 	},
 	recognize : function () {
