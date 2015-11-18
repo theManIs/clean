@@ -21,4 +21,4 @@ var myLoader = {
 	},
 };
 
-myLoader.initiate(['R.js', 'xhr.js', 'drag&drop.js', 'ckScript.js']);
+myLoader.initiate(['R.js', 'xhr.js', 'dnd.js', 'ckScript.js']);

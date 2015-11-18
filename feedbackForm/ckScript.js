@@ -1,10 +1,8 @@
 formWidget = {
-	featuresPath : '../feedbackForm/saveFeatures.php',
-	formPath : '../feedbackForm/callkeeperWidget.html',
-	stylePath : '../feedbackForm/callkeeperStyle.css',
-	backEnd : '../feedbackForm/backEnd.php',
-	xhr : '../feedbackForm/xhr.js',
-	R : '../feedbackForm/R.js',
+	featuresPath : myLoader.src + 'saveFeatures.php',
+	formPath : myLoader.src + 'callkeeperWidget.html',
+	stylePath : myLoader.src + 'callkeeperStyle.css',
+	backEnd : myLoader.src + 'backEnd.php',
 	
 	beforeLoad : function() {
 		R.addStyle(this.stylePath);
