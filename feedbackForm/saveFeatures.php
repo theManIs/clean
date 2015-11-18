@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 include 'config.php';
 //$_POST['form_token'] = '16';
 //$_POST['send'] = '{"title":["callkeeperTitleForm","Отправить сообщение"],"notice":["callkeeperSecondMessage","Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время"],"question":["youQuestion","Введите ваш вопрос"],"send":["youSend","Отправить"],"close":["youClose","Закрыть"],"push":["youPush","Оставить данные"],"tComplete":["titleForComplete","Сообщение"],"mComplete":["callMesBody","Вы успешно отправили свои контактные данные"],"fields":[["inputFieldId0","Новое поле"]],"selects":[["Название","Поле 1","Поле 2","Поле 3"]],"color":"cloud"}';

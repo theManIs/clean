@@ -25,7 +25,7 @@ if ('localhost' === $_SERVER['HTTP_HOST']) {
 	define('DB', 'lead');
 	define('USER', 'root');
 	define('PASSWORD', '');
-} elseif ('mysql.hostinger.ru' === $_SERVER['HTTP_HOST']) {
+} elseif ('climb.hol.es' === $_SERVER['HTTP_HOST']) {
 	define('HOST', 'mysql.hostinger.ru');
 	define('DB', 'u421461657_bank');
 	define('USER', 'u421461657_pie');

@@ -6,16 +6,16 @@ var DnD = {
 		DnD.objdnd = document.querySelector('#' + ev.target.getAttribute('name'));
 		if (DnD.objdnd && DnD.objdnd.getAttribute('dndattribute') === DnD.dndAttribute) {
 			var objdnd = DnD.objdnd;
-			if(objdnd) {
-				X = ev.x;
-				Y = ev.y;
+			if (objdnd) {
+				X = ev.clientX;
+				Y = ev.clientY;
 				objdndLeft = parseInt(objdnd.style.left) ? parseInt(objdnd.style.left) : objdnd.offsetLeft;
 				objdndTop = parseInt(objdnd.style.top) ? parseInt(objdnd.style.top) : objdnd.offsetTop;
 			}
 		}
 		return false;
 	},
-	mousemove : function(ev) {
+	mousemove : function(event) {
 		var objdnd = DnD.objdnd;
 		if(objdnd) {
 			objdnd.style.left = objdndLeft + event.clientX-X + document.body.scrollLeft + 'px';
@@ -39,5 +39,4 @@ var DnD = {
 }
 
 DnD.initiate();
-
 

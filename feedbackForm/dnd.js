@@ -12,7 +12,6 @@ var DnD = {
 				objdndLeft = parseInt(objdnd.style.left) ? parseInt(objdnd.style.left) : objdnd.offsetLeft;
 				objdndTop = parseInt(objdnd.style.top) ? parseInt(objdnd.style.top) : objdnd.offsetTop;
 			}
-			R.log(X + ' ' + Y + ' ' + objdndLeft + ' ' + objdndTop);
 		}
 		return false;
 	},

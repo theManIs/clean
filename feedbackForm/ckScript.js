@@ -1,6 +1,6 @@
 formWidget = {
 	featuresPath : myLoader.src + 'saveFeatures.php',
-	formPath : myLoader.src + 'callkeeperWidget.html',
+	formPath : myLoader.src + 'callkeeperWidget.php',
 	stylePath : myLoader.src + 'callkeeperStyle.css',
 	backEnd : myLoader.src + 'backEnd.php',
 	

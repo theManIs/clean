@@ -1,3 +1,5 @@
+<?php header('Access-Control-Allow-Origin: *');
+echo '
 <div class="displayInlineBlock redactForm" id="parentFrame">
 	<div class="callkeeperMain mainWorkFrame displayInlineBlock" 
 		dndattribute="dragable" id="myBestWidget">
@@ -32,3 +34,5 @@
 			>Вы успешно отправили свои контактные данные</p>
 	</div>
 </div>
+';
+?>
