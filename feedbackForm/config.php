@@ -30,7 +30,7 @@ if ('localhost' === $_SERVER['HTTP_HOST']) {
 	define('DB', 'u421461657_bank');
 	define('USER', 'u421461657_pie');
 	define('PASSWORD', 'OKfS8OI31n');
-} elseif ('disel.esy.es' === $_SERVER['HTTP_HOST'])
+} elseif ('disel.esy.es' === $_SERVER['HTTP_HOST']) {
 	define('HOST', 'mysql.hostinger.ru');
 	define('DB', 'u489083372_sfgsf');
 	define('USER', 'u489083372_dsfgs');
