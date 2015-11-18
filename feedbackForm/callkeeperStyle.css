@@ -74,7 +74,7 @@ input.itemList.scrollElem, .itemListScrollHeader, .newFieldForm, .textA.blockS
 }
 .pushD.ButtonS
 {
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	margin-left: calc(100% - 250px);

@@ -3,21 +3,28 @@
 <head>
 	<meta charset="utf-8">
 	<title>Название</title>
-	<script language="javascript">
+	<!--<script language="javascript">
 		eval('window.' + location.search.substr(1) + ';');
-	</script>
-	<script language="javascript" src="../feedbackForm/R.js"></script>
+	</script>-->
+	<!--<script language="javascript" src="../feedbackForm/R.js"></script>
 	<script language="javascript" src="../feedbackForm/xhr.js"></script>
 	<script language="javascript" src="../feedbackForm/drag&drop.js"></script>
-	<!--<script language="javascript" src="../feedbackForm/ldr.js"></script>-->
-	<script type="text/javascript">
-		//window.form_token = '345345';
+	<script language="javascript" src="../feedbackForm/ldr.js?form_token=26"></script>-->
+	<!--<script type="text/javascript">
+		window.form_token = '26';
 		lead = document.createElement('script');
 		lead.async = true;
 		//lead.src = 'htt' + 'p:' + '//a' + 'rte' + 'm.ca' + 'llkeep' + 'er.ru/ale' + 'rt.js';
 		//lead.src = 'htt' + 'p://' + 'clim' + 'b.hol.es/ale' + 'rt.js';
 		//lead.src = 'alert.js';
 		lead.src = '../feedbackForm/ckScript.js';
+		lead.type = 'text/javascript';
+		document.head.appendChild(lead);
+	</script>-->
+	<script type="text/javascript">
+		window.form_token = '26';
+		lead = document.createElement('script');
+		lead.src = '../feedbackForm/ldr.js';
 		lead.type = 'text/javascript';
 		document.head.appendChild(lead);
 	</script>

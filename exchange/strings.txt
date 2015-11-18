@@ -1,0 +1,11 @@
+str.length
+str.charAt(pos)
+str.toUpperCase()
+str.toLowerCase()
+str.indexOf(sub[, pos])
+str.substring(start [, end])
+str.substr(start [, length])
+str.slice(start [, end])
+String.fromCharCode(code)
+str.charCodeAt(pos)
+str.trim()
