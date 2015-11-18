@@ -99,7 +99,7 @@ div.blockContainerElement option
 	opacity: .9;
 	padding: 0;
 	margin: 0;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: calc(50% - 100px);
 	margin-left: calc(50% - 200px);

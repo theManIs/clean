@@ -133,13 +133,17 @@ function toggle() {
 			request = JSON.stringify(request) + '&form_token=' + form_token;
 			var point = postReq(formWidget.backEnd, request);
 			point.onload = function(){
-				//alert(point.responseText);
 				R('.callkeeperBillboard').hidden = false;
-				setTimeout(function(){R('.callkeeperBillboard').hidden = true;}, 2000);
+				formWidget.deleteAll();
 			}
 		}
 	}
 }
+formWidget.deleteAll = function() {
+	document.body.removeChild(R('#parentFrame'));
+	document.body.removeChild(R('#youPush').parentElement);
+	setTimeout(function(){document.body.removeChild(R('.callkeeperBillboard').parentElement);}, 2000);
+};
 
 formGetData = {
 	fields : function() {
