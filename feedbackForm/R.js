@@ -47,3 +47,10 @@ R.cicle = function(obj, cb) {
 	}
 	return;
 };
+
+R.attach = function(eventName, callback) {
+	if (window.addEventListener) {
+		window.addEventListener(eventName, callback);
+	} else
+		window.attachEvent(eventName, callback);
+};
