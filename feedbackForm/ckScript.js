@@ -18,12 +18,10 @@ formWidget = {
 	},
 	listeners : function() {
 		this.form.addEventListener('load', function() {
-			//R.log(widget.status);
 			document.body.innerHTML = document.body.innerHTML + this.responseText;
 			toggle();
 		});
 		this.widget.addEventListener('load', function() {
-			//R.log(form.status);
 			if (200 === formWidget.form.status)
 				formWidget.build();
 			else
@@ -32,16 +30,9 @@ formWidget = {
 		return this;
 	},
 	build : function() {
-		//R.log(formWidget.widget.status);
-		//R.log(formWidget.form.status);
 		formWidget.jso = JSON.parse(formWidget.widget.responseText);
 		formWidget.formPaint(formWidget.jso.color);
 	},
-	/*features : function() {
-		R('.callkeeperBillboard').style.marginTop = window.innerHeight/2 
-			- R('.callkeeperBillboard').offsetHeight/2;
-		R('#youPush').style.marginTop = window.innerHeight - R('#youPush').offsetHeight;	
-	},*/
 	specialField : function(field) {
 		formWidget.origin = R('#specialField');
 		R.cicle(field, formWidget.fieldCallback);
@@ -103,7 +94,6 @@ function toggle() {
 			lable.hidden = true;
 			feature.hidden = false;
 		};
-		//formWidget.features();
 	}
 	if (feature) {
 		feature.hidden = true;
@@ -144,8 +134,6 @@ function toggle() {
 	}
 }
 formWidget.deleteAll = function() {
-	//var counter = (R.rCookie('sendFormCounter')) ? parseInt(R.rCookie('sendFormCounter')) + 1 :
-		//(R.ls().getItem('sendFormCounter')) ? parseInt(R.ls().getItem('sendFormCounter')) + 1 : 1;
 	var counter = R.rCookie('sendFormCounter') || R.ls().getItem('sendFormCounter')  || 0;
 	counter++;
 	R.wCookie('sendFormCounter', counter);
