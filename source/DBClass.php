@@ -1,5 +1,5 @@
 <?php
-class DBClass {
+class DBClass extends M_base {
 	private $itself;
 	private $cols;
 	private $table;
@@ -33,6 +33,27 @@ class DBClass {
 		$command = '$cortage' . self::constructor($row);
 		eval($command);
 		return $cortage->pdo->lastInsertId();
+	}
+	public function rowUpdate($row) {
+		$row = self::rowFill($row);	
+		$cortage = M_sql::Q();
+		$command = '$command = $cortage' . self::conUpdate($row);
+		eval($command);
+		return $command;
+	}
+	private function conUpdate($row) {
+		$sql_1 = '->update($this->table)->set(' . self::csHelper($row, 'key');
+		$sql_2 = ')->where($this->condition)->bind(' . self::csHelper($row, 'ths');
+		$sql_3 = ', $this->condVal)->send()->rowCount();';
+		return $sql_1 . $sql_2 . $sql_3;
+	}
+	public function condition($cond) {
+		$this->condition = $cond;
+		return $this->itself;
+	}
+	public function condVal($cond) {
+		$this->condVal = $cond;
+		return $this->itself;
 	}
 	private function rowFill($row) {
 		foreach ($row as $key => $val) {
@@ -88,6 +109,15 @@ class DBClass {
 			}
 			return true;
 		} else
+			return false;
+	}
+	public function attempt($column, $value) {
+		$attempt = M_sql::Q();
+		$attempt->select('*')->from($this->table)->where($column)->bind($value);
+		$retPar = $attempt->send()->fetchAll();
+		if (isset($retPar[0]))
+			return $retPar[0];
+		else
 			return false;
 	}
 }

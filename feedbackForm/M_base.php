@@ -28,9 +28,25 @@ class M_base
 					return true;
 				}
 			}
-			return false;
+		}
+		return false;
+	}
+	
+	public static function show($subject) {
+		function agenShow($subject) {
+			foreach ($subject as $k => $v) {
+			if (is_array($v) || is_object($v)) {
+					echo "$k: <br>";
+					agenShow($v);
+				} else
+					printf("%s => %s <br>", $k, $v);
+			}		
+		};
+		if (is_array($subject) || is_object($subject)) {
+			agenShow($subject);
 		}
 	}
+	
 }
 
 ?>
