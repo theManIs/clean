@@ -1,20 +1,24 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 include 'config.php';
-//$_POST['form_token'] = '26';
-//$_POST['send'] = '{"title":["callkeeperTitleForm","Отправить сообщение"],"notice":["callkeeperSecondMessage","Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время"],"question":["youQuestion","Введите ваш вопрос"],"send":["youSend","Отправить"],"close":["youClose","Закрыть"],"push":["youPush","Оставить данные"],"tComplete":["titleForComplete","Сообщение"],"mComplete":["callMesBody","Вы успешно отправили свои контактные данные"],"fields":[["inputFieldId0","Новое поле"]],"selects":[["Название","Поле 1","Поле 2","Поле 3"]],"color":"cloud"}';
+$_POST['form_token'] = '25';
+$_POST['send'] = '{"title":["callkeeperTitleForm","Отправить сообщение"],"notice":["callkeeperSecondMessage","Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время"],"question":["youQuestion","Введите ваш вопрос"],"send":["youSend","Отправить"],"close":["youClose","Закрыть"],"push":["youPush","Оставить данные"],"tComplete":["titleForComplete","Сообщение"],"mComplete":["callMesBody","Вы успешно отправили свои контактные данные"],"fields":[["inputFieldId0","Новое поле"]],"selects":[["Название","Поле 1","Поле 2","Поле 3"]],"color":"cloud"}';
 	
 function write($form_token, $form_str) {
-	$std = json_decode($form_str);
-	$std = checkStd($std);
-	$std->fields = json_encode($std->fields);
-	$std->selects = json_encode($std->selects);
-	$std->form_token = $form_token;
+	$std = unpacked($form_str, $form_token);
 	$structure = structure('form_widget');
 	if ($structure->what('a', $structure->attempt('form_token', $form_token)))
 		return uBase($std, $structure);
 	else
 		return wBase($form_token, $std);
+}
+function unpacked($form_str, $form_token) {
+	$std = json_decode($form_str);
+	$std = checkStd($std);
+	$std->fields = json_encode($std->fields);
+	$std->selects = json_encode($std->selects);
+	$std->form_token = $form_token;
+	return $std;
 }
 function checkStd($std) {
 	$package = ['title', 'notice', 'question', 'send', 'close',
