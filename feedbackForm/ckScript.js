@@ -3,6 +3,8 @@ formWidget = {
 	formPath : myLoader.src + 'callkeeperWidget.php',
 	stylePath : myLoader.src + 'callkeeperStyle.css',
 	backEnd : myLoader.src + 'backEnd.php',
+	invisible : '200%',
+	visible : 'auto',
 	
 	beforeLoad : function() {
 		R.addStyle(this.stylePath);
@@ -81,7 +83,18 @@ formWidget.formPaint = function(color) {
 	formWidget.specialSelect(JSON.parse(formWidget.jso.selects));
 	return this;
 };
-
+formWidget.formTog = function(elem) {
+	if (elem) {
+		if (elem.style.marginLeft != formWidget.invisible) {
+			elem.style.display = 'none';
+			elem.style.marginLeft = formWidget.invisible;
+		} else {
+			elem.style.display = 'block';
+			elem.style.marginLeft = formWidget.visible;
+		}
+	} else
+		return false;
+};
 formWidget.beforeLoad().load().listeners();
 
 function toggle() {
@@ -91,26 +104,27 @@ function toggle() {
 	var send = R('#youSend');
 	if (lable) {
 		lable.onclick = function() {
-			lable.hidden = true;
-			feature.hidden = false;
+			formWidget.formTog(R('.callkeeperMain'));
+			formWidget.formTog(R('#youPush'));
 		};
+		formWidget.formTog(R('.callkeeperMain'));
 	}
 	if (feature) {
-		feature.hidden = true;
-		setTimeout(function(){feature.hidden = false;lable.hidden = true;}, 4000);
+		setTimeout(function(){
+			formWidget.formTog(R('.callkeeperMain'));
+			formWidget.formTog(R('#youPush'));
+		}, 4000);
 	}
 	if (clsr) {
 		clsr.onclick = function() {
-			feature.hidden = true;
-			lable.hidden = false;
+			formWidget.formTog(R('.callkeeperMain'));
+			formWidget.formTog(R('#youPush'));
 		}
 	}
 	if (R('.callkeeperBillboard'))
-		R('.callkeeperBillboard').hidden = true;
+		formWidget.formTog(R('.callkeeperBillboard'));
 	if (send) {
-		send.onclick = function() {
-			feature.hidden = true;
-			lable.hidden = false;			
+		send.onclick = function() {			
 			var fields = formGetData.fields();
 			var selects = formGetData.selects();
 			var textarea = formGetData.textarea();
@@ -126,10 +140,10 @@ function toggle() {
 			}
 			request = JSON.stringify(request);
 			var point = postReq(formWidget.backEnd, request);
-			point.onload = function(){
-				R('.callkeeperBillboard').hidden = false;
+			point.onload = function() {
+				formWidget.formTog(R('.callkeeperBillboard'));
 				formWidget.deleteAll();
-			}
+			};
 		}
 	}
 }
