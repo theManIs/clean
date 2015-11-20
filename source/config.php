@@ -1,9 +1,11 @@
 <?php
+define('DBUG', true);
 
-
-//Настройки сервера
 ini_set('error_reporting', E_ALL);
-ini_set('display_errors','1');
+if ('DBUG')
+	ini_set('display_errors','1');
+else
+	ini_set('display_errors','0');
 setlocale(LC_ALL, "ru_RU.UTF-8");
 mb_internal_encoding("UTF-8");
 mb_http_output('UTF-8');
@@ -14,12 +16,10 @@ function getHour() {
 }
 
 //Динамическое подключение классов
-function __autoload($name) 
-{
+function __autoload($name) {
 	include_once($name.'.php');
 }
 
-//Константы
 if ('localhost' === $_SERVER['HTTP_HOST']) {
 	define('HOST', 'localhost');
 	define('DB', 'lead');

@@ -49,23 +49,39 @@ class M_base
 			}
 		}
 		return false;
-	}	
+	}
+	private function agenShow($subject) {
+		foreach ($subject as $k => $v) {
+			if (is_array($v)) {
+				echo "$k: <br>";
+				self::agenShow($v);
+			} elseif (is_object($v)) {
+				echo var_dump($v);
+			} else
+				printf("%s => %s <br>", $k, $v);
+		}	
+	}
 	public function show($subject) {
-		function agenShow($subject) {
-			foreach ($subject as $k => $v) {
-			if (is_array($v) || is_object($v)) {
-					echo "$k: <br>";
-					agenShow($v);
-				} else
-					printf("%s => %s <br>", $k, $v);
-			}		
-		};
 		if (is_array($subject) || is_object($subject)) {
-			agenShow($subject);
+			self::agenShow($subject);
 		}
 		if (is_string($subject) || is_numeric($subject)) 
 			echo $subject;
-	}	
+		if (is_bool($subject))
+			var_dump($subject);
+		echo '<br>';
+	}
+	public function iterControl($iter, $arg) {
+		static $status = 0;
+		if ($status === $iter) {
+			self::show($arg); exit;
+		}
+		$status++;
+	}
 }
-
-?>
+function B() {
+	return new M_base();
+}
+function V($v) {
+	var_dump($v);
+}

@@ -1,0 +1,2 @@
+onmousedown="return false"
+onselectstart="return false"

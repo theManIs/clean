@@ -7,7 +7,7 @@
 {
 	width: 300px;
 	background: white;
-	position: absolute;
+	position: fixed;
 	top: calc(50% - 250px);
 	left: calc(50% - 150px);
 	border: 0px solid black;

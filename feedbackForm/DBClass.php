@@ -3,6 +3,7 @@ class DBClass extends M_base {
 	private $itself;
 	private $cols;
 	private $table;
+	private $word = 'empty';
 	
 	private function __construct($tName) {		
 		self::flood($tName);
@@ -27,24 +28,31 @@ class DBClass extends M_base {
 		$itself->itself = $itself;
 		return $itself;
 	}
-	public function rowWrite($row) {
-		$row = self::rowFill($row);		
-		$cortage = M_sql::Q();
-		$command = '$cortage' . self::constructor($row);
-		eval($command);
+	private function ifEmpty($row) {
+		foreach ($row as $key => &$val) {
+			if (!B()->what('s', $val)) {
+				$this->itself->$key = $this->word;
+			}
+		}
+		return $row;
+	}
+	private function inputData($row) {
+		$row = self::rowFill($row);
+		$row = self::ifEmpty($row);
+		return '$cortage = M_sql::Q(); $command = $cortage' . self::constructor($row);
+	}
+	public function rowWrite($row) {	
+		eval(self::inputData($row));
 		return $cortage->pdo->lastInsertId();
 	}
 	public function rowUpdate($row) {
-		$row = self::rowFill($row);	
-		$cortage = M_sql::Q();
-		$command = '$command = $cortage' . self::conUpdate($row);
-		eval($command);
-		return $command;
+		eval(self::inputData($row));
+		return $command->rowCount();
 	}
 	private function conUpdate($row) {
 		$sql_1 = '->update($this->table)->set(' . self::csHelper($row, 'key');
 		$sql_2 = ')->where($this->condition)->bind(' . self::csHelper($row, 'ths');
-		$sql_3 = ', $this->condVal)->send()->rowCount();';
+		$sql_3 = ', $this->condVal)->send();';
 		return $sql_1 . $sql_2 . $sql_3;
 	}
 	public function condition($cond) {
@@ -81,8 +89,8 @@ class DBClass extends M_base {
 			$this->last_update = getHour()->format('Y-m-d H:i:s');
 		else {
 			if (in_array('last_update', $this->cols, true)) {
-				$row['last_update'] = '';
 				$this->last_update = getHour()->format('Y-m-d H:i:s');
+				$row['last_update'] = $this->last_update;
 			}
 		}		
 		return $row;
