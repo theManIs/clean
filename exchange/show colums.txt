@@ -1,0 +1,2 @@
+show columns from tablename;
+show columns from tablename \G;

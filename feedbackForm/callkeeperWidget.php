@@ -1,8 +1,10 @@
 <?php header('Access-Control-Allow-Origin: *');
+$remote = $_SERVER['REMOTE_ADDR'];
+echo "<ip>$remote</ip>";
 echo '
 <div class="displayInlineBlock redactForm" id="parentFrame">
 	<div class="callkeeperMain mainWorkFrame displayInlineBlock" 
-		dndattribute="dragable" id="myBestWidget">
+		drag id="myBestWidget">
 		<header>
 			<h3 name="myBestWidget" id="callkeeperTitleForm"  
 			class="headerHtml valueTitle">Отправить сообщение</h3>

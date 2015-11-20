@@ -3,6 +3,8 @@ formWidget = {
 	formPath : myLoader.src + 'callkeeperWidget.php',
 	stylePath : myLoader.src + 'callkeeperStyle.css',
 	backEnd : myLoader.src + 'backEnd.php',
+	invisible : '200%',
+	visible : 'auto',
 	
 	beforeLoad : function() {
 		R.addStyle(this.stylePath);
@@ -18,12 +20,10 @@ formWidget = {
 	},
 	listeners : function() {
 		this.form.addEventListener('load', function() {
-			//R.log(widget.status);
 			document.body.innerHTML = document.body.innerHTML + this.responseText;
 			toggle();
 		});
 		this.widget.addEventListener('load', function() {
-			//R.log(form.status);
 			if (200 === formWidget.form.status)
 				formWidget.build();
 			else
@@ -32,15 +32,8 @@ formWidget = {
 		return this;
 	},
 	build : function() {
-		//R.log(formWidget.widget.status);
-		//R.log(formWidget.form.status);
 		formWidget.jso = JSON.parse(formWidget.widget.responseText);
 		formWidget.formPaint(formWidget.jso.color);
-	},
-	features : function() {
-		R('.callkeeperBillboard').style.marginTop = window.innerHeight/2 
-			- R('.callkeeperBillboard').offsetHeight/2;
-		R('#youPush').style.marginTop = window.innerHeight - R('#youPush').offsetHeight;	
 	},
 	specialField : function(field) {
 		formWidget.origin = R('#specialField');
@@ -90,7 +83,18 @@ formWidget.formPaint = function(color) {
 	formWidget.specialSelect(JSON.parse(formWidget.jso.selects));
 	return this;
 };
-
+formWidget.formTog = function(elem) {
+	if (elem) {
+		if (elem.style.marginLeft != formWidget.invisible) {
+			elem.style.display = 'none';
+			elem.style.marginLeft = formWidget.invisible;
+		} else {
+			elem.style.display = 'block';
+			elem.style.marginLeft = formWidget.visible;
+		}
+	} else
+		return false;
+};
 formWidget.beforeLoad().load().listeners();
 
 function toggle() {
@@ -100,47 +104,70 @@ function toggle() {
 	var send = R('#youSend');
 	if (lable) {
 		lable.onclick = function() {
-			lable.hidden = true;
-			feature.hidden = false;
+			formWidget.formTog(R('.callkeeperMain'));
+			formWidget.formTog(R('#youPush'));
 		};
-		formWidget.features();
+		formWidget.formTog(R('.callkeeperMain'));
 	}
 	if (feature) {
-		feature.hidden = true;
-		setTimeout(function(){feature.hidden = false;lable.hidden = true;}, 4000);
+		setTimeout(function(){
+			formWidget.formTog(R('.callkeeperMain'));
+			formWidget.formTog(R('#youPush'));
+		}, 4000);
 	}
 	if (clsr) {
 		clsr.onclick = function() {
-			feature.hidden = true;
-			lable.hidden = false;
+			formWidget.formTog(R('.callkeeperMain'));
+			formWidget.formTog(R('#youPush'));
 		}
 	}
 	if (R('.callkeeperBillboard'))
-		R('.callkeeperBillboard').hidden = true;
+		formWidget.formTog(R('.callkeeperBillboard'));
 	if (send) {
-		send.onclick = function() {
-			feature.hidden = true;
-			lable.hidden = false;			
+		send.onclick = function() {			
 			var fields = formGetData.fields();
 			var selects = formGetData.selects();
 			var textarea = formGetData.textarea();
+			var ip = R('ip').innerText;
+			var utm = formWidget.utmMarks() || 'empty';
 			var request = {
 				fields : fields,
 				selects : selects,
 				textarea : textarea,
 				token : form_token,
+				ip : ip,
+				utm : utm,
 			}
-			request = JSON.stringify(request) + '&form_token=' + form_token;
+			request = JSON.stringify(request);
 			var point = postReq(formWidget.backEnd, request);
-			point.onload = function(){
-				//alert(point.responseText);
-				R('.callkeeperBillboard').hidden = false;
-				setTimeout(function(){R('.callkeeperBillboard').hidden = true;}, 2000);
-			}
+			point.onload = function() {
+				formWidget.formTog(R('.callkeeperBillboard'));
+				formWidget.deleteAll();
+			};
 		}
 	}
 }
-
+formWidget.deleteAll = function() {
+	var counter = R.rCookie('sendFormCounter') || R.ls().getItem('sendFormCounter')  || 0;
+	counter++;
+	R.wCookie('sendFormCounter', counter);
+	R.ls().setItem('sendFormCounter', counter);
+	document.body.removeChild(R('#parentFrame'));
+	document.body.removeChild(R('#youPush').parentElement);
+	setTimeout(function(){document.body.removeChild(R('.callkeeperBillboard').parentElement);}, 2000);
+};
+formWidget.utmMarks = function() {
+	var ck_c,ck_c_1,ck_c_2,ck_c_3,ck_c_4,ck_c_5,ck_c_6,ck_c_7;
+	ck_c_1=encodeURIComponent('current:::'+R.rCookie('ck_sbjs_current'));
+	ck_c_2=encodeURIComponent('^#^#current_add:::'+R.rCookie('ck_sbjs_current_add'));
+	ck_c_3=encodeURIComponent('^#^#first:::'+R.rCookie('ck_sbjs_first'));
+	ck_c_4=encodeURIComponent('^#^#first_add:::'+R.rCookie('ck_sbjs_first_add'));
+	ck_c_5=encodeURIComponent('^#^#session:::'+R.rCookie('ck_sbjs_session'));
+	ck_c_6=encodeURIComponent('^#^#udata:::'+R.rCookie('ck_sbjs_udata'));
+	ck_c_7=encodeURIComponent('^#^#promo:::'+R.rCookie('ck_sbjs_promo'));
+	ck_c = ck_c_1+ck_c_2+ck_c_3+ck_c_4+ck_c_5+ck_c_6+ck_c_7;
+	return ck_c;
+};
 formGetData = {
 	fields : function() {
 		this.f = this.build('input.class.InputText.newFieldForm', this.cdfields);

@@ -22,4 +22,4 @@ var myLoader = {
 	},
 };
 
-myLoader.initiate(['R.js', 'xhr.js', 'dnd.js', 'ckScript.js']);
+myLoader.initiate(['R.js', 'cks.js', 'localStorage.js', 'xhr.js', 'dnd.js', 'ckScript.js']);

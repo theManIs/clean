@@ -1,0 +1,5 @@
+localStorage.getItem(name);
+localStorage.setItem(name, value);
+localStorage.key(index);
+localStorage.removeItem(name);
+localStorage.clear();

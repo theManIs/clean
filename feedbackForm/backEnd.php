@@ -1,8 +1,7 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 include 'config.php';
-//$_POST['request'] = '{"fields":[[["Ваше имя"],["Козьма"],["#personName"]],[["Мобильный телефон"],["0 000 000 00 00"],["#phoneNumber"]],[["Электронная почта"],["собака@почта.рус"],["#mailAdress"]],[["Новое поле"],["Никогда мне не звоните"],["#inputFieldId0"]]],"selects":[[["Название"],["Поле 1"]],[["Название"],["Поле 2"]],[["Название"],["Поле 3"]]],"textarea":"Угх!","token":26}';
-//$_POST['form_token'] = '345345';
-
+//$_POST['request'] = '{"fields":[[["Ваше имя"],[""],["#personName"]],[["Мобильный телефон"],[""],["#phoneNumber"]],[["Электронная почта"],[""],["#mailAdress"]],[["Новое поле"],[""],["#inputFieldId0"]]],"selects":[[["Название"],["Название"]],[["Название"],["Название"]],[["Название"],["Название"]]],"textarea":"","token":"26","ip":"::1","utm":"current:::someValueHere ck_sbjs_current^#^#current_add:::someValueHere ck_sbjs_current_add^#^#first:::someValueHere ck_sbjs_first^#^#first_add:::someValueHere ck_sbjs_first_add^#^#session:::someValueHere ck_sbjs_session^#^#udata:::someValueHere ck_sbjs_udata^#^#promo:::someValueHere ck_sbjs_promo"}';
 
 function write($msg) {
 	$m = parseMessage($msg);
@@ -29,8 +28,9 @@ function parseMessage($msg) {
 	$cut['fields'] = keyVal($mJson->fields);
 	$cut['textarea'] = $mJson->textarea;
 	$cut['token'] = $mJson->token;
-	$cut['utm'] = '';
-	$cut['ip'] = '';
+	$cut['utm'] = $mJson->utm;
+	$cut['ip'] = $mJson->ip;
+	//var_dump($cut); exit;
 	return $cut;
 }
 function keyVal($components) {
@@ -61,7 +61,7 @@ function structure($tName) {
 }
 function gtVars() {
 	$massive['msg'] = isset($_POST['request']) ?  $_POST['request'] : false;
-	$massive['tkn'] = isset($_POST['form_token']) ? $_POST['form_token'] : false;
+	//$massive['tkn'] = isset($_POST['form_token']) ? $_POST['form_token'] : false;
 	return $massive;
 }
 entry();
