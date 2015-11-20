@@ -1,6 +1,6 @@
 <?php header('Access-Control-Allow-Origin: *');
 $remote = $_SERVER['REMOTE_ADDR'];
-echo "<ip>$remote</ip>";
+echo "<ip style=\"display: none\">$remote</ip>";
 echo '
 <div class="displayInlineBlock redactForm" id="parentFrame">
 	<div class="callkeeperMain mainWorkFrame displayInlineBlock" 
