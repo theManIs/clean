@@ -106,11 +106,12 @@ function toggle() {
 		lable.onclick = function() {
 			formWidget.formTog(R('.callkeeperMain'));
 			formWidget.formTog(R('#youPush'));
+			clearTimeout(toggle.timeout);
 		};
 		formWidget.formTog(R('.callkeeperMain'));
 	}
 	if (feature) {
-		setTimeout(function(){
+		toggle.timeout = setTimeout(function(){
 			formWidget.formTog(R('.callkeeperMain'));
 			formWidget.formTog(R('#youPush'));
 		}, 4000);

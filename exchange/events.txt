@@ -3,6 +3,7 @@ click
 dblclick
 contextmenu
 mouseover
+mouseout
 mousedown
 mouseup
 mousemove

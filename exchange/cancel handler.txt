@@ -1,0 +1,4 @@
+return false;
+event.preventDefault();
+event.returnValue = false; //IE8-
+event.preventDefault ? event.preventDefault() : (event.returnValue=false);
