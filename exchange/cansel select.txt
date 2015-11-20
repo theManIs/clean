@@ -1,2 +1,11 @@
 onmousedown="return false"
 onselectstart="return false"
+window.getSelection().removeAllRanges();
+document.selection.empty(); //IE
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none; //IE10+
+unselectable="on" //IE
+elem.onmousedown = elem.onselectstart = function() {
+  return false;
+};
