@@ -1,0 +1,5 @@
+ssh art@62.213.67.243
+
+cd /var/www/rogue/data/www/62.213.67.243/
+
+git pull https://rogue_localhost@bitbucket.org/rogue_localhost/store.git develop
