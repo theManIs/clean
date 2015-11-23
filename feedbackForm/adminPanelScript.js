@@ -1,7 +1,7 @@
 var fVariables = {
 	countInputField: 0,
 	countSelectMenu: 0,
-	formColorMaster: '#16a085',
+	formColorMaster: '#1b60a6',
 	inputFieldId : 'inputFieldId',
 	selectMenuId : 'selectMenuId',
 	addClass : 'blockContainerElement',
