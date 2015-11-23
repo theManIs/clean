@@ -125,20 +125,18 @@ function toggle() {
 	if (R('.callkeeperBillboard'))
 		formWidget.formTog(R('.callkeeperBillboard'));
 	if (send) {
-		send.onclick = function() {			
-			var fields = formGetData.fields();
-			var selects = formGetData.selects();
-			var textarea = formGetData.textarea();
-			var ip = R('ip').innerText;
+		send.onclick = function() {
+			var form = formGetData.data();
+			var ip = R('ip').innerHTML;
 			var utm = formWidget.utmMarks() || 'empty';
 			var request = {
-				fields : fields,
-				selects : selects,
-				textarea : textarea,
+				fields : form['fields'],
+				selects : form['selects'],
+				textarea : form['textarea'],
 				token : form_token,
 				ip : ip,
 				utm : utm,
-			}
+			};
 			request = JSON.stringify(request);
 			var point = postReq(formWidget.backEnd, request);
 			point.onload = function() {
@@ -169,41 +167,3 @@ formWidget.utmMarks = function() {
 	ck_c = ck_c_1+ck_c_2+ck_c_3+ck_c_4+ck_c_5+ck_c_6+ck_c_7;
 	return ck_c;
 };
-formGetData = {
-	fields : function() {
-		this.f = this.build('input.class.InputText.newFieldForm', this.cdfields);
-		delete kit;
-		delete rec;
-		return this.f;
-	},
-	cdfields : function(k, v, i) {
-		var selectorId = '#' + v.id;
-		rec.push([[R(selectorId).placeholder], [R(selectorId).value], [selectorId]]);
-	},
-	build : function(indifier, callback) {
-		var kit = R(indifier);
-		rec = [];
-		var length = (!kit) ? 0 : (kit.length) ? kit.length : 1;
-		if (length !== 0) {			
-			this.fCount = (length !== 0) ? '#' + kit[0].id.substr(0, 12) : false;
-			if (length === 1) 
-				rec.push([[kit[0].innerText], [kit.value]]);
-			else
-				R.cicle(kit, callback);
-		return rec;
-		}		
-	},
-	cbselects : function(k, v, i) {
-		var nameSel = kit[i][0].innerText;
-		rec.push([[nameSel], [kit[i].value]]);		
-	},
-	selects : function() {
-		this.s = this.build('select.classSelectPoint.newFieldForm', this.cbselects);
-		delete kit;
-		delete rec;
-		return this.s;
-	},
-	textarea : function() {
-		return this.a = R('#youQuestion').value;
-	},
-}

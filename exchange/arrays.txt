@@ -1,0 +1,3 @@
+split(divider[, limit]);
+join(divider);
+new Array(num).join(content);
