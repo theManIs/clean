@@ -6,8 +6,8 @@ echo '
 	<div class="callkeeperMain mainWorkFrame displayInlineBlock" 
 		drag id="myBestWidget">
 		<header>
-			<h3 name="myBestWidget" id="callkeeperTitleForm"  
-			class="headerHtml valueTitle">Отправить сообщение</h3>
+			<h3 name="myBestWidget" id="callkeeperTitleForm" class="headerHtml valueTitle" 			
+			onmousedown="return false" onselectstart="return false">Отправить сообщение</h3>
 			<div id="callkeeperSecondMessage" class="textAreaShortPost"
 			>Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время</div>
 		</header>
