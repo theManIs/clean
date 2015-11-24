@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Тест стилей формы</title>
+	<link rel="stylesheet" href="%D0%A2%D0%B5%D1%81%D1%82%20%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9%20%D1%84%D0%BE%D1%80%D0%BC%D1%8B_files/bootstrap.css">
+	<link href="%D0%A2%D0%B5%D1%81%D1%82%20%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9%20%D1%84%D0%BE%D1%80%D0%BC%D1%8B_files/css.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="%D0%A2%D0%B5%D1%81%D1%82%20%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9%20%D1%84%D0%BE%D1%80%D0%BC%D1%8B_files/ltStyle.css" type="text/css">
+	<!--[if IE]>
+		<link  rel="stylesheet" href="../feedbackForm/ltStyleiE.css" type="text/css">
+	<![endif]-->
+
+	<style>		
+		.callkeeperBillboard
+		{
+			left: 0;
+			top: 70%;
+		}
+		.callK.anyB.pushD.ButtonS
+		{
+			top: 70%;
+			left: 60%;
+		}
+		.callkeeperMain.mainWorkFrame.displayInlineBlock
+		{
+			top: 10%;
+		}
+		.callkeeperBillboard
+		{
+			left: 10%;
+		}
+		body
+		{
+			background: gray;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="displayInlineBlock redactForm" id="parentFrame">
+	<div class="callkeeperMain mainWorkFrame displayInlineBlock" drag="" id="myBestWidget">
+		<header class="hdrCls ckStyle">
+			<blockquote class="speechImg ckStyle"></blockquote>
+			<img src="%D0%A2%D0%B5%D1%81%D1%82%20%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9%20%D1%84%D0%BE%D1%80%D0%BC%D1%8B_files/close.png" class="closeImg ckStyle" title="Закрыть" alt="Закрыть" id="youClose">
+			<h3 name="myBestWidget" id="callkeeperTitleForm" class="headerHtml valueTitle" onmousedown="return false" onselectstart="return false">Отправить сообщение</h3>
+			<div id="callkeeperSecondMessage" class="textArea ShortPost textAreaShortPost">Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время</div>
+		</header>
+		<section>
+			<div class="callkeeper container input newFieldForm">
+				<input id="specialField" placeholder="Введите ваше имя" class="class InputText newFieldForm" type="text">
+				<img src="%D0%A2%D0%B5%D1%81%D1%82%20%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9%20%D1%84%D0%BE%D1%80%D0%BC%D1%8B_files/person.png" title="Имя" alt="Имя" class="personImg ckStyle">
+			</div>
+			<div class="callkeeper container input newFieldForm">
+				<input id="specialField" placeholder="Введите вaш телефон" class="class InputText newFieldForm" type="text">
+				<img src="%D0%A2%D0%B5%D1%81%D1%82%20%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9%20%D1%84%D0%BE%D1%80%D0%BC%D1%8B_files/phone.png" title="Телефон" alt="Телефон" class="phoneImg ckStyle">
+			</div>
+			<div class="callkeeper container input newFieldForm">
+				<input id="specialField" placeholder="Введите вашу почту" class="class InputText newFieldForm" type="text">
+				<img src="%D0%A2%D0%B5%D1%81%D1%82%20%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9%20%D1%84%D0%BE%D1%80%D0%BC%D1%8B_files/mail.png" title="Почта" alt="Почта" class="mailImg ckStyle">
+			</div>
+			<div class="callkeeper container input newFieldForm">
+				<select class="classSelectPoint newFieldForm" id="specialSelect">
+					<option selected="selected" disabled="disabled">Степень</option>
+					<option>Очень</option>
+					<option>Слишком</option>
+					<option>В наибольшей степени</option>
+				</select>
+			</div>
+			<div class="callkeeper container input newFieldForm">
+				<select class="classSelectPoint newFieldForm" id="specialSelect">
+					<option selected="selected" disabled="disabled">Качество</option>
+					<option>Хороший</option>
+					<option>Плохой</option>
+					<option>Злой</option>
+				</select>
+			</div>
+			<textarea type="text" id="youQuestion" class="textA blockS" placeholder="Введите ваш вопрос"></textarea>
+			<button id="youSend" class="callK anyB senBut">Отправить</button>
+		</section>
+		<footer class="footerLine ckStyle">
+			<a href="http://localhost/feedbackFormTest/callkeeper.ru" class="aFooter ckStyle">
+				Сервис предоставлен callkeeper
+			</a>
+		</footer>
+	</div>
+	</div><div class="displayInlineBlock">	
+		<button id="youPush" class="callK anyB pushD ButtonS">
+			Оставить данные
+		</button>
+	</div><div class="containerBillboard displayInlineBlock">
+		<div class="callkeeperBillboard">
+			<h2 class="callkeeperS messageS" id="titleForComplete">Сообщение</h2>
+			<p class="callkeeperS messageBody" id="callMesBody">Вы успешно отправили свои контактные данные</p>
+		</div>
+	</div>
+
+
+</body></html>

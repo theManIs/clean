@@ -50,7 +50,7 @@ header.hdrCls.ckStyle
 	font-size: 13px;
 	background: #ecf0f1;
 }
-input.itemList.scrollElem, .itemListScrollHeader, .newFieldForm, .textA.blockS, .InputText.newFieldForm
+input.itemList.scrollElem, .itemListScrollHeader, .newFieldForm, .textA.blockS
 {
 	padding: 4px 4px 4px 30px;
 	width: 270px;
@@ -264,13 +264,12 @@ img.speechImg.ckStyle
 	font-size: 16px;
 	overflow: visible;
 }
-.pushD.ButtonS:before, .hdrCls.ckStyle:before, .callkeeperS.messageS:before
+.pushD.ButtonS:before, blockquote.speechImg.ckStyle:before, .callkeeperS.messageS:before
 {
-	display: block;
 	position: absolute;
 	content: url("post.svg");
-	#margin-left: -125px;
-	#margin-top: -20px;
+	margin-left: -125px;
+	margin-top: -20px;
 	overflow: visible;
 	width: 40px;
 	height: 35px;
@@ -280,7 +279,7 @@ img.speechImg.ckStyle
 	#margin-left: -20px; /*IE*/
 	margin-left: -50px;
 }
-.hdrCls.ckStyle:before
+blockquote.speechImg.ckStyle:before
 {
 	margin-left: -15px;
 	margin-top: -10px;
