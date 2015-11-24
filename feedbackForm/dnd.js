@@ -3,6 +3,7 @@ var DnD = {
 	drag : 'true',
 	isMove : false,
 	callable : {},
+	container : {},
 
 	mousedown : function(ev) {
 		var objdnd = document.querySelector('#' + ev.target.getAttribute('name'));
@@ -18,6 +19,7 @@ var DnD = {
 				DnD.Top = parseInt(objdnd.style.top) ? parseInt(objdnd.style.top) : objdnd.offsetTop;
 			}
 		}
+		return false;
 	},
 	mousemove : function(event) {
 		if(DnD.objdnd) {
@@ -27,15 +29,19 @@ var DnD = {
 			DnD.objdnd.style.top = DnD.Top + DnD.offsetY + 'px';
 			DnD.isMove = true;
 		}
+		return false;
 	},
 	mouseup : function(event) {
 		if (DnD.objdnd) {
-			if (!DnD.isMove) 
-				if (DnD.callable[DnD.currentAim]) 
+			if (!DnD.isMove) {
+				if (DnD.callable[DnD.currentAim])
 					DnD.callable[DnD.currentAim](event);
-			DnD.isMove = false;
+			}
 			DnD.objdnd = false;
 		}
+		if (!DnD.container[DnD.currentAim])
+			DnD.isMove = false;	
+		return false;
 	},
 	initiate : function(subject) {
 		this.target = subject;
@@ -59,6 +65,17 @@ var DnD = {
 		} catch(e) { }
 		
 	},
+	preventParentHandler : function(parentId, childId) {
+		DnD.container[childId] = parentId;
+		var parent = document.getElementById(parentId);
+		DnD.preventHandler(parent);
+		if (DnD.callable[childId])
+			parent.addEventListener('click', function(event) {
+				if (!DnD.isMove) 
+					DnD.callable[childId](event);
+				DnD.isMove = false;
+			});
+	},
 	beforeDrag : function(obj) {
 		DnD.ifPercent(obj);
 	},
@@ -78,4 +95,7 @@ var DnD = {
 }
 
 DnD.initiate();
-//DnD.callable.callkeeperTitleForm = function(event){console.log(event);};
+//DnD.callable.childId = function(event){console.log(event);};
+//DnD.preventParentHandler(parentId, childId);
+
+

@@ -1,56 +1,5 @@
 (function(j, l, n) {
 
-var DnD = {
-	objdnd : false,
-	drag : 'true',
-
-	mousedown : function(ev) {
-		var objdnd = document.querySelector('#' + ev.target.getAttribute('name'));
-		if (objdnd && objdnd.getAttribute('drag') !== null) {
-			DnD.objdnd = objdnd;
-			if (objdnd) {
-				DnD.X = ev.clientX;
-				DnD.Y = ev.clientY;
-				DnD.Left = parseInt(objdnd.style.left) ? parseInt(objdnd.style.left) : objdnd.offsetLeft;
-				DnD.Top = parseInt(objdnd.style.top) ? parseInt(objdnd.style.top) : objdnd.offsetTop;
-			}
-		}
-		return false;
-	},
-	mousemove : function(event) {
-		if(DnD.objdnd) {
-			DnD.offsetX = event.clientX-DnD.X;
-			DnD.offsetY = event.clientY-DnD.Y;
-			DnD.objdnd.style.left = DnD.Left + DnD.offsetX  + 'px';
-			DnD.objdnd.style.top = DnD.Top + DnD.offsetY + 'px';
-			return false;
-		}
-	},
-	mouseup : function() {
-		DnD.objdnd = false;
-		return false;
-	},
-	initiate : function(subject) {
-		this.target = subject;
-		this.listen();
-	},
-	listen : function() {
-		document.addEventListener('mousedown', DnD.mousedown);
-		document.addEventListener('mousemove', DnD.mousemove);
-		document.addEventListener('mouseup', DnD.mouseup);
-	},
-	debug : function() {
-		console.log('start output');
-		console.log('origin offset: ' + DnD.Left + ' ' + DnD.Top + ' ' +
-		'origin client: ' + DnD.X + ' ' + DnD.Y);
-		console.log('current style offfset: ' + DnD.objdnd.style.left + ' ' + DnD.objdnd.style.top + ' ' +
-		'current js offset: ' + DnD.objdnd.offsetLeft + ' ' + DnD.objdnd.offsetLeft + ' ' +
-		'current move: ' + DnD.offsetX + ' ' + DnD.offsetY);
-		
-	},
-}
-
-DnD.initiate();
 
 var hostname = window.location.hostname.toString();
 function encode_data(s) {
@@ -3454,7 +3403,7 @@ i18n.phonenumbers.AsYouTypeFormatter.prototype.inputDigitHelper_=function(a){var
                 a += ' <div class="callkeeper_circle2"></div>';
                 a += ' <div class="callkeeper_circle3"></div>';
                 a += ' <div class="callkeeper_circle4"></div>';
-                a += ' <div class="callkeeper_img_circle" name="ck_phone_widget"></div>';
+                a += ' <div id="ck_act_wid_circ" class="callkeeper_img_circle" name="ck_phone_widget"></div>';
                 var b = document.createElement("div");
                 b.setAttribute("id", "ck_phone_widget");
                 b.setAttribute("drag", "");
@@ -3492,12 +3441,12 @@ i18n.phonenumbers.AsYouTypeFormatter.prototype.inputDigitHelper_=function(a){var
   				addClass(ck_phone_widget, 'ck_active');
   				addClass(ck_phone_widget, 'ck_green');
   				}
-                
-                ck_phone_widget.onclick = function(){
-                		event_source = 3;
-                        initForm();
-                        clearTimeout(auto);
-                    }
+                DnD.callable.ck_act_wid_circ = function(){
+					event_source = 3;
+					initForm();
+					clearTimeout(auto);
+				}				
+				DnD.preventParentHandler('ck_phone_widget', 'ck_act_wid_circ');
                 
                 }
             }
