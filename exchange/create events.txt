@@ -1,0 +1,13 @@
+ev = new Event(eventType, flags)
+flags = {bubbles: true/false, cancelable: true/false};
+elem.dispatchEvent(ev);
+CustomEvent
+UIEvent
+FocusEvent
+MouseEvent
+WheelEvent
+KeyboardEvent
+CompositionEvent
+ev = document.createEvent(eventInterface); //IE9+
+Event, MouseEvent, FocusEvent, KeyboardEvent //IE9+
+ev.initEvent(type, boolean bubbles, boolean cancelable); //IE9+

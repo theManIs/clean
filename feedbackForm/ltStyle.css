@@ -1,9 +1,14 @@
 * 
 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 15px;
 	padding: 0px; 
 	margin: 0px;
+}
+.callkeeperS.messageBody, .callkeeperS.messageS, .callK.anyB, .newFieldForm, .textA.blockS, 
+	.textArea.ShortPost, .headerHtml.valueTitle, a.aFooter.ckStyle
+{
+	letter-spacing: .07ex;
+	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
 }
 .callkeeperMain 
 {
@@ -42,8 +47,7 @@ header.hdrCls.ckStyle
 	margin: 15px;
 	padding: 10px;
 	font-size: 13px;
-	background: rgb(223, 233, 242);
-	letter-spacing: normal;
+	background: #ecf0f1;
 }
 input.itemList.scrollElem, .itemListScrollHeader, .newFieldForm, .textA.blockS
 {
@@ -51,7 +55,7 @@ input.itemList.scrollElem, .itemListScrollHeader, .newFieldForm, .textA.blockS
 	width: 270px;
 	height: 35px;
 	margin: 10px 0 0 15px;
-	font: 14px Verdana;
+	#font: 14px Verdana;
 	border: 1px solid rgb(250, 250, 250);
 	outline: 0;
 	background: none;
@@ -87,20 +91,6 @@ textarea.textA.blockS
 	box-shadow: inset 0 0 0 black;
 	border-radius: 0;
 }
-.pushD.ButtonS
-{
-	margin-top: 0;
-	position: fixed;
-	left: calc(100% - 250px);
-	top: calc(100% - 50px);
-	margin-left: 0;
-	width:  225px;
-	height: 36px;
-	box-shadow: inset 0 0 0 black;
-	border-radius: 15px 15px 0 0;
-	color: white;
-	font-size: 16px;
-}
 .callK.anyB:hover
 {
 	color: rgba(255, 255, 255, .5);
@@ -135,6 +125,7 @@ textarea.textA.blockS
 	border-bottom: 1px solid black;
 	transition: none;
 	box-shadow: inset 0 0 0 black;
+	color: white;
 }
 .callkeeperS.messageBody
 {
@@ -145,20 +136,33 @@ textarea.textA.blockS
 	text-align: center;
 	padding: 40px 0 40px 0;
 	margin: 0;
-	font: 25px Verdana;
+	font-size: 25px;
 	border-radius: 0;
 	box-shadow: inset 0 0 0 black;
 }
 select.classSelectPoint, input.class.InputText 
 {
 	border: 0;
-	border-radius: 0;
 	box-shadow: none;
 	outline: none;
 	width: 100%;
 	height: 100%;
 	margin: 0;	
 	background: none;
+}
+.classSelectPoint.newFieldForm
+{
+	border: none;
+	outline: none;
+	background: none;
+	padding-left: 10px;	
+}
+.classSelectPoint.newFieldForm:hover
+{
+	border: none;
+	outline: none;
+	background: none;
+	padding-left: 10px;	
 }
 input.class.InputText 
 {
@@ -244,28 +248,53 @@ img.speechImg.ckStyle
 	margin-top: 5px;
 	margin-left: 45px;
 }
-.ckStyle.pushImg:after
+.pushD.ButtonS
+{
+	margin-top: 0px;
+	position: fixed;
+	left: calc(100% - 250px);
+	top: calc(100% - 50px);
+	margin-left: 0;
+	width:  225px;
+	height: 38px;
+	box-shadow: inset 0 0 0 black;
+	border-radius: 15px 15px 0 0;
+	color: white;
+	font-size: 16px;
+	overflow: visible;
+}
+.pushD.ButtonS:before, blockquote.speechImg.ckStyle:before, .callkeeperS.messageS:before
 {
 	position: absolute;
-	content: url("doc.png");
+	content: url("post.svg");
+	margin-left: -125px;
+	margin-top: -20px;
+	overflow: visible;
+	width: 40px;
+	height: 35px;
+}
+.pushD.ButtonS:before 
+{
+	#margin-left: -20px; /*IE*/
 	margin-left: -50px;
-	margin-top: -15px;
 }
-.callK.anyB.pushD.ButtonS:before
+blockquote.speechImg.ckStyle:before
 {
-	content: url("bBtt.svg");
-	position: absolute;
-	margin-left: -75px;
-	margin-top: -5px;
+	margin-left: -15px;
+	margin-top: -10px;
 }
-.callK.anyB.pushD.ButtonS:after
+.callkeeperS.messageS:before
 {
-	content: url("aBtt.svg");
-	position: absolute;
-	margin-left: 25px;
-	margin-top: -5px;
+	margin-left: -150px;
+	#margin-left: -20px; /*IE*/
+	margin-top: -10px;
 }
-.callkeeperAnyButton, .headerHtmlTitle, .callkeeperMessage, .headerHtml.valueTitle, .pushD.ButtonS
+.displayInlineBlock 
+{
+	overflow: visible;
+}
+.callkeeperAnyButton, .headerHtmlTitle, .callkeeperMessage, .headerHtml.valueTitle, .pushD.ButtonS,
+	.callkeeperS.messageS
 {
 	background-image: -linear-gradient(top, rgba(255, 255, 255, .15) 0%, rgba(255, 255, 255, 0) 100%);
 	background-image: -o-linear-gradient(top, rgba(255, 255, 255, .15) 0%, rgba(255, 255, 255, 0) 100%);

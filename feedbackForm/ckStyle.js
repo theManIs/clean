@@ -1,0 +1,1 @@
+document.querySelector('.ckStyle.pushImg:before');

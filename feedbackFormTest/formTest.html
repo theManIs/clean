@@ -5,7 +5,11 @@
 	<title>Тест стилей формы</title>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link  rel="stylesheet" href="../feedbackForm/ltStyle.css" type="text/css">
-	<style>
+	<!--[if IE]>
+		<link  rel="stylesheet" href="../feedbackForm/ltStyleiE.css" type="text/css">
+	<![endif]-->
+
+	<style>		
 		.callkeeperBillboard
 		{
 			left: 0;
@@ -20,18 +24,23 @@
 		{
 			top: 10%;
 		}
+		.callkeeperBillboard
+		{
+			left: 10%;
+		}
 		body
 		{
 			background: gray;
 		}
 	</style>
+	<script src="../feedbackForm/ckStyle.js" language="javascript"></script>
 </head>
 <body>
 	<div class="displayInlineBlock redactForm" id="parentFrame">
 	<div class="callkeeperMain mainWorkFrame displayInlineBlock" 
 		drag id="myBestWidget">
 		<header class="hdrCls ckStyle">
-			<img src="speech.png" title="Сообщение" alt="Сообщение" class="speechImg ckStyle">
+			<blockquote class="speechImg ckStyle"></blockquote>
 			<img src="close.png" class="closeImg ckStyle" title="Закрыть" alt="Закрыть" id="youClose">
 			<h3 name="myBestWidget" id="callkeeperTitleForm" class="headerHtml valueTitle" 			
 			onmousedown="return false" onselectstart="return false">Отправить сообщение</h3>
@@ -61,8 +70,6 @@
 					<option>Слишком</option>
 					<option>В наибольшей степени</option>
 				</select>
-				<img src="chevron.png" title="Выпадающий список" alt="Выпадающий список"
-					class="chevronImg ckStyle">
 			</div>
 			<div class="callkeeper container input newFieldForm">
 				<select class="classSelectPoint newFieldForm" id="specialSelect">
@@ -71,13 +78,10 @@
 					<option>Плохой</option>
 					<option>Злой</option>
 				</select>
-				<img src="chevron.png" title="Выпадающий список" alt="Выпадающий список"
-					class="chevronImg ckStyle">
 			</div>
 			<textarea type="text" id="youQuestion" class="textA blockS"
 				placeholder="Введите ваш вопрос"></textarea>
 			<button id="youSend" class="callK anyB senBut">Отправить</button>
-			<!--<button id="youClose" class="callK anyB closeB featuresS">Закрыть</button>-->
 		</section>
 		<footer  class="footerLine ckStyle">
 			<a href="callkeeper.ru" class="aFooter ckStyle">
@@ -88,7 +92,6 @@
 	</div
 	><div class="displayInlineBlock">	
 		<button id="youPush" class="callK anyB pushD ButtonS">
-			<span class="pushImg ckStyle"></span>
 			Оставить данные
 		</button>
 	</div

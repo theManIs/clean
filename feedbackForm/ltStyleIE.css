@@ -1,0 +1,9 @@
+/*<link  rel="stylesheet" href="../feedbackForm/ltStyleIE.css" type="text/css">*/
+.pushD.ButtonS:before 
+{
+	margin-left: -20px; /*IE*/
+}
+.callkeeperS.messageS:before
+{
+	margin-left: -20px; /*IE*/
+}

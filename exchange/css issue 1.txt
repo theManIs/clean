@@ -1,0 +1,4 @@
+letter-spacing: normal | inherit | value
+:after
+:before
+content: string | attr(attribute) | open-quote | close-qote | no-open-qote | no-close-qote | url("address") | normal | none | inherit
